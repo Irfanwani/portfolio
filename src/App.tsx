@@ -1,20 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import { useColorMode } from '@chakra-ui/react'
+import "./App.css";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Projects from "./pages/projects";
+import Contact from "./pages/contact";
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  const {colorMode, toggleColorMode} = useColorMode()
-
-  console.log(colorMode)
   return (
-    <div className="App">
-      <div>there is some text</div>
-      <button onClick={toggleColorMode}>toggle theme</button>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
