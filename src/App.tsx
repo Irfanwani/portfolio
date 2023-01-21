@@ -6,17 +6,28 @@ import Projects from "./pages/projects";
 import Contact from "./pages/contact";
 import Navbar from "./components/navbar";
 
+import "./App.css";
+import { useEffect } from "react";
+import { threemain } from "./threemain";
+
 function App() {
+  useEffect(() => {
+    threemain();
+  }, []);
+
+
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    // <Router>
+    //   <Navbar />
+
+    //   <Routes>
+    //     <Route path="/" element={<Home />} />
+    //     <Route path="/about" element={<About />} />
+    //     <Route path="/projects" element={<Projects />} />
+    //     <Route path="/contact" element={<Contact />} />
+    //   </Routes>
+    // </Router>
+    <canvas id="bg"></canvas>
   );
 }
 
