@@ -39,11 +39,11 @@ export const threemain = () => {
 
   scene.add(pointLight, ambientLight);
 
-  const lightHelper = new THREE.PointLightHelper(pointLight);
+  // const lightHelper = new THREE.PointLightHelper(pointLight);
 
   const gridHelper = new THREE.GridHelper(window.innerWidth, 100);
 
-  scene.add(lightHelper, gridHelper);
+  scene.add(gridHelper);
 
   const controls = new OrbitControls(camera, renderer.domElement);
 
@@ -55,14 +55,55 @@ export const threemain = () => {
 
     const [x, y, z] = Array(3)
       .fill(0)
-      .map(() => THREE.MathUtils.randFloatSpread(500));
+      .map(() => THREE.MathUtils.randFloatSpread(400));
 
     star.position.set(x, y, z);
 
     scene.add(star);
   }
 
-  Array(2000).fill(0).forEach(addStar);
+  Array(4000).fill(0).forEach(addStar);
+
+  const spaceTexture = new THREE.TextureLoader().load(
+    "src/assets/colorsmoke.jpeg"
+  );
+
+  scene.background = spaceTexture;
+
+  // DP
+
+  const dpTexture = new THREE.TextureLoader().load("src/assets/dp.png");
+
+  const irfan = new THREE.Mesh(
+    new THREE.BoxGeometry(3, 3.5, 3.5),
+    new THREE.MeshBasicMaterial({ map: dpTexture })
+  );
+
+  scene.add(irfan);
+
+  irfan.position.z = 40;
+  irfan.position.x = 20;
+
+  // sphere object
+  const sphereTexture = new THREE.TextureLoader().load(
+    "src/assets/spacestars.jpeg"
+  );
+  const normalTexture = new THREE.TextureLoader().load(
+    "src/assets/spaceclouds.jpeg"
+  );
+
+  const sphere = new THREE.Mesh(
+    new THREE.SphereGeometry(5, 32, 32),
+    new THREE.MeshStandardMaterial({
+      map: sphereTexture,
+      normalMap: normalTexture,
+    })
+  );
+
+  scene.add(sphere);
+
+  sphere.position.z = 30;
+  sphere.position.x = -10;
 
   const animate = () => {
     torus.rotation.x += 0.01;

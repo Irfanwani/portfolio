@@ -15,7 +15,6 @@ function App() {
     threemain();
   }, []);
 
-
   return (
     // <Router>
     //   <Navbar />
@@ -27,7 +26,14 @@ function App() {
     //     <Route path="/contact" element={<Contact />} />
     //   </Routes>
     // </Router>
-    <canvas id="bg"></canvas>
+    <>
+      <canvas id="bg"></canvas>
+        <Navbar />
+      <main>
+
+        {/* <Home /> */}
+      </main>
+    </>
   );
 }
 
