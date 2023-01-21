@@ -31,7 +31,7 @@ function App() {
         <Navbar />
       <main>
 
-        {/* <Home /> */}
+        <Home />
       </main>
     </>
   );

@@ -105,6 +105,24 @@ export const threemain = () => {
   sphere.position.z = 30;
   sphere.position.x = -10;
 
+
+  const moveCamera = () => {
+    const t = document.body.getBoundingClientRect().top;
+    sphere.rotation.x += 0.05;
+    sphere.rotation.y += 0.05;
+    sphere.rotation.z += 0.05;
+
+    irfan.rotation.y += 0.01;
+    irfan.rotation.z += 0.01;
+
+    camera.position.z = t * -0.01;
+    camera.position.x = t * -0.0002;
+    camera.position.y = t * -0.0002;
+
+  }
+
+  document.body.onscroll = moveCamera
+
   const animate = () => {
     torus.rotation.x += 0.01;
     torus.rotation.y += 0.005;
