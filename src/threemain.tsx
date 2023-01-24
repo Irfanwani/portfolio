@@ -2,14 +2,19 @@ import * as THREE from "three";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
+import { FontLoader } from "three/examples/jsm/loaders/fontLoader";
+import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
+
 export const threemain = () => {
   const scene = new THREE.Scene();
+
+  const textureloader = new THREE.TextureLoader();
 
   const camera = new THREE.PerspectiveCamera(
     70,
     window.innerWidth / window.innerHeight,
-    0.1,
-    1000
+    0.01,
+    10000000
   );
 
   const renderer = new THREE.WebGLRenderer({
@@ -21,6 +26,27 @@ export const threemain = () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 
   camera.position.setZ(30);
+
+  const fontLoader = new FontLoader();
+
+  fontLoader.load(
+    "node_modules/three/examples/fonts/droid/droid_sans_bold.typeface.json",
+    (droidFont) => {
+      const textGeometry = new TextGeometry("Irfan\nwani", {
+        height: 0,
+        size: 3,
+        font: droidFont,
+      });
+
+      const textMaterial = new THREE.MeshBasicMaterial({color: 'rgb(198, 185, 158)'});
+      const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+
+      textMesh.position.x = -25;
+      textMesh.position.y = 15;
+
+      scene.add(textMesh);
+    }
+  );
 
   const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 
@@ -39,11 +65,6 @@ export const threemain = () => {
 
   scene.add(pointLight, ambientLight);
 
-  // const lightHelper = new THREE.PointLightHelper(pointLight);
-
-  const gridHelper = new THREE.GridHelper(window.innerWidth, 100);
-
-  scene.add(gridHelper);
 
   const controls = new OrbitControls(camera, renderer.domElement);
 
@@ -55,29 +76,22 @@ export const threemain = () => {
 
     const [x, y, z] = Array(3)
       .fill(0)
-      .map(() => THREE.MathUtils.randFloatSpread(400));
+      .map(() => THREE.MathUtils.randFloatSpread(200));
 
     star.position.set(x, y, z);
 
     scene.add(star);
   }
 
-  Array(4000).fill(0).forEach(addStar);
-
-  const spaceTexture = new THREE.TextureLoader().load(
-    "src/assets/colorsmoke.jpeg"
-  );
-
-  scene.background = spaceTexture;
+  Array(400).fill(0).forEach(addStar);
 
   // DP
 
-  const dpTexture = new THREE.TextureLoader().load("src/assets/dp.png");
+  const dpTexture = textureloader.load("src/assets/dp.png");
 
-  const irfan = new THREE.Mesh(
-    new THREE.BoxGeometry(3, 3.5, 3.5),
-    new THREE.MeshBasicMaterial({ map: dpTexture })
-  );
+  const dpgeometry = new THREE.BoxGeometry(3, 3.5, 3.5);
+  const dpmaterial = new THREE.MeshBasicMaterial({ map: dpTexture });
+  const irfan = new THREE.Mesh(dpgeometry, dpmaterial);
 
   scene.add(irfan);
 
@@ -85,26 +99,19 @@ export const threemain = () => {
   irfan.position.x = 20;
 
   // sphere object
-  const sphereTexture = new THREE.TextureLoader().load(
-    "src/assets/spacestars.jpeg"
-  );
-  const normalTexture = new THREE.TextureLoader().load(
-    "src/assets/spaceclouds.jpeg"
-  );
+  const sphereTexture = textureloader.load("src/assets/colorsmoke.jpeg");
 
-  const sphere = new THREE.Mesh(
-    new THREE.SphereGeometry(5, 32, 32),
-    new THREE.MeshStandardMaterial({
-      map: sphereTexture,
-      normalMap: normalTexture,
-    })
-  );
+  const spheregeometry = new THREE.SphereGeometry(5, 32, 32);
+  const spherematerial = new THREE.MeshBasicMaterial({
+    map: sphereTexture,
+  });
+
+  const sphere = new THREE.Mesh(spheregeometry, spherematerial);
 
   scene.add(sphere);
 
-  sphere.position.z = 30;
+  sphere.position.z = 300;
   sphere.position.x = -10;
-
 
   const moveCamera = () => {
     const t = document.body.getBoundingClientRect().top;
@@ -118,10 +125,9 @@ export const threemain = () => {
     camera.position.z = t * -0.01;
     camera.position.x = t * -0.0002;
     camera.position.y = t * -0.0002;
+  };
 
-  }
-
-  document.body.onscroll = moveCamera
+  document.body.onscroll = moveCamera;
 
   const animate = () => {
     torus.rotation.x += 0.01;

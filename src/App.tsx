@@ -9,6 +9,7 @@ import Navbar from "./components/navbar";
 import "./App.css";
 import { useEffect } from "react";
 import { threemain } from "./threemain";
+import Card from "./components/card";
 
 function App() {
   useEffect(() => {
@@ -28,11 +29,11 @@ function App() {
     // </Router>
     <>
       <canvas id="bg"></canvas>
-        <Navbar />
-      <main>
-
+      <div className="main">
         <Home />
-      </main>
+        
+
+      </div>
     </>
   );
 }

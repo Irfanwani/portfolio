@@ -4,8 +4,46 @@ canvas {
   left: 0;
 }
 
-main {
+.main {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: rgb(198, 185, 158);
+  flex-direction: column;
 }
 
+.card {
+  color: rgb(198, 185, 158);
+  padding: 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(100, 100, 100, 1),
+    rgba(100, 100, 100, 0.1)
+  );
+  backdrop-filter: "blur(10px)";
+  box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
+}
 
+.title {
+  text-decoration: underline;
+  font-size: 50px;
+  font-weight: 700;
+  transition: 0.3s;
+  font-family: "Comic Sans MS";
+}
+
+.title:hover {
+  text-decoration-color: transparent;
+  transition-duration: 0.3s;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
