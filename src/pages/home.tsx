@@ -3,7 +3,7 @@ import Card from "../components/card";
 const Home = () => {
   return (
     <Card>
-      <div className="center">
+      <div className="center column titlecolor">
         <div className="title">Hello World!</div>
 
         <h3>

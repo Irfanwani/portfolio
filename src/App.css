@@ -5,13 +5,8 @@ canvas {
 }
 
 .main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   width: 98vw;
-  color: rgb(198, 185, 158);
-  flex-direction: column;
 }
 
 main {
@@ -19,13 +14,14 @@ main {
 }
 
 .card {
-  color: rgb(198, 185, 158);
   padding: 20px;
   border-radius: 20px;
   background-image: linear-gradient(
     to bottom right,
-    rgba(100, 100, 100, 1),
-    rgba(100, 100, 100, 0.1)
+    rgb(22, 176, 196, 0.8),
+    rgba(100, 100, 100, 0.5),
+    rgba(200, 200, 200, 0.3),
+    rgba(0, 255, 0, 0.1)
   );
   backdrop-filter: "blur(10px)";
   box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
@@ -39,6 +35,7 @@ main {
   font-weight: 700;
   transition: 0.3s;
   font-family: "Comic Sans MS";
+  text-align: center;
 }
 
 .title:hover {
@@ -48,7 +45,42 @@ main {
 
 .center {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.marginright {
+  margin-right: 40px;
+}
+
+.date {
+  font-size: 25px;
+}
+
+.description {
+  font-size: 25px;
+  font-weight: 200;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.spacebetween {
+  justify-content: space-evenly;
+  padding: 20px 20px 30px 20px;
+}
+
+.a {
+  color: beige;
+}
+
+.titlecolor {
+  color: rgb(198, 185, 158);
+}
+
+.descolor {
+  color: rgb(185, 185, 175);
 }

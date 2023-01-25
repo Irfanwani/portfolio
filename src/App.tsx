@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./pages/home";
 import About from "./pages/about";
-import Projects from "./pages/projects";
+import Exp from "./pages/exp";
 import Contact from "./pages/contact";
 
 import "./App.css";
@@ -17,8 +17,9 @@ function App() {
     <>
       <canvas id="bg"></canvas>
       <main>
-        <div className="main">
+        <div className="main center column">
           <Home />
+          <Exp />
         </div>
       </main>
     </>
