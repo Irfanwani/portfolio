@@ -42,7 +42,7 @@ export const threemain = () => {
       const textMesh = new THREE.Mesh(textGeometry, textMaterial);
 
       textMesh.position.x = -25;
-      textMesh.position.y = 15;
+      textMesh.position.y = 17;
 
       scene.add(textMesh);
     }
@@ -67,6 +67,8 @@ export const threemain = () => {
 
 
   const controls = new OrbitControls(camera, renderer.domElement);
+
+  controls.enabled = false;
 
   const spgeometry = new THREE.SphereGeometry(0.25, 24, 24);
   const spmaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
@@ -101,7 +103,7 @@ export const threemain = () => {
   // sphere object
   const sphereTexture = textureloader.load("src/assets/colorsmoke.jpeg");
 
-  const spheregeometry = new THREE.SphereGeometry(5, 32, 32);
+  const spheregeometry = new THREE.SphereGeometry(50, 50, 50);
   const spherematerial = new THREE.MeshBasicMaterial({
     map: sphereTexture,
   });
@@ -114,7 +116,7 @@ export const threemain = () => {
   sphere.position.x = -10;
 
   const moveCamera = () => {
-    const t = document.body.getBoundingClientRect().top;
+    const t = window.scrollY;
     sphere.rotation.x += 0.05;
     sphere.rotation.y += 0.05;
     sphere.rotation.z += 0.05;
@@ -122,9 +124,10 @@ export const threemain = () => {
     irfan.rotation.y += 0.01;
     irfan.rotation.z += 0.01;
 
-    camera.position.z = t * -0.01;
-    camera.position.x = t * -0.0002;
-    camera.position.y = t * -0.0002;
+    console.log(t, 'ttttt')
+
+    camera.position.x = t/3;
+    camera.position.y = t/3;
   };
 
   document.body.onscroll = moveCamera;

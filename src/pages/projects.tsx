@@ -1,8 +1,13 @@
+import Card from "../components/card";
+
 const Projects = () => {
     return (
-        <div>
-            
-        </div>
+        <Card>
+            <div className="center">
+
+            </div>
+        </Card>
+        
     )
 }
 

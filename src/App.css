@@ -5,14 +5,17 @@ canvas {
 }
 
 .main {
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
+  width: 98vw;
   color: rgb(198, 185, 158);
   flex-direction: column;
+}
+
+main {
+  position: absolute;
 }
 
 .card {
@@ -26,6 +29,8 @@ canvas {
   );
   backdrop-filter: "blur(10px)";
   box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
+
+  margin: 10px 0;
 }
 
 .title {

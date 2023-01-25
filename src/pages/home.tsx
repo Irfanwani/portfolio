@@ -6,16 +6,16 @@ const Home = () => {
       <div className="center">
         <div className="title">Hello World!</div>
 
-        <h6>
-          This is Irfan wani. Welcome to my website.
+        <h3>
+          This is Irfan wani. Welcome to my Portfolio!!!
           <br />
-        </h6>
-        <h4>Who am I?</h4>
-        <h6>
+        </h3>
+        <h2>Who am I?</h2>
+        <h3>
           Self Taught Full stack web and app developer, building nice things
-          from last 3 YEARS. 
-        </h6>
-          Keep Scrolling to explore more about ME!
+          from last 3 YEARS.
+        </h3>
+        <h2>Keep Scrolling to explore more about ME!</h2>
       </div>
     </Card>
   );
