@@ -18,11 +18,10 @@ main {
   border-radius: 20px;
   background-image: linear-gradient(
     to bottom right,
-    rgb(22, 176, 196, 0.8),
-    rgba(100, 100, 100, 0.5),
-    rgba(255, 174, 23, 0.2)
+    rgba(65, 65, 65, 0.3),
+    rgba(255, 255, 255, 0.1)
   );
-  backdrop-filter: "blur(10px)";
+  backdrop-filter: blur(10px);
   box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
 
   margin: 50vh 100px;
@@ -30,7 +29,7 @@ main {
 
 .title {
   text-decoration: underline;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
   transition: 0.3s;
   font-family: "Comic Sans MS";
@@ -62,7 +61,7 @@ main {
 }
 
 .description {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 200;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -99,4 +98,8 @@ main {
   margin-top: 10px;
   color: rgb(95, 189, 189);
   font-family: Geneva, Verdana, sans-serif;
+}
+
+.divider {
+  background-image: linear-gradient(to right, "green", "orange");
 }

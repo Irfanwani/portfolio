@@ -13,7 +13,7 @@ const Exp = () => {
         >
           <Appsdeployer />
         </ExpSingle>
-
+        <hr className='divider' />
         <ExpSingle
           title="Solvevolve"
           date="Oct-2022 to Dec-2022"
