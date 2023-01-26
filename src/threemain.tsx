@@ -8,6 +8,8 @@ import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 export const threemain = () => {
   const scene = new THREE.Scene();
 
+  const rad = Math.PI / 180;
+
   const textureloader = new THREE.TextureLoader();
 
   const camera = new THREE.PerspectiveCamera(
@@ -29,24 +31,42 @@ export const threemain = () => {
 
   const fontLoader = new FontLoader();
 
-  fontLoader.load(
-    "node_modules/three/examples/fonts/droid/droid_sans_bold.typeface.json",
-    (droidFont) => {
-      const textGeometry = new TextGeometry("Irfan\nwani", {
-        height: 0,
-        size: 3,
-        font: droidFont,
-      });
+  const textGen = (
+    text: string,
+    x: number,
+    y: number,
+    z: number,
+    color: string,
+    size: number
+  ) => {
+    fontLoader.load(
+      "node_modules/three/examples/fonts/droid/droid_sans_bold.typeface.json",
+      (droidFont) => {
+        const textGeometry = new TextGeometry(text, {
+          height: 0,
+          size,
+          font: droidFont,
+        });
 
-      const textMaterial = new THREE.MeshBasicMaterial({color: 'rgb(198, 185, 158)'});
-      const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+        const textMaterial = new THREE.MeshBasicMaterial({
+          color,
+        });
+        const textMesh = new THREE.Mesh(textGeometry, textMaterial);
 
-      textMesh.position.x = -25;
-      textMesh.position.y = 10;
+        textMesh.position.x = x;
+        textMesh.position.y = y;
+        textMesh.position.z = z;
 
-      scene.add(textMesh);
-    }
-  );
+        textMesh.name = text;
+
+        scene.add(textMesh);
+      }
+    );
+  };
+
+  textGen("Irfan\nwani", -25, 10, 0, "rgb(198, 185, 158)", 3);
+
+  textGen("Experience", -50, -50, 0, "rgb(198, 185, 158)", 10);
 
   const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 
@@ -65,7 +85,6 @@ export const threemain = () => {
 
   scene.add(pointLight, ambientLight);
 
-
   const controls = new OrbitControls(camera, renderer.domElement);
 
   controls.enabled = false;
@@ -78,17 +97,16 @@ export const threemain = () => {
 
     const [x, y, z] = Array(3)
       .fill(0)
-      .map(() => THREE.MathUtils.randFloatSpread(200));
+      .map(() => THREE.MathUtils.randFloatSpread(2000));
 
     star.position.set(x, y, z);
 
     scene.add(star);
   }
 
-  Array(400).fill(0).forEach(addStar);
+  Array(4000).fill(0).forEach(addStar);
 
   // DP
-
   const dpTexture = textureloader.load("src/assets/dp.png");
 
   const dpgeometry = new THREE.BoxGeometry(3, 3.5, 3.5);
@@ -101,9 +119,9 @@ export const threemain = () => {
   irfan.position.x = 20;
 
   // sphere object
-  const sphereTexture = textureloader.load("src/assets/colorsmoke.jpeg");
+  const sphereTexture = textureloader.load("src/assets/spaceclouds.jpeg");
 
-  const spheregeometry = new THREE.SphereGeometry(50, 50, 50);
+  const spheregeometry = new THREE.SphereGeometry(200, 50, 50);
   const spherematerial = new THREE.MeshBasicMaterial({
     map: sphereTexture,
   });
@@ -116,6 +134,7 @@ export const threemain = () => {
   sphere.position.x = -10;
 
   const moveCamera = () => {
+    const textMesh = scene.getObjectByName("Experience")!;
     const t = window.scrollY;
     sphere.rotation.x += 0.05;
     sphere.rotation.y += 0.05;
@@ -124,10 +143,11 @@ export const threemain = () => {
     irfan.rotation.y += 0.01;
     irfan.rotation.z += 0.01;
 
-    console.log(t, 'ttttt')
+    camera.position.x = -t / 10;
+    camera.position.y = -t / 10;
 
-    camera.position.x = t/3;
-    camera.position.y = t/3;
+    // textMesh.rotateY(t / 1000 * rad);
+    // textMesh.rotation.x = textMesh.rotation.x
   };
 
   document.body.onscroll = moveCamera;

@@ -47,3 +47,17 @@ export const Solvevolve: FC = () => {
     </div>
   );
 };
+
+export const NITSri: FC = () => {
+  return (
+    <div>
+      Blockchain Internship, learned about blockchains, smart contracts, NFTs, DeFi, Dapps, etc.
+      <br />
+      <br />
+      Tech stack used:
+      <h6 className="techstack">
+        Python, Brownie, Ethereum Blockchain, Solidity, chainlink, MetaMask.
+      </h6>
+    </div>
+  )
+}

@@ -1,6 +1,6 @@
 import Card from "../components/card";
 import ExpSingle from "../components/expsingle";
-import { Appsdeployer, Solvevolve } from "../components/desc";
+import { Appsdeployer, NITSri, Solvevolve } from "../components/desc";
 
 const Exp = () => {
   return (
@@ -13,13 +13,21 @@ const Exp = () => {
         >
           <Appsdeployer />
         </ExpSingle>
-        <hr className='divider' />
+
         <ExpSingle
           title="Solvevolve"
           date="Oct-2022 to Dec-2022"
           href="https://www.linkedin.com/company/solvevolve/"
         >
           <Solvevolve />
+        </ExpSingle>
+
+        <ExpSingle
+          title="NIT Srinagar"
+          date="Jun-2022 to Jul-2022"
+          href="https://nitsri.ac.in/Department/Deptindex.aspx?page=a&ItemID=cs&nDeptID=cs"
+        >
+          <NITSri />
         </ExpSingle>
       </div>
     </Card>

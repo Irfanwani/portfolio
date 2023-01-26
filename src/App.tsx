@@ -9,7 +9,6 @@ import { threemain } from "./threemain";
 function App() {
   useEffect(() => {
     threemain();
-    window.scrollbars.visible
   }, []);
 
   return (
