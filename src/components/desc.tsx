@@ -24,6 +24,26 @@ export const Appsdeployer: FC = () => {
           </a>
         </li>
       </ul>
+      Tech stack used:
+      <h6 className="techstack">
+        React Native, Redux, Firebase, Android Studio, Xcode.
+      </h6>
+    </div>
+  );
+};
+
+export const Solvevolve: FC = () => {
+  return (
+    <div>
+      Worked as a mobile App developer, Created an android app, integrated APIs
+      and also worked a bit on backend and website.
+      <br />
+      <br />
+      Tech stack used:
+      <h6 className="techstack">
+        Typescript, React Native, Expo, Redux Toolkit,
+        GraphQL (apollo client), Firebase, Android Studio, charts.
+      </h6>
     </div>
   );
 };

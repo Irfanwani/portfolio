@@ -42,7 +42,7 @@ export const threemain = () => {
       const textMesh = new THREE.Mesh(textGeometry, textMaterial);
 
       textMesh.position.x = -25;
-      textMesh.position.y = 17;
+      textMesh.position.y = 10;
 
       scene.add(textMesh);
     }

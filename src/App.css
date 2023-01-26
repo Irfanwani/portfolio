@@ -20,13 +20,12 @@ main {
     to bottom right,
     rgb(22, 176, 196, 0.8),
     rgba(100, 100, 100, 0.5),
-    rgba(200, 200, 200, 0.3),
-    rgba(0, 255, 0, 0.1)
+    rgba(255, 174, 23, 0.2)
   );
   backdrop-filter: "blur(10px)";
   box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
 
-  margin: 20px 20px;
+  margin: 50vh 100px;
 }
 
 .title {
@@ -59,29 +58,45 @@ main {
 }
 
 .date {
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .description {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 200;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .spacebetween {
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 20px 20px 30px 20px;
 }
 
 .a {
-  color: beige;
+  color: rgb(176, 173, 134);
 }
 
 .titlecolor {
-  color: rgb(198, 185, 158);
+  color: rgb(232, 220, 195);
 }
 
 .descolor {
   color: rgb(185, 185, 175);
+}
+
+.first {
+  margin-top: 100vh;
+}
+
+.expsingle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+}
+
+.techstack {
+  margin-top: 10px;
+  color: rgb(95, 189, 189);
+  font-family: Geneva, Verdana, sans-serif;
 }

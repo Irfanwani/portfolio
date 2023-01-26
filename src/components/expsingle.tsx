@@ -1,16 +1,11 @@
 import { FC } from "react";
 import type { ExpSingleProps } from "./types";
 
-const ExpSingle: FC<ExpSingleProps> = ({ title, date, children }) => {
+const ExpSingle: FC<ExpSingleProps> = ({ title, date, children, href }) => {
   return (
-    <div>
-      <div className="center spacebetween">
+      <div className="expsingle spacebetween">
         <div className="column marginright">
-          <a
-            href="https://appsdeployer.com"
-            target="_blank"
-            className="title titlecolor"
-          >
+          <a href={href} target="_blank" className="title titlecolor">
             {title}
           </a>
           <div className="date descolor">{date}</div>
@@ -19,9 +14,6 @@ const ExpSingle: FC<ExpSingleProps> = ({ title, date, children }) => {
           {children}
         </div>
       </div>
-
-      <hr style={{ width: "50%" }} />
-    </div>
   );
 };
 

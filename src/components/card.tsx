@@ -1,10 +1,8 @@
-import type { ReactElement, FC } from "react";
+import type { FC } from "react";
+import { cardProps } from "./types";
 
-interface cardProps {
-  children: ReactElement;
-}
-const Card: FC<cardProps> = ({ children }) => {
-  return <div className="card">{children}</div>;
+const Card: FC<cardProps> = ({ children, className }) => {
+  return <div className={`card ${className}`}>{children}</div>;
 };
 
 export default Card;

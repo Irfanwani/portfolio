@@ -2,7 +2,7 @@ import Card from "../components/card";
 
 const Home = () => {
   return (
-    <Card>
+    <Card className="first">
       <div className="center column titlecolor">
         <div className="title">Hello World!</div>
 
