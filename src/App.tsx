@@ -4,7 +4,7 @@ import Exp from "./pages/exp";
 
 import "./App.css";
 import { useEffect } from "react";
-import { threemain } from "./threemain";
+import { threemain } from "./three/threemain";
 import Skills from "./pages/skills";
 
 function App() {
