@@ -5,6 +5,7 @@ import Exp from "./pages/exp";
 import "./App.css";
 import { useEffect } from "react";
 import { threemain } from "./threemain";
+import Skills from "./pages/skills";
 
 function App() {
   useEffect(() => {
@@ -18,6 +19,7 @@ function App() {
         <div className="main center column">
           <Home />
           <Exp />
+          <Skills />
         </div>
       </main>
     </>

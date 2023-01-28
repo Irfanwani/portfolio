@@ -146,8 +146,6 @@ export const threemain = () => {
     camera.position.x = -t / 10;
     camera.position.y = -t / 10;
 
-    // textMesh.rotateY(t / 1000 * rad);
-    // textMesh.rotation.x = textMesh.rotation.x
   };
 
   document.body.onscroll = moveCamera;

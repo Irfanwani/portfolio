@@ -30,7 +30,8 @@ main {
 .title {
   font-size: 40px;
   transition: 0.3s;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   text-align: center;
 }
 
@@ -70,7 +71,14 @@ main {
 }
 
 .titlecolor {
-  color: rgb(232, 220, 195);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(232, 220, 195),
+    rgba(210, 197, 158, 0.3)
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .descolor {
@@ -92,4 +100,12 @@ main {
   margin-top: 10px;
   color: rgb(95, 189, 189);
   font-family: Geneva, Verdana, sans-serif;
+}
+
+li {
+  color: rgb(68, 206, 206);
+}
+
+.flexstart {
+  align-self: flex-start;
 }
