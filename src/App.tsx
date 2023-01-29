@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { threemain } from "./three/threemain";
 import Skills from "./pages/skills";
 import Links from "./pages/links";
+import Footer from "./pages/footer";
 
 function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
           <Exp />
           <Skills />
           <Links />
+          <Footer />
         </div>
       </main>
     </>

@@ -28,6 +28,15 @@ export const threemain = () => {
 
   camera.position.setZ(30);
 
+  const handleResize = () => {
+    const {innerHeight, innerWidth} = window;
+    camera.aspect = innerWidth / innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(innerWidth, innerHeight);
+  };
+
+  window.addEventListener("resize", handleResize);
+
   const fontLoader = new FontLoader();
 
   const textGen = (
@@ -63,9 +72,14 @@ export const threemain = () => {
     );
   };
 
-  textGen("Irfan\nwani", -25, 10, 0, "rgb(198, 185, 158)", 3);
+  const {innerHeight, innerWidth} = window;
 
-  // textGen("Experience", -50, -50, 0, "rgb(198, 185, 158)", 10);
+  let x = innerWidth < innerHeight ? -5 : -20
+  let size = innerWidth < innerHeight ? 1 : 2
+
+
+
+  textGen("Irfan\nwani", x, 17, 0, "rgb(198, 185, 158)", size);
 
   const satrings = textureloader.load("src/assets/saturn_ring_alpha.png");
 
