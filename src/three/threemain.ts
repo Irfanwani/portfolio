@@ -6,6 +6,13 @@ import { FontLoader } from "three/examples/jsm/loaders/fontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import { sphereGen } from "./sphere";
 
+import rings from "../assets/saturn_ring_alpha.png";
+import saturn from "../assets/saturn.jpeg";
+import dp from "../assets/dp.png";
+
+import jupiter from "../assets/jupiter.jpeg";
+import marsimage from "../assets/mars.jpeg";
+
 export const threemain = () => {
   const scene = new THREE.Scene();
 
@@ -29,7 +36,7 @@ export const threemain = () => {
   camera.position.setZ(30);
 
   const handleResize = () => {
-    const {innerHeight, innerWidth} = window;
+    const { innerHeight, innerWidth } = window;
     camera.aspect = innerWidth / innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(innerWidth, innerHeight);
@@ -48,7 +55,7 @@ export const threemain = () => {
     size: number
   ) => {
     fontLoader.load(
-      "node_modules/three/examples/fonts/droid/droid_sans_bold.typeface.json",
+      "/droid_sans_bold.typeface.json",
       (droidFont) => {
         const textGeometry = new TextGeometry(text, {
           height: 0,
@@ -72,16 +79,14 @@ export const threemain = () => {
     );
   };
 
-  const {innerHeight, innerWidth} = window;
+  const { innerHeight, innerWidth } = window;
 
-  let x = innerWidth < innerHeight ? -5 : -20
-  let size = innerWidth < innerHeight ? 1 : 2
-
-
+  let x = innerWidth < innerHeight ? -5 : -20;
+  let size = innerWidth < innerHeight ? 1 : 2;
 
   textGen("Irfan\nwani", x, 17, 0, "rgb(198, 185, 158)", size);
 
-  const satrings = textureloader.load("src/assets/saturn_ring_alpha.png");
+  const satrings = textureloader.load(rings);
 
   const geometry = new THREE.TorusGeometry(10, 3, 2, 100);
 
@@ -93,7 +98,7 @@ export const threemain = () => {
 
   scene.add(torus);
 
-  const sattexture = textureloader.load("src/assets/saturn.jpeg");
+  const sattexture = textureloader.load(saturn);
 
   const sat = sphereGen(5, 32, 32, sattexture, scene);
 
@@ -126,7 +131,7 @@ export const threemain = () => {
   Array(4000).fill(0).forEach(addStar);
 
   // DP
-  const dpTexture = textureloader.load("src/assets/dp.png");
+  const dpTexture = textureloader.load(dp);
 
   const dpgeometry = new THREE.BoxGeometry(3, 3.5, 3.5);
   const dpmaterial = new THREE.MeshBasicMaterial({ map: dpTexture });
@@ -138,7 +143,7 @@ export const threemain = () => {
   irfan.position.x = 20;
 
   // sphere object
-  const sphereTexture = textureloader.load("src/assets/jupiter.jpeg");
+  const sphereTexture = textureloader.load(jupiter);
 
   const sphere = sphereGen(200, 50, 50, sphereTexture, scene, 0x45454544);
 
@@ -146,7 +151,7 @@ export const threemain = () => {
   sphere.position.x = -10;
 
   // MARS
-  const marstexture = textureloader.load("src/assets/mars.jpeg");
+  const marstexture = textureloader.load(marsimage);
 
   const mars = sphereGen(30, 50, 50, marstexture, scene);
 
