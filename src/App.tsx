@@ -6,6 +6,7 @@ import "./App.css";
 import { useEffect } from "react";
 import { threemain } from "./three/threemain";
 import Skills from "./pages/skills";
+import Links from "./pages/links";
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
           <Home />
           <Exp />
           <Skills />
+          <Links />
         </div>
       </main>
     </>

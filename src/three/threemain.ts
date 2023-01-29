@@ -65,7 +65,7 @@ export const threemain = () => {
 
   textGen("Irfan\nwani", -25, 10, 0, "rgb(198, 185, 158)", 3);
 
-  textGen("Experience", -50, -50, 0, "rgb(198, 185, 158)", 10);
+  // textGen("Experience", -50, -50, 0, "rgb(198, 185, 158)", 10);
 
   const satrings = textureloader.load("src/assets/saturn_ring_alpha.png");
 

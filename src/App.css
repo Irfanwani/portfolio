@@ -22,7 +22,7 @@ main {
     rgba(255, 255, 255, 0.1)
   );
   backdrop-filter: blur(10px);
-  box-shadow: 10px 10px 10px rgba(30, 30, 30, 0.5);
+  box-shadow: 5px 5px 5px rgba(30, 30, 30, 0.5);
 
   margin: 50vh 100px;
 }
@@ -92,7 +92,6 @@ main {
 .expsingle {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: space-between;
   padding: 50px 30px;
 }
 
@@ -108,4 +107,25 @@ li {
 
 .flexstart {
   align-self: flex-start;
+}
+
+.flexend {
+  align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin: 50vh 10px;
+    padding: 10px;
+  }
+  .expsingle {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .card {
+    margin: 50vh 20px;
+  }
 }
