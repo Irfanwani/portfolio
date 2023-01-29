@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <Card>
       <footer className="titlecolor title">
-        
+        Thank You!
       </footer>
     </Card>
   );
