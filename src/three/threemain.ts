@@ -8,10 +8,9 @@ import { sphereGen } from "./sphere";
 
 import rings from "../assets/saturn_ring_alpha.png";
 import saturn from "../assets/saturn.jpeg";
-import dp from "../assets/dp.png";
 
 import jupiter from "../assets/jupiter.jpeg";
-import marsimage from "../assets/mars.jpeg";
+import marsimage from "../assets/mars.jpg";
 
 export const threemain = () => {
   const scene = new THREE.Scene();
@@ -130,18 +129,6 @@ export const threemain = () => {
 
   Array(4000).fill(0).forEach(addStar);
 
-  // DP
-  const dpTexture = textureloader.load(dp);
-
-  const dpgeometry = new THREE.BoxGeometry(3, 3.5, 3.5);
-  const dpmaterial = new THREE.MeshBasicMaterial({ map: dpTexture });
-  const irfan = new THREE.Mesh(dpgeometry, dpmaterial);
-
-  scene.add(irfan);
-
-  irfan.position.z = 40;
-  irfan.position.x = 20;
-
   // sphere object
   const sphereTexture = textureloader.load(jupiter);
 
@@ -169,9 +156,6 @@ export const threemain = () => {
     mars.rotation.x += 0.01;
     mars.rotation.y += 0.008;
     mars.rotation.z += 0.01;
-
-    irfan.rotation.y += 0.01;
-    irfan.rotation.z += 0.01;
 
     camera.position.x = -t / 10;
     camera.position.y = -t / 10;
