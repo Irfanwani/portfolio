@@ -11,6 +11,7 @@ export const Appsdeployer: FC = () => {
           <a
             className="a"
             href="https://play.google.com/store/apps/developer?id=Rock+Pros+USA+LLC&hl=en&gl=US"
+            target='_blank'
           >
             Rocks Pro Android Apps
           </a>
@@ -19,6 +20,7 @@ export const Appsdeployer: FC = () => {
           <a
             className="a"
             href="https://apps.apple.com/in/developer/rock-pros/id1604082793"
+            target='_blank'
           >
             Rocks Pro iOS apps
           </a>
