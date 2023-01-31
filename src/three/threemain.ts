@@ -2,7 +2,7 @@ import * as THREE from "three";
 
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-import { FontLoader } from "three/examples/jsm/loaders/fontLoader";
+import { Font, FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import { sphereGen } from "./sphere";
 
@@ -55,7 +55,7 @@ export const threemain = () => {
   ) => {
     fontLoader.load(
       "/droid_sans_bold.typeface.json",
-      (droidFont) => {
+      (droidFont: Font) => {
         const textGeometry = new TextGeometry(text, {
           height: 0,
           size,
