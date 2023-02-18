@@ -7,9 +7,9 @@ import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import { sphereGen } from "./sphere";
 
 import rings from "../assets/saturn_ring_alpha.png";
-import saturn from "../assets/saturn.jpeg";
+import saturn from "../assets/saturn.jpg";
 
-import jupiter from "../assets/jupiter.jpeg";
+import jupiter from "../assets/jupiter.jpg";
 import marsimage from "../assets/mars.jpg";
 
 export const threemain = () => {
@@ -53,29 +53,26 @@ export const threemain = () => {
     color: string,
     size: number
   ) => {
-    fontLoader.load(
-      "/droid_sans_bold.typeface.json",
-      (droidFont: Font) => {
-        const textGeometry = new TextGeometry(text, {
-          height: 0,
-          size,
-          font: droidFont,
-        });
+    fontLoader.load("/droid_sans_bold.typeface.json", (droidFont: Font) => {
+      const textGeometry = new TextGeometry(text, {
+        height: 0,
+        size,
+        font: droidFont,
+      });
 
-        const textMaterial = new THREE.MeshBasicMaterial({
-          color,
-        });
-        const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+      const textMaterial = new THREE.MeshBasicMaterial({
+        color,
+      });
+      const textMesh = new THREE.Mesh(textGeometry, textMaterial);
 
-        textMesh.position.x = x;
-        textMesh.position.y = y;
-        textMesh.position.z = z;
+      textMesh.position.x = x;
+      textMesh.position.y = y;
+      textMesh.position.z = z;
 
-        textMesh.name = text;
+      textMesh.name = text;
 
-        scene.add(textMesh);
-      }
-    );
+      scene.add(textMesh);
+    });
   };
 
   const { innerHeight, innerWidth } = window;
