@@ -9,7 +9,7 @@ import { sphereGen } from "./sphere";
 import rings from "../assets/saturn_ring_alpha.png";
 import saturn from "../assets/saturn.jpg";
 
-import jupiter from "../assets/jupiter.jpg";
+import jupiter from "../assets/jupiter.jpeg";
 import marsimage from "../assets/mars.jpg";
 
 export const threemain = () => {
