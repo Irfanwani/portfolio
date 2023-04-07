@@ -4,7 +4,6 @@ export const Frejun: FC = () => {
   return (
     <div>
       Working as a mobile app developer using React Native. Working on the following projects:
-      are:
       <ul>
         <li>
           <a
