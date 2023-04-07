@@ -1,5 +1,38 @@
 import { FC } from "react";
 
+export const Frejun: FC = () => {
+  return (
+    <div>
+      Working as a mobile app developer using React Native. Working on the following projects:
+      are:
+      <ul>
+        <li>
+          <a
+            className="a"
+            href="https://play.google.com/store/apps/details?id=com.frejun.FreJunApp"
+            target='_blank'
+          >
+            Frejun Android App
+          </a>
+        </li>
+        <li>
+          <a
+            className="a"
+            href="https://apps.apple.com/in/app/frejun-dialer/id1621698092"
+            target='_blank'
+          >
+            Frejun iOS app
+          </a>
+        </li>
+      </ul>
+      Tech stack used:
+      <h6 className="techstack">
+        React Native, Redux, Firebase, Android Studio, Xcode, axios.
+      </h6>
+    </div>
+  );
+};
+
 export const Appsdeployer: FC = () => {
   return (
     <div>
