@@ -13,7 +13,7 @@ const Home = () => {
         <h2 className="descolor">Who am I?</h2>
         <h3 className="descolor">
           Self Taught Full stack web and app developer, building nice things
-          from last 3 YEARS.
+          from last 3.5 YEARS.
         </h3>
         <h2 className="descolor">Keep Scrolling to explore more about ME!</h2>
       </div>

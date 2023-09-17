@@ -8,7 +8,7 @@ const Exp = () => {
       <div>
         <ExpSingle
           title="Frejun"
-          date="April-2023 to Present"
+          date="April-2023 to July-2023"
           href="https://frejun.com"
         >
           <Frejun />
