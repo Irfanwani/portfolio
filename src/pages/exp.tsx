@@ -15,7 +15,7 @@ const Exp = () => {
         </ExpSingle>
         <ExpSingle
           title="Appsdeployer"
-          date="Oct-2022 to Present"
+          date="Oct-2022 to Oct-2023"
           href="https://appsdeployer.com"
         >
           <Appsdeployer />

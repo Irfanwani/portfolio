@@ -3,7 +3,7 @@ import { FC } from "react";
 export const Frejun: FC = () => {
   return (
     <div>
-      Working as a mobile app developer using React Native. Working on the following projects:
+      Worked as a mobile app developer using React Native. Worked on the following projects:
       <ul>
         <li>
           <a
@@ -35,7 +35,7 @@ export const Frejun: FC = () => {
 export const Appsdeployer: FC = () => {
   return (
     <div>
-      Working as a mobile app developer, upgraded and published multiple
+      Worked as a mobile app developer, upgraded and published multiple
       versions of multiple apps on respective app stores. Some of the projects
       are:
       <ul>
