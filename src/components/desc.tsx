@@ -1,5 +1,13 @@
 import { FC } from "react";
 
+export const FrejunSDE: FC = () => {
+  return (
+    <div>
+      Working as a Software Development Engineer.
+    </div>
+  );
+};
+
 export const Frejun: FC = () => {
   return (
     <div>

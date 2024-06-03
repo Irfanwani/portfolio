@@ -13,26 +13,23 @@ const Skills = () => {
               <li>Typescript</li>
               <li>SQL</li>
               <li>C++</li>
-              <li>Solidity</li>
+              <li>Java</li>
             </ul>
           </li>
           <li className="titlecolor">
             Frameworks and Libraries
             <ul>
               <li>React Native</li>
-              <li>React</li>
               <li>Redux</li>
               <li>Redux Toolkit and RTK query</li>
+              <li>Django</li>
+              <li>Django Rest Framework</li>
+              <li>React</li>
               <li>Three js</li>
               <li>GraphQL</li>
               <li>Socket io</li>
-              <li>Expo</li>
-              <li>Django</li>
-              <li>Django Rest Framework</li>
-              <li>Flask</li>
               <li>Matplotlib</li>
-              <li>Brownie</li>
-              <li>Hardhat</li>
+
             </ul>
           </li>
           <li className="titlecolor">
@@ -47,12 +44,10 @@ const Skills = () => {
             Extras
             <ul>
               <li>Data Structures and Algorithms</li>
+              <li>HTML and CSS</li>
             </ul>
           </li>
         </ul>
-
-        <h3 className="titlecolor">Last But not the least</h3>
-        <li>HTML and CSS</li>
       </div>
     </Card>
   );

@@ -144,7 +144,6 @@ export const threemain = () => {
   mars.position.y = -50;
 
   const moveCamera = () => {
-    // const textMesh = scene.getObjectByName("Experience")!;
     const t = window.scrollY;
     sphere.rotation.x += 0.05;
     sphere.rotation.y += 0.05;
