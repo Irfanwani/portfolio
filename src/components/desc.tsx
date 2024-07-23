@@ -77,7 +77,7 @@ export const Appsdeployer: FC = () => {
 export const Solvevolve: FC = () => {
   return (
     <div>
-      Worked as a mobile App developer intern intern, Created an android app, integrated APIs
+      Worked as a mobile App developer intern, Created an android app, integrated APIs
       and also worked a bit on backend and website.
       <br />
       <br />
