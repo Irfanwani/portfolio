@@ -11,7 +11,7 @@ export const FrejunSDE: FC = () => {
 export const Frejun: FC = () => {
   return (
     <div>
-      Worked as a mobile app developer using React Native. Worked on the following projects:
+      Worked as a mobile app developer intern using React Native. Worked on the following projects:
       <ul>
         <li>
           <a
@@ -43,7 +43,7 @@ export const Frejun: FC = () => {
 export const Appsdeployer: FC = () => {
   return (
     <div>
-      Worked as a mobile app developer, upgraded and published multiple
+      Worked as a mobile app developer intern, upgraded and published multiple
       versions of multiple apps on respective app stores. Some of the projects
       are:
       <ul>
@@ -77,7 +77,7 @@ export const Appsdeployer: FC = () => {
 export const Solvevolve: FC = () => {
   return (
     <div>
-      Worked as a mobile App developer, Created an android app, integrated APIs
+      Worked as a mobile App developer intern intern, Created an android app, integrated APIs
       and also worked a bit on backend and website.
       <br />
       <br />

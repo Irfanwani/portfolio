@@ -1,16 +1,24 @@
 import Card from "../components/card";
 import ExpSingle from "../components/expsingle";
-import { Appsdeployer, Frejun, FrejunSDE, NITSri, Solvevolve } from "../components/desc";
+import {
+  Appsdeployer,
+  Frejun,
+  FrejunSDE,
+  NITSri,
+  Solvevolve,
+} from "../components/desc";
 
 const Exp = () => {
   return (
     <Card>
       <div>
-      <ExpSingle
+        <ExpSingle
           title="Frejun"
           date="June-2024 to Present"
           href="https://frejun.com"
-        ><FrejunSDE /></ExpSingle>
+        >
+          <FrejunSDE />
+        </ExpSingle>
         <ExpSingle
           title="Frejun"
           date="April-2023 to July-2023"
