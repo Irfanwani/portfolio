@@ -12,8 +12,7 @@ const Home = () => {
         </h3>
         <h2 className="descolor">Who am I?</h2>
         <h3 className="descolor">
-          Self Taught Full stack web and app developer, building nice things
-          from last 3.5 YEARS.
+          Software Development Engineer, mainly working with mobile applications. Currently, pursuing Master's in Computer Applications.
         </h3>
         <h2 className="descolor">Keep Scrolling to explore more about ME!</h2>
       </div>

@@ -24,11 +24,6 @@ const Links = () => {
             Instagram
           </a>
         </li>
-        <li>
-          <a target="_blank" href="https://twitter.com/Irfan__wani">
-            Twitter
-          </a>
-        </li>
         Email me at
         <li>
           <a href="mailto:irfanwani347@gmail.com">Email</a>
