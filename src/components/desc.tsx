@@ -1,9 +1,18 @@
 import { FC } from "react";
 
+export const FrejunIntegrationManager = () => {
+  return (
+    <div>
+      Working as an Integration Manager, managing the integration of different
+      CRM and ATS systems with Frejun.
+    </div>
+  );
+};
+
 export const FrejunSDE: FC = () => {
   return (
     <div>
-      Working as a Software Development Engineer.
+      <div>Working as a Software Development Engineer.</div>
     </div>
   );
 };
@@ -11,13 +20,14 @@ export const FrejunSDE: FC = () => {
 export const Frejun: FC = () => {
   return (
     <div>
-      Worked as a mobile app developer intern using React Native. Worked on the following projects:
+      Worked as a mobile app developer intern using React Native. Worked on the
+      following projects:
       <ul>
         <li>
           <a
             className="a"
             href="https://play.google.com/store/apps/details?id=com.frejun.FreJunApp"
-            target='_blank'
+            target="_blank"
           >
             Frejun Android App
           </a>
@@ -26,7 +36,7 @@ export const Frejun: FC = () => {
           <a
             className="a"
             href="https://apps.apple.com/in/app/frejun-dialer/id1621698092"
-            target='_blank'
+            target="_blank"
           >
             Frejun iOS app
           </a>
@@ -51,7 +61,7 @@ export const Appsdeployer: FC = () => {
           <a
             className="a"
             href="https://play.google.com/store/apps/developer?id=Rock+Pros+USA+LLC&hl=en&gl=US"
-            target='_blank'
+            target="_blank"
           >
             Rocks Pro Android Apps
           </a>
@@ -60,7 +70,7 @@ export const Appsdeployer: FC = () => {
           <a
             className="a"
             href="https://apps.apple.com/in/developer/rock-pros/id1604082793"
-            target='_blank'
+            target="_blank"
           >
             Rocks Pro iOS apps
           </a>
@@ -77,14 +87,14 @@ export const Appsdeployer: FC = () => {
 export const Solvevolve: FC = () => {
   return (
     <div>
-      Worked as a mobile App developer intern, Created an android app, integrated APIs
-      and also worked a bit on backend and website.
+      Worked as a mobile App developer intern, Created an android app,
+      integrated APIs and also worked a bit on backend and website.
       <br />
       <br />
       Tech stack used:
       <h6 className="techstack">
-        Typescript, React Native, Expo, Redux Toolkit,
-        GraphQL (apollo client), Firebase, Android Studio, charts.
+        Typescript, React Native, Expo, Redux Toolkit, GraphQL (apollo client),
+        Firebase, Android Studio, charts.
       </h6>
     </div>
   );
@@ -93,7 +103,8 @@ export const Solvevolve: FC = () => {
 export const NITSri: FC = () => {
   return (
     <div>
-      Blockchain Internship, learned about blockchains, smart contracts, NFTs, DeFi, Dapps, etc.
+      Blockchain Internship, learned about blockchains, smart contracts, NFTs,
+      DeFi, Dapps, etc.
       <br />
       <br />
       Tech stack used:
@@ -101,5 +112,5 @@ export const NITSri: FC = () => {
         Python, Brownie, Ethereum Blockchain, Solidity, chainlink, MetaMask.
       </h6>
     </div>
-  )
-}
+  );
+};
