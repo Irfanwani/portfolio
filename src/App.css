@@ -1,3 +1,7 @@
+body {
+  font-family: "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
+}
+
 canvas {
   position: fixed;
   top: 0;
@@ -18,10 +22,10 @@ main {
   border-radius: 20px;
   background-image: linear-gradient(
     to bottom right,
-    rgba(65, 65, 65, 0.3),
+    rgba(65, 65, 65, 0.1),
     rgba(255, 255, 255, 0.1)
   );
-  backdrop-filter: blur(10px);
+  backdrop-filter: saturate(180%) blur(40px);
   box-shadow: 5px 5px 5px rgba(30, 30, 30, 0.5);
 
   margin: 50vh 100px;
@@ -61,9 +65,7 @@ main {
 
 .description {
   font-size: 20px;
-  font-weight: 200;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  line-height: 1.5;
 }
 
 .a {
@@ -95,12 +97,6 @@ main {
   padding: 50px 30px;
 }
 
-.techstack {
-  margin-top: 10px;
-  color: rgb(95, 189, 189);
-  font-family: Geneva, Verdana, sans-serif;
-}
-
 li {
   color: rgb(68, 206, 206);
 }
@@ -111,6 +107,11 @@ li {
 
 .flexend {
   align-self: flex-end;
+}
+
+.exptext {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {

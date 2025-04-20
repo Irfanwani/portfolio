@@ -3,8 +3,17 @@ import { FC } from "react";
 export const FrejunIntegrationManager = () => {
   return (
     <div>
-      Working as an Integration Manager, managing the integration of different
-      CRM and ATS systems with Frejun.
+      As an Integration Manager, I lead the efforts to connect our core platform
+      with a variety of third-party systems, including CRMs, ATSs, and other
+      business tools. I oversee the full lifecycle of integrations—from planning
+      and development to deployment and maintenance—ensuring seamless data flow
+      and reliability. My responsibilities include designing and maintaining
+      robust APIs, implementing webhooks and SDKs, and supporting external teams
+      in integrating with our platform. I also work closely with internal
+      stakeholders to identify integration needs, optimize existing connections,
+      and enhance the overall user experience. In addition to integrations, I
+      manage mobile application development, contribute to backend systems, and
+      help shape the future of our integration architecture.
     </div>
   );
 };
@@ -12,7 +21,16 @@ export const FrejunIntegrationManager = () => {
 export const FrejunSDE: FC = () => {
   return (
     <div>
-      <div>Working as a Software Development Engineer.</div>
+      As an SDE, I work across backend systems and mobile application
+      development to build scalable, high-performance solutions. I primarily use
+      Django and Django REST Framework to develop robust APIs, manage databases,
+      and handle complex business logic. On the mobile side, I contribute to
+      building and maintaining cross-platform apps using React Native, with a
+      focus on delivering smooth, responsive user experiences—especially on
+      Android. I collaborate closely with product, design, and integration teams
+      to ensure that features are delivered efficiently and reliably. I also
+      have experience working with AWS services to deploy and manage cloud-based
+      applications.
     </div>
   );
 };
@@ -20,32 +38,11 @@ export const FrejunSDE: FC = () => {
 export const Frejun: FC = () => {
   return (
     <div>
-      Worked as a mobile app developer intern using React Native. Worked on the
-      following projects:
-      <ul>
-        <li>
-          <a
-            className="a"
-            href="https://play.google.com/store/apps/details?id=com.frejun.FreJunApp"
-            target="_blank"
-          >
-            Frejun Android App
-          </a>
-        </li>
-        <li>
-          <a
-            className="a"
-            href="https://apps.apple.com/in/app/frejun-dialer/id1621698092"
-            target="_blank"
-          >
-            Frejun iOS app
-          </a>
-        </li>
-      </ul>
-      Tech stack used:
-      <h6 className="techstack">
-        React Native, Redux, Firebase, Android Studio, Xcode, axios.
-      </h6>
+      Worked on building Android applications using React Native as an intern,
+      with a strong focus on integrating SIP-based calling functionality.
+      Implemented key features for real-time communication, optimized
+      performance for Android as well as iOS devices, and ensured a smooth and
+      reliable user experience across calling flows and UI interactions.
     </div>
   );
 };
@@ -53,33 +50,11 @@ export const Frejun: FC = () => {
 export const Appsdeployer: FC = () => {
   return (
     <div>
-      Worked as a mobile app developer intern, upgraded and published multiple
-      versions of multiple apps on respective app stores. Some of the projects
-      are:
-      <ul>
-        <li>
-          <a
-            className="a"
-            href="https://play.google.com/store/apps/developer?id=Rock+Pros+USA+LLC&hl=en&gl=US"
-            target="_blank"
-          >
-            Rocks Pro Android Apps
-          </a>
-        </li>
-        <li>
-          <a
-            className="a"
-            href="https://apps.apple.com/in/developer/rock-pros/id1604082793"
-            target="_blank"
-          >
-            Rocks Pro iOS apps
-          </a>
-        </li>
-      </ul>
-      Tech stack used:
-      <h6 className="techstack">
-        React Native, Redux, Firebase, Android Studio, Xcode.
-      </h6>
+      Contributed to the development of a variety of React Native applications
+      as an intern, focusing on building intuitive user interfaces and smooth
+      performance for Android and iOS. Also assisted in backend development
+      tasks, including API integration and debugging, to support full-stack
+      feature delivery and improve overall app functionality.
     </div>
   );
 };
@@ -87,15 +62,11 @@ export const Appsdeployer: FC = () => {
 export const Solvevolve: FC = () => {
   return (
     <div>
-      Worked as a mobile App developer intern, Created an android app,
-      integrated APIs and also worked a bit on backend and website.
-      <br />
-      <br />
-      Tech stack used:
-      <h6 className="techstack">
-        Typescript, React Native, Expo, Redux Toolkit, GraphQL (apollo client),
-        Firebase, Android Studio, charts.
-      </h6>
+      Focused on building and optimizing Android applications using React Native
+      as an intern, delivering smooth UI experiences and reliable performance.
+      Additionally, supported both frontend and backend teams by helping debug
+      and implement features, ensuring seamless integration across the
+      application stack.
     </div>
   );
 };
@@ -103,14 +74,10 @@ export const Solvevolve: FC = () => {
 export const NITSri: FC = () => {
   return (
     <div>
-      Blockchain Internship, learned about blockchains, smart contracts, NFTs,
-      DeFi, Dapps, etc.
-      <br />
-      <br />
-      Tech stack used:
-      <h6 className="techstack">
-        Python, Brownie, Ethereum Blockchain, Solidity, chainlink, MetaMask.
-      </h6>
+      As an intern, Explored core blockchain concepts including NFTs, decentralized
+      applications (dApps), smart contracts, and cryptocurrencies. Gained
+      hands-on experience with blockchain development tools and platforms while
+      deepening understanding of web3 technologies and decentralized ecosystems.
     </div>
   );
 };

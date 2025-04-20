@@ -11,15 +11,15 @@ const Home = () => {
           <br />
         </h3>
         <h2 className="descolor">Who am I?</h2>
-        <h3 className="descolor">
-          A Software Development Engineer and
-          Integration Manager with a passion for crafting seamless digital
-          experiences. I specialize in building and integrating scalable
-          systems, with hands-on expertise in mobile application development.
-          From backend architecture to intuitive mobile interfaces, I bridge the
-          gap between robust engineering and smooth user experiences. Welcome to
-          my portfolio — where innovation meets execution.
-        </h3>
+        <p className="descolor description">
+          A Software Development Engineer and Integration Manager with a passion
+          for crafting seamless digital experiences. I specialize in building
+          and integrating scalable systems, with hands-on expertise in mobile
+          application development. From backend architecture to intuitive mobile
+          interfaces, I bridge the gap between robust engineering and smooth
+          user experiences. Welcome to my portfolio — where innovation meets
+          execution.
+        </p>
         <h2 className="descolor">Keep Scrolling to explore more about ME!</h2>
       </div>
     </Card>
