@@ -1,5 +1,12 @@
 import { FC } from "react";
 
+export const FrejunSeniorSDE = () => {
+  return (
+    <div>
+      Working as a Senior Software Development Engineer, I handle the integration team and lead the development of integration solutions. I work on mobile apps, backend systems, and more.
+    </div>
+  );
+};
 export const FrejunIntegrationManager = () => {
   return (
     <div>
@@ -74,10 +81,11 @@ export const Solvevolve: FC = () => {
 export const NITSri: FC = () => {
   return (
     <div>
-      As an intern, Explored core blockchain concepts including NFTs, decentralized
-      applications (dApps), smart contracts, and cryptocurrencies. Gained
-      hands-on experience with blockchain development tools and platforms while
-      deepening understanding of web3 technologies and decentralized ecosystems.
+      As an intern, Explored core blockchain concepts including NFTs,
+      decentralized applications (dApps), smart contracts, and cryptocurrencies.
+      Gained hands-on experience with blockchain development tools and platforms
+      while deepening understanding of web3 technologies and decentralized
+      ecosystems.
     </div>
   );
 };

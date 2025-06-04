@@ -5,6 +5,7 @@ import {
   Frejun,
   FrejunIntegrationManager,
   FrejunSDE,
+  FrejunSeniorSDE,
   NITSri,
   Solvevolve,
 } from "../components/desc";
@@ -15,6 +16,13 @@ const Exp = () => {
       <div>
         <ExpSingle
           title="Frejun"
+          date="June-2025 to Present"
+          href="https://frejun.com"
+        >
+          <FrejunSeniorSDE />
+        </ExpSingle>
+        <ExpSingle
+          title="Frejun"
           date="November-2024 to Present"
           href="https://frejun.com"
         >
@@ -22,7 +30,7 @@ const Exp = () => {
         </ExpSingle>
         <ExpSingle
           title="Frejun"
-          date="June-2024 to Present"
+          date="June-2024 to June-2025"
           href="https://frejun.com"
         >
           <FrejunSDE />
