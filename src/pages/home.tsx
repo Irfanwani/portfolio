@@ -1,28 +1,23 @@
-import Card from "../components/card";
-
 const Home = () => {
   return (
-    <Card className="first">
-      <div className="center column">
-        <div className="title titlecolor">Hello World!</div>
-
-        <h3 className="descolor">
-          This is Irfan wani. Welcome to my Portfolio!!!
-          <br />
-        </h3>
-        <h2 className="descolor">Who am I?</h2>
-        <p className="descolor description">
-          A Software Development Engineer and Integration Manager with a passion
-          for crafting seamless digital experiences. I specialize in building
-          and integrating scalable systems, with hands-on expertise in mobile
-          application development. From backend architecture to intuitive mobile
-          interfaces, I bridge the gap between robust engineering and smooth
-          user experiences. Welcome to my portfolio — where innovation meets
-          execution.
-        </p>
-        <h2 className="descolor">Keep Scrolling to explore more about ME!</h2>
+    <section className="section section-hero reveal">
+      <p className="hero-eyebrow">✦ Welcome to my universe ✦</p>
+      <h1 className="hero-name">Irfan Wani</h1>
+      <div className="hero-roles">
+        <span className="hero-badge">Software Engineer</span>
+        <span className="hero-badge">Integration Manager</span>
+        <span className="hero-badge">Mobile Developer</span>
       </div>
-    </Card>
+      <p className="hero-bio">
+        A Software Development Engineer &amp; Integration Manager with a passion
+        for crafting seamless digital experiences. Specializing in scalable
+        systems, mobile application development, and third-party integrations.
+      </p>
+      <div className="hero-scroll-indicator">
+        <div className="hero-scroll-line" />
+        <span className="hero-scroll-text">scroll to explore</span>
+      </div>
+    </section>
   );
 };
 

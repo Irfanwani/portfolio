@@ -1,12 +1,11 @@
-import Card from "../components/card";
-
 const Footer = () => {
   return (
-    <Card>
-      <footer className="titlecolor title">
-        Thank You!
+    <section className="section section-footer reveal">
+      <footer>
+        <p className="footer-heading">Thank You for Visiting</p>
+        <p className="footer-sub">End of transmission · Irfan Wani · 2025</p>
       </footer>
-    </Card>
+    </section>
   );
 };
 

@@ -1,55 +1,43 @@
-import Card from "../components/card";
-
 const Skills = () => {
   return (
-    <Card className="flexstart">
-      <div>
-        <ul>
-          <li className="titlecolor">
-            Programming Languages
-            <ul>
-              <li>Python</li>
-              <li>Javascript</li>
-              <li>Typescript</li>
-              <li>SQL</li>
-              <li>C++</li>
-              <li>Java</li>
-            </ul>
-          </li>
-          <li className="titlecolor">
-            Frameworks and Libraries
-            <ul>
-              <li>React Native</li>
-              <li>Redux</li>
-              <li>Redux Toolkit and RTK query</li>
-              <li>Django</li>
-              <li>Django Rest Framework</li>
-              <li>React</li>
-              <li>Three js</li>
-              <li>GraphQL</li>
-              <li>Socket io</li>
-              <li>Matplotlib</li>
-
-            </ul>
-          </li>
-          <li className="titlecolor">
-            Databases
-            <ul>
-              <li>PostgreSQL</li>
-              <li>MongoDB</li>
-              <li>Sqlite3</li>
-            </ul>
-          </li>
-          <li className="titlecolor">
-            Extras
-            <ul>
-              <li>Data Structures and Algorithms</li>
-              <li>HTML and CSS</li>
-            </ul>
-          </li>
-        </ul>
+    <section className="section section-skills reveal">
+      <span className="section-label">✦ Chapter 03</span>
+      <h2 className="section-title">Tech Stack</h2>
+      <div className="skills-grid">
+        <div className="skill-category stagger-item">
+          <div className="skill-category-header">Languages</div>
+          <div className="skill-pills">
+            {["Python", "JavaScript", "TypeScript", "SQL", "C++", "Java"].map((s) => (
+              <span key={s} className="skill-pill">{s}</span>
+            ))}
+          </div>
+        </div>
+        <div className="skill-category stagger-item">
+          <div className="skill-category-header">Frameworks &amp; Libraries</div>
+          <div className="skill-pills">
+            {["React Native", "React", "Redux", "RTK Query", "Django", "DRF", "Three.js", "GraphQL", "Socket.io", "Matplotlib"].map((s) => (
+              <span key={s} className="skill-pill">{s}</span>
+            ))}
+          </div>
+        </div>
+        <div className="skill-category stagger-item">
+          <div className="skill-category-header">Databases</div>
+          <div className="skill-pills">
+            {["PostgreSQL", "MongoDB", "SQLite3"].map((s) => (
+              <span key={s} className="skill-pill">{s}</span>
+            ))}
+          </div>
+        </div>
+        <div className="skill-category stagger-item">
+          <div className="skill-category-header">Other</div>
+          <div className="skill-pills">
+            {["Data Structures", "Algorithms", "HTML", "CSS", "AWS", "REST APIs", "Webhooks"].map((s) => (
+              <span key={s} className="skill-pill">{s}</span>
+            ))}
+          </div>
+        </div>
       </div>
-    </Card>
+    </section>
   );
 };
 

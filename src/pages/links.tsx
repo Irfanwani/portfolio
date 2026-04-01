@@ -1,35 +1,57 @@
-import Card from "../components/card";
-
 const Links = () => {
   return (
-    <Card className="flexend">
-      <div className="titlecolor">
-        Checkout my github
-        <li>
-          <a target="_blank" href="https://github.com/irfanwani">
-            Github
-          </a>
-        </li>
-        Make sure to follow me on
-        <li>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/irfan-wani-6891b1181/"
-          >
-            LinkedIn
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://www.instagram.com/irfanwani347/">
-            Instagram
-          </a>
-        </li>
-        Email me at
-        <li>
-          <a href="mailto:irfanwani347@gmail.com">Email</a>
-        </li>
+    <section className="section section-links reveal">
+      <span className="section-label">✦ Chapter 04</span>
+      <h2 className="section-title">Get in Touch</h2>
+      <div className="links-grid">
+        <a
+          className="link-card stagger-item"
+          href="https://github.com/irfanwani"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="link-icon">⌥</div>
+          <div className="link-details">
+            <span className="link-title">GitHub</span>
+            <span className="link-subtitle">github.com/irfanwani</span>
+          </div>
+        </a>
+        <a
+          className="link-card stagger-item"
+          href="https://www.linkedin.com/in/irfan-wani/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="link-icon">in</div>
+          <div className="link-details">
+            <span className="link-title">LinkedIn</span>
+            <span className="link-subtitle">Connect with me</span>
+          </div>
+        </a>
+        <a
+          className="link-card stagger-item"
+          href="https://www.instagram.com/irfanwani347/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="link-icon">◎</div>
+          <div className="link-details">
+            <span className="link-title">Instagram</span>
+            <span className="link-subtitle">@irfanwani347</span>
+          </div>
+        </a>
+        <a
+          className="link-card stagger-item"
+          href="mailto:irfanwani347@gmail.com"
+        >
+          <div className="link-icon">✉</div>
+          <div className="link-details">
+            <span className="link-title">Email</span>
+            <span className="link-subtitle">irfanwani347@gmail.com</span>
+          </div>
+        </a>
       </div>
-    </Card>
+    </section>
   );
 };
 

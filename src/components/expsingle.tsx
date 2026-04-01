@@ -3,17 +3,15 @@ import type { ExpSingleProps } from "./types";
 
 const ExpSingle: FC<ExpSingleProps> = ({ title, date, children, href }) => {
   return (
-      <div className="expsingle spacebetween">
-        <div className="column marginright">
-          <a href={href} target="_blank" className="title titlecolor">
-            {title}
-          </a>
-          <div className="date descolor">{date}</div>
-        </div>
-        <div id="el" className="description descolor">
-          {children}
-        </div>
+    <div className="exp-item stagger-item">
+      <div className="exp-item-header">
+        <a href={href} target="_blank" rel="noreferrer" className="exp-company">
+          {title}
+        </a>
+        <span className="exp-date-badge">{date}</span>
       </div>
+      <div className="exp-desc">{children}</div>
+    </div>
   );
 };
 

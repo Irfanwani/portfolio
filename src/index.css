@@ -1,9 +1,25 @@
-:root {
-  font-family: sans, Inter, Avenir, Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-  background-color: #242424;
+:root {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: #000008;
+  color: #c8c8d4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 :root::-webkit-scrollbar {
   display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
 }

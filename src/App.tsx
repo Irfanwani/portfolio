@@ -1,15 +1,16 @@
 import "./App.css";
 import Home from "./pages/home";
 import Exp from "./pages/exp";
-
-import "./App.css";
 import { useEffect } from "react";
 import { threemain } from "./three/threemain";
 import Skills from "./pages/skills";
 import Links from "./pages/links";
 import Footer from "./pages/footer";
+import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
 function App() {
+  useScrollAnimation();
+
   useEffect(() => {
     threemain();
   }, []);
@@ -18,7 +19,7 @@ function App() {
     <>
       <canvas id="bg"></canvas>
       <main>
-        <div className="main center column">
+        <div className="sections-container">
           <Home />
           <Exp />
           <Skills />
