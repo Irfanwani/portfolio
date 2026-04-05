@@ -15,7 +15,7 @@ const Skills = () => {
         <div className="skill-category stagger-item">
           <div className="skill-category-header">Frameworks &amp; Libraries</div>
           <div className="skill-pills">
-            {["React Native", "React", "Redux", "RTK Query", "Django", "DRF", "Three.js", "GraphQL", "Socket.io", "Matplotlib"].map((s) => (
+            {["FastAPI", "React Native", "React", "Redux", "Django", "DRF", "Three.js", "GraphQL", "Socket.io"].map((s) => (
               <span key={s} className="skill-pill">{s}</span>
             ))}
           </div>
@@ -31,7 +31,7 @@ const Skills = () => {
         <div className="skill-category stagger-item">
           <div className="skill-category-header">Other</div>
           <div className="skill-pills">
-            {["Data Structures", "Algorithms", "HTML", "CSS", "AWS", "REST APIs", "Webhooks"].map((s) => (
+            {["SIP", "VoIP", "AWS", "ECS", "Docker", "REST APIs", "Webhooks", "Automations"].map((s) => (
               <span key={s} className="skill-pill">{s}</span>
             ))}
           </div>
