@@ -55,9 +55,9 @@ export const threemain = () => {
   ) => {
     fontLoader.load("/droid_sans_bold.typeface.json", (droidFont: Font) => {
       const textGeometry = new TextGeometry(text, {
-        height: 0,
         size,
         font: droidFont,
+        depth: 0
       });
 
       const textMaterial = new THREE.MeshBasicMaterial({
@@ -80,7 +80,7 @@ export const threemain = () => {
   let x = innerWidth < innerHeight ? -5 : -20;
   let size = innerWidth < innerHeight ? 1 : 2;
 
-  textGen("Irfan\nwani", x, 17, 0, "rgb(198, 185, 158)", size);
+  textGen("Irfan wani", x, 17, 0, "rgb(198, 185, 158)", size);
 
   const satrings = textureloader.load(rings);
 
