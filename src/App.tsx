@@ -7,27 +7,34 @@ import Skills from "./pages/skills";
 import Links from "./pages/links";
 import Footer from "./pages/footer";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
+import ExperienceCube from "./components/ExperienceCube";
 
 function App() {
-  useScrollAnimation();
+  // useScrollAnimation();
 
-  useEffect(() => {
-    threemain();
-  }, []);
+  // useEffect(() => {
+  //   threemain();
+  // }, []);
+
+  // return (
+  //   <>
+  //     <canvas id="bg"></canvas>
+  //     <main>
+  //       <div className="sections-container">
+  //         <Home />
+  //         <Exp />
+  //         <Skills />
+  //         <Links />
+  //         <Footer />
+  //       </div>
+  //     </main>
+  //   </>
+  // );
 
   return (
-    <>
-      <canvas id="bg"></canvas>
-      <main>
-        <div className="sections-container">
-          <Home />
-          <Exp />
-          <Skills />
-          <Links />
-          <Footer />
-        </div>
-      </main>
-    </>
+    <div style={{ width: '100vw', height: '100vh', background: '#0a0a0f' }}>
+      <ExperienceCube />
+    </div>
   );
 }
 
