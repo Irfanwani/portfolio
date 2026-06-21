@@ -7,7 +7,7 @@ import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass";
 import starfield from "./starfield";
-import { cometPathPoint, cometGroup, cometHistory, TRAIL_LENGTH, trailGeometry } from "./commets";
+import { cometPathPoint, cometGroup, cometHistory, TRAIL_LENGTH, trailGeometry, cometTrail } from "./comets";
 
 
 export const threemain = () => {
@@ -113,6 +113,8 @@ export const threemain = () => {
   // COMET — glowing head + fading particle trail
   // ---------------------------------------------------------------------
   let cometT = 0;
+  // scene.add(cometGroup);
+  // scene.add(cometTrail);
 
   // ---------------------------------------------------------------------
   // SCROLL-DRIVEN CAMERA ORBIT

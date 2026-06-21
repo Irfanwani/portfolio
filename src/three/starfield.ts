@@ -1,9 +1,9 @@
 import * as THREE from "three";
 
-const BH_POS = new THREE.Vector3(35, 25, -70);
+const BH_POS = new THREE.Vector3(0, 0, 0);
 
 const starGeometry = new THREE.BufferGeometry();
-const STAR_COUNT = 3000;
+const STAR_COUNT = 3500;
 const positions = new Float32Array(STAR_COUNT * 3);
 
 for (let i = 0; i < STAR_COUNT * 3; i++) {
