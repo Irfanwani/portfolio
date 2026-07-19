@@ -8,6 +8,7 @@ export type ExpSingleProps = {
 };
 
 export type cardProps = {
-  children: ReactElement;
-  className?: string;
+  title: string;
+  date: string;
+  description: string;
 };

@@ -1,39 +1,57 @@
 const Skills = () => {
   return (
-    <section className="section section-skills reveal">
-      <span className="section-label">✦ Chapter 03</span>
-      <h2 className="section-title">Tech Stack</h2>
-      <div className="skills-grid">
-        <div className="skill-category stagger-item">
-          <div className="skill-category-header">Languages</div>
-          <div className="skill-pills">
-            {["Python", "JavaScript", "TypeScript", "SQL", "C++", "Java"].map((s) => (
-              <span key={s} className="skill-pill">{s}</span>
-            ))}
+    <section className="section" id="tech">
+      <div className="section-header reveal">
+        <span className="section-num">02</span>
+        <h2 className="section-title">
+          Tech <span>Stack</span>
+        </h2>
+      </div>
+      <div className="tech-grid">
+        <div className="tech-category reveal">
+          <div className="tech-cat-title">Languages</div>
+          <div className="tech-items">
+            <span className="tech-item">Python</span>
+            <span className="tech-item">JavaScript</span>
+            <span className="tech-item">TypeScript</span>
+            <span className="tech-item">SQL</span>
+            <span className="tech-item">C++</span>
+            <span className="tech-item">Java</span>
           </div>
         </div>
-        <div className="skill-category stagger-item">
-          <div className="skill-category-header">Frameworks &amp; Libraries</div>
-          <div className="skill-pills">
-            {["FastAPI", "React Native", "React", "Redux", "Django", "DRF", "Three.js", "GraphQL", "Socket.io"].map((s) => (
-              <span key={s} className="skill-pill">{s}</span>
-            ))}
+        <div className="tech-category reveal">
+          <div className="tech-cat-title">Frameworks & Libraries</div>
+          <div className="tech-items">
+            <span className="tech-item">FastAPI</span>
+            <span className="tech-item">React Native</span>
+            <span className="tech-item">React</span>
+            <span className="tech-item">Redux</span>
+            <span className="tech-item">Django</span>
+            <span className="tech-item">DRF</span>
+            <span className="tech-item">Three.js</span>
+            <span className="tech-item">GraphQL</span>
+            <span className="tech-item">Socket.io</span>
           </div>
         </div>
-        <div className="skill-category stagger-item">
-          <div className="skill-category-header">Databases</div>
-          <div className="skill-pills">
-            {["PostgreSQL", "MongoDB", "SQLite3"].map((s) => (
-              <span key={s} className="skill-pill">{s}</span>
-            ))}
+        <div className="tech-category reveal">
+          <div className="tech-cat-title">Databases</div>
+          <div className="tech-items">
+            <span className="tech-item">PostgreSQL</span>
+            <span className="tech-item">MongoDB</span>
+            <span className="tech-item">SQLite3</span>
           </div>
         </div>
-        <div className="skill-category stagger-item">
-          <div className="skill-category-header">Other</div>
-          <div className="skill-pills">
-            {["SIP", "VoIP", "AWS", "ECS", "Docker", "REST APIs", "Webhooks", "Automations"].map((s) => (
-              <span key={s} className="skill-pill">{s}</span>
-            ))}
+        <div className="tech-category reveal">
+          <div className="tech-cat-title">Tools & Platforms</div>
+          <div className="tech-items">
+            <span className="tech-item">SIP</span>
+            <span className="tech-item">VoIP</span>
+            <span className="tech-item">AWS</span>
+            <span className="tech-item">ECS</span>
+            <span className="tech-item">Docker</span>
+            <span className="tech-item">REST APIs</span>
+            <span className="tech-item">Webhooks</span>
+            <span className="tech-item">Automations</span>
           </div>
         </div>
       </div>
