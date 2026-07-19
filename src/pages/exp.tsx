@@ -12,19 +12,19 @@ const Exp = () => {
       <div className="timeline">
         <Card
           title="Senior Software Development Engineer & Integration Manager"
-          date="June-2025 to Present"
+          date="Jun-2025 to Present"
           description="Leading the integration team and developing integration solutions. I oversee the full lifecycle of integrations from planning and development to deployment and maintenance, ensuring seamless data flow and reliability. Designing and maintaining robust APIs, implementing webhooks and SDKs, and supporting external teams in integrating with our platform. Managing mobile application development, contributing to backend systems, and shaping the future of our integration architecture."
         />
 
         <Card
           title="Software Development Engineer"
-          date="June-2024 to June-2025"
+          date="Jun-2024 to Jun-2025"
           description="Working across backend systems and mobile application development to build scalable, high-performance solutions. Primarily using Django and Django REST Framework to develop robust APIs, manage databases, and handle complex business logic. Building and maintaining cross-platform apps using React Native with a focus on delivering smooth, responsive user experiences on Android. Collaborating with product, design, and integration teams to deliver features efficiently. Experience with AWS services for cloud-based application deployment and management."
         />
 
         <Card
           title="React Native Intern — SIP Calling"
-          date="April-2023 to July-2023"
+          date="Apr-2023 to Jul-2023"
           description="Built Android and iOS applications using React Native with a strong focus on integrating SIP-based calling functionality. Implemented key features for real-time communication, optimized performance, and ensured a smooth, reliable user experience across calling flows and UI interactions."
         />
 

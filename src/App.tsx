@@ -6,12 +6,14 @@ import Skills from "./pages/skills";
 import Exp from "./pages/exp";
 import Home from "./pages/home";
 
+type RGBColor = [number, number, number];
+
 function App() {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const mouseRef = useRef({ x: 0, y: 0 });
   const scrollRef = useRef(0);
-  const cursorDotRef = useRef(null);
-  const cursorRingRef = useRef(null);
+  const cursorDotRef = useRef<HTMLDivElement | null>(null);
+  const cursorRingRef = useRef<HTMLDivElement | null>(null);
   const cursorPos = useRef({ x: 0, y: 0, ringX: 0, ringY: 0 });
 
   const [typedText, setTypedText] = useState("");
@@ -19,24 +21,40 @@ function App() {
 
   // ==================== 3D SPACE BACKGROUND ====================
   const initSpace = useCallback(() => {
-    const canvas: any = canvasRef.current;
+    const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    let width: any, height: any;
-    let stars: any = [];
-    let shootingStars: any = [];
-    let nebulaClouds: any = [];
+
+    const canvasElement = canvas;
+    const ctx = canvasElement.getContext("2d");
+    if (!ctx) return;
+
+    const drawingContext = ctx;
+
+    let width = 0;
+    let height = 0;
+    let stars: Star3D[] = [];
+    let shootingStars: ShootingStar[] = [];
+    let nebulaClouds: NebulaCloud[] = [];
     let time = 0;
 
     function resize() {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      width = canvasElement.width = window.innerWidth;
+      height = canvasElement.height = window.innerHeight;
     }
     resize();
     window.addEventListener("resize", resize);
 
     // 3D Star with depth
     class Star3D {
+      x = 0;
+      y = 0;
+      z = 0;
+      size = 0;
+      baseOpacity = 0;
+      twinkleSpeed = 0;
+      twinklePhase = 0;
+      color: RGBColor = [0, 0, 0];
+
       constructor() {
         this.reset(true);
       }
@@ -50,8 +68,8 @@ function App() {
         this.twinklePhase = Math.random() * Math.PI * 2;
         this.color = this.getStarColor();
       }
-      getStarColor() {
-        const colors = [
+      getStarColor(): RGBColor {
+        const colors: RGBColor[] = [
           [200, 195, 255], // blue-white
           [255, 240, 200], // warm white
           [180, 200, 255], // cool blue
@@ -106,17 +124,17 @@ function App() {
 
         if (drawSize < 0.3) return;
 
-        ctx.beginPath();
-        ctx.arc(pos.x, pos.y, drawSize, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${this.color[0]}, ${this.color[1]}, ${this.color[2]}, ${alpha})`;
-        ctx.fill();
+        drawingContext.beginPath();
+        drawingContext.arc(pos.x, pos.y, drawSize, 0, Math.PI * 2);
+        drawingContext.fillStyle = `rgba(${this.color[0]}, ${this.color[1]}, ${this.color[2]}, ${alpha})`;
+        drawingContext.fill();
 
         // Glow for close/bright stars
         if (this.z < 800 && alpha > 0.5) {
           const glowSize = drawSize * 6;
-          ctx.beginPath();
-          ctx.arc(pos.x, pos.y, glowSize, 0, Math.PI * 2);
-          const gradient = ctx.createRadialGradient(
+          drawingContext.beginPath();
+          drawingContext.arc(pos.x, pos.y, glowSize, 0, Math.PI * 2);
+          const gradient = drawingContext.createRadialGradient(
             pos.x,
             pos.y,
             0,
@@ -132,14 +150,22 @@ function App() {
             1,
             `rgba(${this.color[0]}, ${this.color[1]}, ${this.color[2]}, 0)`,
           );
-          ctx.fillStyle = gradient;
-          ctx.fill();
+          drawingContext.fillStyle = gradient;
+          drawingContext.fill();
         }
       }
     }
 
     // Nebula cloud for depth
     class NebulaCloud {
+      x = 0;
+      y = 0;
+      radius = 0;
+      color: RGBColor = [0, 0, 0];
+      opacity = 0;
+      driftX = 0;
+      driftY = 0;
+
       constructor() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
@@ -149,8 +175,8 @@ function App() {
         this.driftX = (Math.random() - 0.5) * 0.2;
         this.driftY = (Math.random() - 0.5) * 0.2;
       }
-      getColor() {
-        const colors = [
+      getColor(): RGBColor {
+        const colors: RGBColor[] = [
           [124, 111, 255], // purple
           [0, 212, 170], // teal
           [100, 80, 200], // deep purple
@@ -166,7 +192,7 @@ function App() {
         if (this.y > height + this.radius) this.y = -this.radius;
       }
       draw() {
-        const gradient = ctx.createRadialGradient(
+        const gradient = drawingContext.createRadialGradient(
           this.x,
           this.y,
           0,
@@ -186,8 +212,8 @@ function App() {
           1,
           `rgba(${this.color[0]}, ${this.color[1]}, ${this.color[2]}, 0)`,
         );
-        ctx.fillStyle = gradient;
-        ctx.fillRect(
+        drawingContext.fillStyle = gradient;
+        drawingContext.fillRect(
           this.x - this.radius,
           this.y - this.radius,
           this.radius * 2,
@@ -198,6 +224,14 @@ function App() {
 
     // Shooting star
     class ShootingStar {
+      x = 0;
+      y = 0;
+      length = 0;
+      speed = 0;
+      angle = 0;
+      life = 0;
+      decay = 0;
+
       constructor() {
         this.reset();
       }
@@ -219,22 +253,27 @@ function App() {
         if (this.life <= 0) return;
         const tailX = this.x - Math.cos(this.angle) * this.length;
         const tailY = this.y - Math.sin(this.angle) * this.length;
-        const gradient = ctx.createLinearGradient(this.x, this.y, tailX, tailY);
+        const gradient = drawingContext.createLinearGradient(
+          this.x,
+          this.y,
+          tailX,
+          tailY,
+        );
         gradient.addColorStop(0, `rgba(255, 255, 255, ${this.life})`);
         gradient.addColorStop(0.3, `rgba(200, 195, 255, ${this.life * 0.8})`);
         gradient.addColorStop(1, `rgba(124, 111, 255, 0)`);
-        ctx.beginPath();
-        ctx.moveTo(this.x, this.y);
-        ctx.lineTo(tailX, tailY);
-        ctx.strokeStyle = gradient;
-        ctx.lineWidth = 2;
-        ctx.stroke();
+        drawingContext.beginPath();
+        drawingContext.moveTo(this.x, this.y);
+        drawingContext.lineTo(tailX, tailY);
+        drawingContext.strokeStyle = gradient;
+        drawingContext.lineWidth = 2;
+        drawingContext.stroke();
 
         // Head glow
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${this.life})`;
-        ctx.fill();
+        drawingContext.beginPath();
+        drawingContext.arc(this.x, this.y, 3, 0, Math.PI * 2);
+        drawingContext.fillStyle = `rgba(255, 255, 255, ${this.life})`;
+        drawingContext.fill();
       }
     }
 
@@ -247,7 +286,7 @@ function App() {
     }
 
     // Mouse tracking
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       mouseRef.current.x = e.clientX;
       mouseRef.current.y = e.clientY;
     };
@@ -262,8 +301,8 @@ function App() {
     // Animation loop
     function animate() {
       // Clear with slight trail for motion blur effect
-      ctx.fillStyle = "rgba(5, 5, 8, 0.3)";
-      ctx.fillRect(0, 0, width, height);
+      drawingContext.fillStyle = "rgba(5, 5, 8, 0.3)";
+      drawingContext.fillRect(0, 0, width, height);
 
       // Draw nebula clouds first (background layer)
       nebulaClouds.forEach((cloud) => {
@@ -308,20 +347,23 @@ function App() {
     const ring = cursorRingRef.current;
     if (!dot || !ring) return;
 
-    let rafId;
+    const dotElement = dot;
+    const ringElement = ring;
+
+    let rafId = 0;
     function updateCursor() {
       cursorPos.current.ringX +=
         (cursorPos.current.x - cursorPos.current.ringX) * 0.15;
       cursorPos.current.ringY +=
         (cursorPos.current.y - cursorPos.current.ringY) * 0.15;
-      dot.style.left = cursorPos.current.x - 4 + "px";
-      dot.style.top = cursorPos.current.y - 4 + "px";
-      ring.style.left = cursorPos.current.ringX - 20 + "px";
-      ring.style.top = cursorPos.current.ringY - 20 + "px";
-      rafId = requestAnimationFrame(updateCursor);
+      dotElement.style.left = cursorPos.current.x - 4 + "px";
+      dotElement.style.top = cursorPos.current.y - 4 + "px";
+      ringElement.style.left = cursorPos.current.ringX - 20 + "px";
+      ringElement.style.top = cursorPos.current.ringY - 20 + "px";
+      rafId = window.requestAnimationFrame(updateCursor);
     }
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       cursorPos.current.x = e.clientX;
       cursorPos.current.y = e.clientY;
     };
@@ -332,8 +374,8 @@ function App() {
     const hoverElements = document.querySelectorAll(
       "a, button, .tech-item, .role-pill",
     );
-    const handleEnter = () => ring.classList.add("hovering");
-    const handleLeave = () => ring.classList.remove("hovering");
+    const handleEnter = () => ringElement.classList.add("hovering");
+    const handleLeave = () => ringElement.classList.remove("hovering");
     hoverElements.forEach((el) => {
       el.addEventListener("mouseenter", handleEnter);
       el.addEventListener("mouseleave", handleLeave);
@@ -341,7 +383,7 @@ function App() {
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
-      cancelAnimationFrame(rafId);
+      window.cancelAnimationFrame(rafId);
       hoverElements.forEach((el) => {
         el.removeEventListener("mouseenter", handleEnter);
         el.removeEventListener("mouseleave", handleLeave);
@@ -370,7 +412,7 @@ function App() {
   // ==================== TYPING EFFECT ====================
   useEffect(() => {
     let cancelled = false;
-    let timerId;
+    let timerId = 0;
     let charIndex = 0;
 
     const typeWriter = () => {
@@ -387,7 +429,7 @@ function App() {
     timerId = window.setTimeout(typeWriter, 1500);
 
     const glitchTimer = window.setTimeout(() => {
-      const line1 = document.querySelector(".hero-title .line1");
+      const line1 = document.querySelector<HTMLElement>(".hero-title .line1");
       if (line1) {
         line1.style.textShadow = "2px 0 var(--accent), -2px 0 var(--accent2)";
         window.setTimeout(() => {
@@ -405,8 +447,9 @@ function App() {
 
   // ==================== SMOOTH SCROLL ====================
   useEffect(() => {
-    const handleClick = (e) => {
-      const href = e.currentTarget.getAttribute("href");
+    const handleClick = (e: Event) => {
+      const target = e.currentTarget as HTMLAnchorElement;
+      const href = target.getAttribute("href");
       if (href && href.startsWith("#")) {
         e.preventDefault();
         const target = document.querySelector(href);
@@ -432,7 +475,8 @@ function App() {
       const scrollY = window.scrollY;
       orbs.forEach((orb, i) => {
         const speed = (i + 1) * 0.1;
-        orb.style.transform = `translateY(${scrollY * speed}px)`;
+        (orb as HTMLElement).style.transform =
+          `translateY(${scrollY * speed}px)`;
       });
     };
     window.addEventListener("scroll", handleScroll);
