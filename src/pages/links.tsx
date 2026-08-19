@@ -28,6 +28,14 @@ const ContactMe = () => {
           >
             LinkedIn
           </a>
+          <a
+            href="https://drive.google.com/file/d/1bAGv636a9BxP4Hpr4t2F3tplMQHP70EZ/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            Resume
+          </a>
         </div>
       </section>
   );

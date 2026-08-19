@@ -708,6 +708,10 @@ body {
   .section {
     padding: 5rem 1.5rem;
   }
+  .section-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
   .timeline {
     padding-left: 2rem;
   }
@@ -716,6 +720,74 @@ body {
   }
   .exp-card::before {
     left: -2rem;
+  }
+  .hero {
+    padding: 0 1.5rem;
+  }
+  .hero-badge {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+    max-width: 100%;
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .hero-roles {
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+  .role-pill {
+    font-size: 0.65rem;
+    padding: 0.4rem 1rem;
+  }
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 0.9rem 2rem;
+  }
+  .scroll-indicator {
+    bottom: 2rem;
+  }
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .tech-category {
+    padding: 1.5rem;
+  }
+  .contact-section {
+    padding: 5rem 1.5rem;
+  }
+  .contact-links {
+    gap: 1rem;
+  }
+  .contact-link {
+    font-size: 0.7rem;
+    padding: 0.8rem 1.5rem;
+    letter-spacing: 1px;
+  }
+  .orb-1 {
+    width: 200px;
+    height: 200px;
+  }
+  .orb-2 {
+    width: 150px;
+    height: 150px;
+  }
+  .orb-3 {
+    width: 100px;
+    height: 100px;
   }
   .cursor-dot,
   .cursor-ring {
@@ -730,5 +802,90 @@ body {
   .tech-item,
   .role-pill {
     cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 0.8rem 1rem;
+  }
+  .logo {
+    font-size: 0.95rem;
+  }
+  .nav-links {
+    gap: 0.8rem;
+  }
+  .nav-links a {
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+  }
+  .hero-badge {
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    padding: 0.4rem 1rem;
+  }
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+  .hero-roles {
+    gap: 0.4rem;
+  }
+  .role-pill {
+    font-size: 0.6rem;
+    padding: 0.35rem 0.8rem;
+  }
+  .section {
+    padding: 4rem 1rem;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  .exp-card {
+    padding: 1.3rem;
+  }
+  .exp-card::before {
+    left: -1.5rem;
+    width: 10px;
+    height: 10px;
+  }
+  .exp-role {
+    font-size: 1.05rem;
+  }
+  .exp-desc {
+    font-size: 0.85rem;
+  }
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+  .tech-category {
+    padding: 1.2rem;
+  }
+  .tech-item {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.8rem;
+  }
+  .contact-section {
+    padding: 4rem 1rem;
+  }
+  .contact-title {
+    font-size: 1.5rem;
+  }
+  .contact-desc {
+    font-size: 0.85rem;
+  }
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-link {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+  .footer {
+    padding: 2rem 1rem;
   }
 }
