@@ -696,39 +696,36 @@ function App() {
           if (entry.isIntersecting && !entry.target.classList.contains("glitched")) {
             entry.target.classList.add("glitched");
             const el = entry.target as HTMLElement;
+            el.style.transition = "none";
 
-            // Multi-step glitch sequence
-            const glitchSteps = [
-              { offset: 0,   textShadow: "3px 0 var(--accent), -3px 0 var(--accent2)", transform: "translateX(2px)" },
-              { offset: 50,  textShadow: "-2px 0 var(--accent2), 2px 0 var(--accent)", transform: "translateX(-3px) skewX(-2deg)" },
-              { offset: 100, textShadow: "1px 0 var(--accent), -1px 0 var(--accent2)", transform: "translateX(1px) skewX(1deg)" },
-              { offset: 150, textShadow: "-3px 0 var(--accent), 3px 0 var(--accent2)", transform: "translateX(-1px)" },
-              { offset: 200, textShadow: "none", transform: "none" },
-            ];
+            const apply = (s: { ts?: string; tf?: string; cp?: string }) => {
+              if (s.ts !== undefined) el.style.textShadow = s.ts;
+              if (s.tf !== undefined) el.style.transform = s.tf;
+              if (s.cp !== undefined) el.style.clipPath = s.cp;
+            };
 
-            glitchSteps.forEach(({ offset, textShadow, transform }) => {
-              setTimeout(() => {
-                el.style.textShadow = textShadow;
-                el.style.transform = transform;
-                el.style.transition = "text-shadow 0.05s, transform 0.05s";
-              }, offset);
-            });
+            // --- Burst 1: strong initial glitch ---
+            setTimeout(() => apply({ ts: "5px 0 var(--accent), -5px 0 var(--accent2), 0 3px rgba(0,212,170,0.4)", tf: "translateX(4px) skewX(-4deg)" }), 0);
+            setTimeout(() => apply({ cp: "inset(15% 0 25% 0)" }), 40);
+            setTimeout(() => apply({ ts: "-4px 0 var(--accent2), 4px 0 var(--accent)", tf: "translateX(-6px) skewX(3deg)", cp: "inset(45% 0 5% 0)" }), 90);
+            setTimeout(() => apply({ ts: "3px 0 var(--accent), -3px 0 var(--accent2)", tf: "translateX(3px)" }), 160);
+            setTimeout(() => apply({ cp: "inset(5% 0 60% 0)" }), 200);
+            setTimeout(() => apply({ ts: "none", tf: "none", cp: "none" }), 280);
 
-            // Add clip-path flash effect
-            setTimeout(() => {
-              el.style.clipPath = "inset(10% 0 20% 0)";
-            }, 75);
-            setTimeout(() => {
-              el.style.clipPath = "inset(40% 0 10% 0)";
-            }, 125);
-            setTimeout(() => {
-              el.style.clipPath = "none";
-              el.style.transition = "";
-            }, 200);
+            // --- Burst 2: second wave ---
+            setTimeout(() => apply({ ts: "-6px 0 var(--accent2), 6px 0 var(--accent), 0 -2px rgba(124,111,255,0.5)", tf: "translateX(-5px) skewX(5deg) scaleY(1.02)" }), 380);
+            setTimeout(() => apply({ cp: "inset(30% 0 10% 0)" }), 430);
+            setTimeout(() => apply({ ts: "4px 0 var(--accent), -4px 0 var(--accent2)", tf: "translateX(4px) skewX(-2deg)", cp: "inset(0% 0 40% 0)" }), 490);
+            setTimeout(() => apply({ ts: "-2px 0 var(--accent2), 2px 0 var(--accent)", tf: "translateX(-2px)" }), 560);
+            setTimeout(() => apply({ cp: "inset(50% 0 0% 0)" }), 590);
+
+            // --- Settle ---
+            setTimeout(() => apply({ ts: "2px 0 var(--accent), -2px 0 var(--accent2)", tf: "translateX(1px)", cp: "none" }), 660);
+            setTimeout(() => apply({ ts: "none", tf: "none", cp: "none" }), 740);
           }
         });
       },
-      { threshold: 0.3 },
+      { threshold: 0.15 },
     );
 
     titles.forEach((t) => observer.observe(t));
