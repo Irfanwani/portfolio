@@ -8,6 +8,17 @@ import Home from "./pages/home";
 
 type RGBColor = [number, number, number];
 
+interface TrailParticle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  life: number;
+  maxLife: number;
+  size: number;
+  color: RGBColor;
+}
+
 function App() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const mouseRef = useRef({ x: 0, y: 0 });
@@ -35,7 +46,12 @@ function App() {
     let stars: Star3D[] = [];
     let shootingStars: ShootingStar[] = [];
     let nebulaClouds: NebulaCloud[] = [];
+    let trailParticles: TrailParticle[] = [];
     let time = 0;
+    let mouseVx = 0;
+    let mouseVy = 0;
+    let lastMouseX = 0;
+    let lastMouseY = 0;
 
     function resize() {
       width = canvasElement.width = window.innerWidth;
@@ -54,6 +70,9 @@ function App() {
       twinkleSpeed = 0;
       twinklePhase = 0;
       color: RGBColor = [0, 0, 0];
+      screenX = 0;
+      screenY = 0;
+      screenScale = 1;
 
       constructor() {
         this.reset(true);
@@ -103,8 +122,24 @@ function App() {
 
         const perspective = 400;
         const scale = perspective / (perspective + this.z);
-        const sx = width / 2 + (this.x - mx) * scale;
-        const sy = height / 2 + (this.y - my + scrollOffset) * scale;
+        let sx = width / 2 + (this.x - mx) * scale;
+        let sy = height / 2 + (this.y - my + scrollOffset) * scale;
+
+        // Mouse proximity repulsion for nearby stars
+        if (this.z < 600) {
+          const dx = sx - mouseRef.current.x;
+          const dy = sy - mouseRef.current.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120 && dist > 0) {
+            const force = (120 - dist) / 120;
+            sx += (dx / dist) * force * 25;
+            sy += (dy / dist) * force * 25;
+          }
+        }
+
+        this.screenX = sx;
+        this.screenY = sy;
+        this.screenScale = scale;
         return { x: sx, y: sy, scale, z: this.z };
       }
       draw() {
@@ -285,10 +320,33 @@ function App() {
       nebulaClouds.push(new NebulaCloud());
     }
 
-    // Mouse tracking
+    // Mouse tracking with velocity
     const handleMouseMove = (e: MouseEvent) => {
+      mouseVx = e.clientX - lastMouseX;
+      mouseVy = e.clientY - lastMouseY;
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
       mouseRef.current.x = e.clientX;
       mouseRef.current.y = e.clientY;
+
+      // Spawn trail particles based on mouse speed
+      const speed = Math.sqrt(mouseVx * mouseVx + mouseVy * mouseVy);
+      if (speed > 3) {
+        const count = Math.min(Math.floor(speed / 5), 3);
+        const colors: RGBColor[] = [[124, 111, 255], [0, 212, 170], [200, 195, 255]];
+        for (let i = 0; i < count; i++) {
+          trailParticles.push({
+            x: e.clientX + (Math.random() - 0.5) * 10,
+            y: e.clientY + (Math.random() - 0.5) * 10,
+            vx: (Math.random() - 0.5) * 2 - mouseVx * 0.1,
+            vy: (Math.random() - 0.5) * 2 - mouseVy * 0.1,
+            life: 40 + Math.random() * 30,
+            maxLife: 70,
+            size: Math.random() * 2 + 1,
+            color: colors[Math.floor(Math.random() * colors.length)],
+          });
+        }
+      }
     };
     document.addEventListener("mousemove", handleMouseMove);
 
@@ -328,6 +386,64 @@ function App() {
         s.update();
         s.draw();
       });
+
+      // Constellation lines between nearby close stars
+      const closeStars = stars.filter((s) => s.z < 500 && s.screenX > 0 && s.screenX < width && s.screenY > 0 && s.screenY < height);
+      for (let i = 0; i < closeStars.length; i++) {
+        for (let j = i + 1; j < closeStars.length; j++) {
+          const a = closeStars[i];
+          const b = closeStars[j];
+          const dx = a.screenX - b.screenX;
+          const dy = a.screenY - b.screenY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100) {
+            const lineAlpha = (1 - dist / 100) * 0.12;
+            const depthAvg = (a.z + b.z) / 2;
+            const depthFade = Math.max(0, 1 - depthAvg / 500);
+            drawingContext.beginPath();
+            drawingContext.moveTo(a.screenX, a.screenY);
+            drawingContext.lineTo(b.screenX, b.screenY);
+            drawingContext.strokeStyle = `rgba(124, 111, 255, ${lineAlpha * depthFade})`;
+            drawingContext.lineWidth = 0.5;
+            drawingContext.stroke();
+          }
+        }
+      }
+
+      // Cursor trail particles
+      for (let i = trailParticles.length - 1; i >= 0; i--) {
+        const p = trailParticles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vx *= 0.97;
+        p.vy *= 0.97;
+        p.life -= 1;
+        if (p.life <= 0) {
+          trailParticles.splice(i, 1);
+          continue;
+        }
+        const lifeRatio = p.life / p.maxLife;
+        const pAlpha = lifeRatio * 0.6;
+        const pSize = p.size * lifeRatio;
+        drawingContext.beginPath();
+        drawingContext.arc(p.x, p.y, pSize, 0, Math.PI * 2);
+        drawingContext.fillStyle = `rgba(${p.color[0]}, ${p.color[1]}, ${p.color[2]}, ${pAlpha})`;
+        drawingContext.fill();
+        // Particle glow
+        if (pSize > 0.8) {
+          const glowGrad = drawingContext.createRadialGradient(p.x, p.y, 0, p.x, p.y, pSize * 4);
+          glowGrad.addColorStop(0, `rgba(${p.color[0]}, ${p.color[1]}, ${p.color[2]}, ${pAlpha * 0.3})`);
+          glowGrad.addColorStop(1, `rgba(${p.color[0]}, ${p.color[1]}, ${p.color[2]}, 0)`);
+          drawingContext.beginPath();
+          drawingContext.arc(p.x, p.y, pSize * 4, 0, Math.PI * 2);
+          drawingContext.fillStyle = glowGrad;
+          drawingContext.fill();
+        }
+      }
+      // Limit trail particles
+      if (trailParticles.length > 150) {
+        trailParticles = trailParticles.slice(-150);
+      }
 
       time += 0.016;
       requestAnimationFrame(animate);
@@ -481,6 +597,142 @@ function App() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // ==================== MAGNETIC CURSOR ====================
+  useEffect(() => {
+    if ("ontouchstart" in window) return;
+
+    const magneticElements = document.querySelectorAll<HTMLElement>(
+      ".btn-primary, .btn-secondary, .contact-link",
+    );
+
+    const cleanups: (() => void)[] = [];
+
+    magneticElements.forEach((el) => {
+      const handleMouseMove = (e: MouseEvent) => {
+        const rect = el.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const dx = e.clientX - centerX;
+        const dy = e.clientY - centerY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 150) {
+          el.style.transform = `translate(${dx * 0.35}px, ${dy * 0.35}px)`;
+        } else {
+          el.style.transform = "";
+        }
+      };
+
+      const handleMouseLeave = () => {
+        el.style.transform = "";
+      };
+
+      document.addEventListener("mousemove", handleMouseMove);
+      el.addEventListener("mouseleave", handleMouseLeave);
+
+      cleanups.push(() => {
+        document.removeEventListener("mousemove", handleMouseMove);
+        el.removeEventListener("mouseleave", handleMouseLeave);
+      });
+    });
+
+    return () => cleanups.forEach((fn) => fn());
+  }, []);
+
+  // ==================== 3D TILT CARDS ====================
+  useEffect(() => {
+    if ("ontouchstart" in window) return;
+
+    const tiltCards = document.querySelectorAll<HTMLElement>(
+      ".exp-card, .tech-category",
+    );
+
+    const cleanups: (() => void)[] = [];
+
+    tiltCards.forEach((card) => {
+      const handleMouseMove = (e: MouseEvent) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -8;
+        const rotateY = ((x - centerX) / centerX) * 8;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+
+        // Dynamic gradient highlight following cursor
+        const gradX = (x / rect.width) * 100;
+        const gradY = (y / rect.height) * 100;
+        card.style.background = `radial-gradient(circle at ${gradX}% ${gradY}%, rgba(124, 111, 255, 0.08) 0%, var(--bg-card) 50%)`;
+      };
+
+      const handleMouseLeave = () => {
+        card.style.transform = "";
+        card.style.background = "";
+      };
+
+      card.addEventListener("mousemove", handleMouseMove);
+      card.addEventListener("mouseleave", handleMouseLeave);
+
+      cleanups.push(() => {
+        card.removeEventListener("mousemove", handleMouseMove);
+        card.removeEventListener("mouseleave", handleMouseLeave);
+      });
+    });
+
+    return () => cleanups.forEach((fn) => fn());
+  }, []);
+
+  // ==================== GLITCH ON SCROLL ====================
+  useEffect(() => {
+    const titles = document.querySelectorAll<HTMLElement>(".section-title, .contact-title");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !entry.target.classList.contains("glitched")) {
+            entry.target.classList.add("glitched");
+            const el = entry.target as HTMLElement;
+
+            // Multi-step glitch sequence
+            const glitchSteps = [
+              { offset: 0,   textShadow: "3px 0 var(--accent), -3px 0 var(--accent2)", transform: "translateX(2px)" },
+              { offset: 50,  textShadow: "-2px 0 var(--accent2), 2px 0 var(--accent)", transform: "translateX(-3px) skewX(-2deg)" },
+              { offset: 100, textShadow: "1px 0 var(--accent), -1px 0 var(--accent2)", transform: "translateX(1px) skewX(1deg)" },
+              { offset: 150, textShadow: "-3px 0 var(--accent), 3px 0 var(--accent2)", transform: "translateX(-1px)" },
+              { offset: 200, textShadow: "none", transform: "none" },
+            ];
+
+            glitchSteps.forEach(({ offset, textShadow, transform }) => {
+              setTimeout(() => {
+                el.style.textShadow = textShadow;
+                el.style.transform = transform;
+                el.style.transition = "text-shadow 0.05s, transform 0.05s";
+              }, offset);
+            });
+
+            // Add clip-path flash effect
+            setTimeout(() => {
+              el.style.clipPath = "inset(10% 0 20% 0)";
+            }, 75);
+            setTimeout(() => {
+              el.style.clipPath = "inset(40% 0 10% 0)";
+            }, 125);
+            setTimeout(() => {
+              el.style.clipPath = "none";
+              el.style.transition = "";
+            }, 200);
+          }
+        });
+      },
+      { threshold: 0.3 },
+    );
+
+    titles.forEach((t) => observer.observe(t));
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
