@@ -732,6 +732,25 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
+  // ==================== BORDER GRADIENT ANGLE ====================
+  useEffect(() => {
+    if ("ontouchstart" in window) return;
+
+    let angle = 0;
+    let raf: number;
+
+    const tick = () => {
+      angle = (angle + 5) % 360;
+      document.querySelectorAll<HTMLElement>(".contact-link").forEach((el) => {
+        el.style.setProperty("--angle", `${angle}deg`);
+      });
+      raf = requestAnimationFrame(tick);
+    };
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
   useEffect(() => {
     initSpace();
   }, [initSpace]);

@@ -649,48 +649,46 @@ body {
   letter-spacing: 2px;
   padding: 1rem 2rem;
   border-radius: 100px;
-  border: 1px solid var(--border);
+  border: none;
   color: var(--text-secondary);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   cursor: none;
   position: relative;
-  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
-    linear-gradient(
-      var(--gradient-angle, 0deg),
-      var(--accent),
-      var(--accent2),
-      #ff6b9d,
-      var(--accent)
-    ) border-box;
-  border: 1px solid transparent;
-  animation: borderRotate 4s linear infinite;
+  background: var(--bg-card);
+  z-index: 1;
 }
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
+.contact-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 100px;
+  padding: 2px;
+  background: conic-gradient(
+    from var(--angle, 0deg),
+    var(--accent),
+    var(--accent2),
+    #ff6b9d,
+    var(--accent)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  pointer-events: none;
 }
-@keyframes borderRotate {
+@keyframes borderSpin {
   to {
-    --gradient-angle: 360deg;
+    transform: rotate(360deg);
   }
 }
 .contact-link:hover {
-  border-color: transparent;
   color: var(--text-primary);
-  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
-    linear-gradient(
-      var(--gradient-angle, 0deg),
-      var(--accent),
-      var(--accent2),
-      #ff6b9d,
-      var(--accent)
-    ) border-box;
-  transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(124, 111, 255, 0.2);
 }
 
