@@ -43,7 +43,6 @@ through the UI, including counters and the 3D graph.
 | `experience`          | Experience timeline                     |
 | `education` / `certifications` | Academic + cert panels          |
 | `projects`            | Ranked top 10 project cards             |
-| `otherProjects`       | "Also in the repository" strip          |
 | `integrationNodes` / `integrationEdges` | The 3D hero graph         |
 | `bootLines`           | Console boot sequence                   |
 | `sections`            | Nav items + section codes               |

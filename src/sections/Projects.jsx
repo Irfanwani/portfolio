@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { otherProjects, projects } from '../data/profile'
+import { projects } from '../data/profile'
 import { Section, Reveal, Icon } from '../components/ui'
 import TiltCard from '../components/TiltCard'
 
@@ -160,47 +160,6 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* ---------- also in the repo ---------- */}
-      <Reveal delay={0.1} className="mt-10">
-        <div className="panel panel-edge p-6">
-          <div className="mb-5 flex items-center gap-2">
-            <Icon.layers size={15} className="text-cyan" />
-            <span className="font-mono text-[10px] tracking-[0.26em] text-ice/55">
-              ALSO IN THE REPOSITORY
-            </span>
-            <span className="font-mono text-[9.5px] text-ice/25">
-              {otherProjects.length} more
-            </span>
-          </div>
-          <div className="grid gap-x-6 gap-y-2 sm:grid-cols-2">
-            {otherProjects.map((o, i) => (
-              <motion.a
-                key={o.name}
-                href={o.href}
-                target="_blank"
-                rel="noreferrer noopener"
-                data-hot
-                initial={{ opacity: 0, x: 12 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.03 }}
-                className="group flex items-center gap-2.5 border-b border-stroke/40 py-2 transition-colors"
-              >
-                <Icon.chevron
-                  size={12}
-                  className="shrink-0 text-ice/25 transition-all duration-300 group-hover:translate-x-0.5 group-hover:text-cyan"
-                />
-                <span className="shrink-0 font-mono text-[11px] text-ice/75 transition-colors group-hover:text-cyan">
-                  {o.name}
-                </span>
-                <span className="truncate font-mono text-[10px] text-ice/35">
-                  {o.desc}
-                </span>
-              </motion.a>
-            ))}
-          </div>
-        </div>
-      </Reveal>
     </Section>
   )
 }

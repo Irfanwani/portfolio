@@ -306,7 +306,6 @@ export const projects = [
     private: true,
     links: [
       { label: 'Play Store', href: profile.playStore, icon: 'play' },
-      { label: 'Source', href: 'https://github.com/Irfanwani/geotagcamera', icon: 'github' },
     ],
     highlights: [
       'Native camera + geolocation capture pipeline',
@@ -481,28 +480,6 @@ id: 'frejun-dialer',
 
   {
     rank: 9,
-    id: 'virtugift',
-    name: 'Virtual Gift',
-    tagline: 'React Native app with native iOS and Android modules',
-    description:
-      'A virtual gifting application built with React Native and TypeScript, backed by hand-written native modules for both Android and iOS — Kotlin for Android and Objective-C++ for the iOS layer.',
-    tech: ['React Native', 'TypeScript', 'Kotlin', 'Objective-C++', 'iOS'],
-    metric: 'CROSS-PLATFORM NATIVE',
-    accent: 'amber',
-    live: false,
-    private: true,
-    links: [
-      { label: 'Source', href: 'https://github.com/Irfanwani/virtugift', icon: 'github' },
-    ],
-    highlights: [
-      'Shared React Native + TypeScript application layer',
-      'Native Android (Kotlin) and iOS (Objective-C++) modules',
-      'Cross-platform gifting flow end to end',
-    ],
-  },
-
-  {
-    rank: 10,
     id: 'kashmiri-wedding-tracker',
     name: 'Kashmiri Wedding Tracker',
     tagline: 'Expo app for wedding logistics, guests and expenses',
@@ -514,6 +491,7 @@ id: 'frejun-dialer',
     live: false,
     private: false,
     links: [
+      { label: 'Play Store', href: 'https://play.google.com/store/apps/details?id=com.appshop.kashmiriweddingtracker', icon: 'play' },
       { label: 'Source', href: 'https://github.com/Irfanwani/kashmiri-wedding-tracker', icon: 'github' },
     ],
     highlights: [
@@ -524,19 +502,6 @@ id: 'frejun-dialer',
   },
 ]
 
-/** Shown as a compact strip under the ranked list. */
-export const otherProjects = [
-  { name: 'IPS', desc: 'Internal full-stack platform — React/TS frontend + Python API', href: 'https://github.com/Irfanwani/ips-frontend' },
-  { name: 'img2sketch', desc: 'Python image-to-sketch conversion', href: 'https://github.com/Irfanwani/img2sketch' },
-  { name: 'Excel Formatter', desc: 'React + Vite spreadsheet formatting tool', href: 'https://github.com/Irfanwani/excel-formatter' },
-  { name: 'CyberStudio', desc: 'React + Vite build, Oxlint-configured', href: 'https://github.com/Irfanwani/cyberstudio' },
-  { name: 'Location App', desc: 'React Native app resolving user location and address', href: 'https://github.com/Irfanwani/locationapp' },
-  { name: 'App Shop Generator', desc: 'React Native app with native modules', href: 'https://github.com/Irfanwani/appshopimagegeneration' },
-  { name: 'Shadowwolf', desc: 'React + TypeScript + Vite application', href: 'https://github.com/Irfanwani/shadowwolf' },
-  { name: 'Autotranslator', desc: 'Translation preserving tone and emotion (TeX/Jupyter)', href: 'https://github.com/Irfanwani/autotranslator' },
-  { name: 'Electron Flux', desc: 'Astrophysics notebook — electron flux vs energy', href: 'https://github.com/Irfanwani/astro' },
-  { name: 'Instagram Clone', desc: 'Social feed UI built in Java', href: 'https://github.com/Irfanwani/social-media-app' },
-]
 
 /* ------------------------------------------------------------------ */
 /*  INTEGRATION GRAPH — drives the hero 3D scene                        */

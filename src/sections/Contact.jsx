@@ -90,7 +90,7 @@ export default function Contact() {
             </h2>
 
             <p className="mt-5 font-mono text-[12.5px] leading-relaxed text-ice/55">
-              <span className="text-cyan/70">&gt;</span> Open to integration engineering
+              <span className="text-cyan/70">&gt;</span> Open to AI and software engineering
               roles, API and platform work, React Native positions, and freelance
               builds. Currently at{' '}
               <span className="text-cyan">{profile.org}</span> as{' '}

@@ -212,13 +212,6 @@ export default function About() {
 
       {/* ================= STACK + INTEGRATION MAP ================= */}
       <Section id="stack" className="py-20 sm:py-24" label="STACK" code="02">
-        <Reveal className="mb-10 max-w-2xl">
-          <p className="font-mono text-[12.5px] leading-relaxed text-ice/55">
-            <span className="text-cyan/70">&gt;</span> The integration graph in the header
-            is live in 3D — every node below is a system this work keeps connected.
-            Hover the cards to inspect the stack.
-          </p>
-        </Reveal>
 
         <div className="grid gap-6 lg:grid-cols-[1.05fr_1fr] lg:gap-8">
           {/* tech stack cards */}

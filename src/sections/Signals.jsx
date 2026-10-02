@@ -10,13 +10,6 @@ export default function Signals() {
 
   return (
     <Section id="stats" className="py-20 sm:py-24" label="SIGNALS" code="05">
-      <Reveal className="mb-9 max-w-2xl">
-        <p className="font-mono text-[12.5px] leading-relaxed text-ice/55">
-          <span className="text-cyan/70">&gt;</span> GitHub exposes an unauthenticated
-          REST API, so these figures are fetched on every build and are always
-          current. Nothing here is hand-maintained.
-        </p>
-      </Reveal>
 
       {/* ---- live API stats ---- */}
       <Reveal className="mb-4 flex flex-wrap items-center gap-2">
