@@ -77,7 +77,7 @@ export default function BootSequence({ onDone }) {
 
           <div className="relative w-full max-w-xl px-6">
             {/* Header */}
-            <div className="mb-6 flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] text-ice/40">
+            <div className="mb-6 flex items-center gap-2 font-mono text-[10px] tracking-[0.3em] text-ice/58">
               <StatusDot />
               <span>UPLINK · SECURE CHANNEL</span>
             </div>
@@ -95,7 +95,7 @@ export default function BootSequence({ onDone }) {
                       ? 'mb-3 text-cyan glow-cyan'
                       : line.type === 'success'
                         ? 'mt-4 text-lime'
-                        : 'text-ice/65'
+                        : 'text-ice/82'
                   }
                 >
                   {line.type === 'success' ? (
@@ -117,7 +117,7 @@ export default function BootSequence({ onDone }) {
 
             {/* Progress */}
             <div className="mt-7">
-              <div className="mb-2 flex items-center justify-between font-mono text-[10px] tracking-[0.2em] text-ice/45">
+              <div className="mb-2 flex items-center justify-between font-mono text-[10px] tracking-[0.2em] text-ice/63">
                 <span>LOADING FLIGHT SYSTEMS</span>
                 <span className="text-cyan">{String(progress).padStart(3, '0')}%</span>
               </div>
@@ -133,7 +133,7 @@ export default function BootSequence({ onDone }) {
               </div>
             </div>
 
-            <div className="mt-6 flex items-center justify-between font-mono text-[9px] tracking-[0.22em] text-ice/25">
+            <div className="mt-6 flex items-center justify-between font-mono text-[9px] tracking-[0.22em] text-ice/56">
               <span>{profile.callSign} :: OS 4.2.1-STABLE</span>
               <span>© {YEAR}</span>
             </div>

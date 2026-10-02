@@ -321,7 +321,7 @@ export default function DevCursor() {
           {/* telemetry readout */}
           <span
             ref={readoutRef}
-            className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[7px] tracking-[0.1em] text-cyan/70 tabular-nums"
+            className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono text-[7px] tracking-[0.1em] text-cyan/80 tabular-nums"
           >
             0x0000 00000000
           </span>
@@ -356,7 +356,7 @@ export default function DevCursor() {
             />
           ))}
         </svg>
-        <span className="absolute left-1/2 top-full mt-1 -translate-x-1/2 font-mono text-[7px] tracking-[0.18em] text-cyan/70">
+        <span className="absolute left-1/2 top-full mt-1 -translate-x-1/2 font-mono text-[7px] tracking-[0.18em] text-cyan/80">
           LOCK
         </span>
       </div>

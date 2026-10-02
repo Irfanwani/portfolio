@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { projects } from '../data/profile'
-import { Section, Reveal, Icon } from '../components/ui'
+import { Section, Icon } from '../components/ui'
 import TiltCard from '../components/TiltCard'
 
 const EASE = [0.16, 1, 0.3, 1]
@@ -65,13 +65,13 @@ export default function Projects() {
                     {p.private && (
                       <span
                         title="Repository is private"
-                        className="border border-amber/30 bg-amber/[0.06] px-1.5 py-[2px] font-mono text-[8px] tracking-[0.14em] text-amber/90"
+                        className="border border-amber/30 bg-amber/[0.06] px-1.5 py-[2px] font-mono text-[8px] tracking-[0.14em] text-amber/94"
                       >
                         PRIVATE
                       </span>
                     )}
                     {p.stars > 0 && (
-                      <span className="border border-stroke px-1.5 py-[2px] font-mono text-[8.5px] text-ice/50">
+                      <span className="border border-stroke px-1.5 py-[2px] font-mono text-[8.5px] text-ice/68">
                         {p.stars}★
                       </span>
                     )}
@@ -97,11 +97,11 @@ export default function Projects() {
                 <h3 className="relative z-10 mt-4 font-display text-[16px] leading-snug font-semibold text-ice transition-colors duration-300 group-hover:text-cyan">
                   {p.name}
                 </h3>
-                <p className="relative z-10 mt-1 font-mono text-[10.5px] leading-snug text-ice/45">
+                <p className="relative z-10 mt-1 font-mono text-[10.5px] leading-snug text-ice/63">
                   {p.tagline}
                 </p>
 
-                <p className="relative z-10 mt-3 flex-1 font-mono text-[11px] leading-relaxed text-ice/52">
+                <p className="relative z-10 mt-3 flex-1 font-mono text-[11px] leading-relaxed text-ice/70">
                   {p.description}
                 </p>
 
@@ -110,7 +110,7 @@ export default function Projects() {
                   {p.highlights.map((h) => (
                     <li
                       key={h}
-                      className="flex items-start gap-1.5 font-mono text-[10px] leading-relaxed text-ice/42"
+                      className="flex items-start gap-1.5 font-mono text-[10px] leading-relaxed text-ice/60"
                     >
                       <span className={`mt-[3px] shrink-0 ${accentText[p.accent]}/70`}>▸</span>
                       <span>{h}</span>
@@ -123,7 +123,7 @@ export default function Projects() {
                   {p.tech.map((t) => (
                     <span
                       key={t}
-                      className="border border-stroke/70 bg-white/[0.02] px-1.5 py-[2px] font-mono text-[9px] tracking-[0.08em] text-ice/45"
+                      className="border border-stroke/70 bg-white/[0.02] px-1.5 py-[2px] font-mono text-[9px] tracking-[0.08em] text-ice/63"
                     >
                       {t}
                     </span>
@@ -145,7 +145,7 @@ export default function Projects() {
                         className={`group/btn inline-flex items-center gap-1.5 border px-2.5 py-1.5 font-mono text-[9.5px] tracking-[0.13em] transition-all duration-300 ${
                           isPlay
                             ? 'border-lime/45 bg-lime/[0.08] text-lime hover:bg-lime hover:text-void'
-                            : 'border-stroke bg-white/[0.02] text-ice/55 hover:border-cyan/45 hover:text-cyan'
+                            : 'border-stroke bg-white/[0.02] text-ice/72 hover:border-cyan/45 hover:text-cyan'
                         }`}
                       >
                         <Ico size={12} />

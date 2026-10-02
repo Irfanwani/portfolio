@@ -62,9 +62,18 @@ export const githubStatKeys = ['followers', 'publicRepos', 'totalStars', 'origin
 /* ------------------------------------------------------------------ */
 /*  TECH STACK                                                         */
 /* ------------------------------------------------------------------ */
+/** Spoken languages. Distinct from the programming-language skill group below. */
+export const languages = [
+  { name: 'English', level: 'Full Professional', pct: 100 },
+  { name: 'Urdu', level: 'Full Professional', pct: 100 },
+  { name: 'Kashmiri', level: 'Native / Bilingual', pct: 100 },
+  { name: 'Hindi', level: 'Limited Working', pct: 45 },
+  { name: 'German', level: 'Elementary', pct: 20 },
+]
+
 export const skills = [
   {
-    group: 'Languages',
+    group: 'Programming Languages',
     items: ['Python', 'TypeScript', 'JavaScript', 'SQL', 'Java', 'Kotlin', 'Swift', 'C++'],
   },
   {

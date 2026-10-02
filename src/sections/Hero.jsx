@@ -32,10 +32,10 @@ export default function Hero() {
               <StatusDot />
               OPEN TO WORK
             </span>
-            <span className="flex items-center gap-1.5 font-mono text-[9.5px] tracking-[0.2em] text-ice/40">
+            <span className="flex items-center gap-1.5 font-mono text-[9.5px] tracking-[0.2em] text-ice/58">
               <Icon.pin size={12} /> {profile.location}
             </span>
-            <span className="flex items-center gap-1.5 font-mono text-[9.5px] tracking-[0.2em] text-ice/40">
+            <span className="flex items-center gap-1.5 font-mono text-[9.5px] tracking-[0.2em] text-ice/58">
               <Icon.clock size={12} /> {profile.timezone}
             </span>
           </motion.div>
@@ -43,14 +43,14 @@ export default function Hero() {
           {/* eyebrow */}
           <motion.p
             variants={rise}
-            className="mb-3 flex flex-wrap items-center gap-x-2 gap-y-0.5 font-mono text-[10.5px] leading-relaxed tracking-[0.2em] text-cyan/75 sm:text-[11px] sm:tracking-[0.28em]"
+            className="mb-3 flex flex-wrap items-center gap-x-2 gap-y-0.5 font-mono text-[10.5px] leading-relaxed tracking-[0.2em] text-cyan/86 sm:text-[11px] sm:tracking-[0.28em]"
           >
-            <span className="text-violet/70">&gt;</span>
+            <span className="text-violet/80">&gt;</span>
             {/* full title is too long on narrow screens */}
             <span className="sm:hidden">{profile.shortTitle.toUpperCase()}</span>
             <span className="hidden sm:inline">{profile.title.toUpperCase()}</span>
-            <span className="text-ice/20">//</span>
-            <span className="text-ice/45">{profile.org}</span>
+            <span className="text-ice/52">//</span>
+            <span className="text-ice/63">{profile.org}</span>
           </motion.p>
 
           {/* name */}
@@ -75,9 +75,9 @@ export default function Hero() {
 
           <motion.p
             variants={rise}
-            className="mt-6 max-w-xl font-mono text-[12.5px] leading-relaxed text-ice/60 sm:text-sm"
+            className="mt-6 max-w-xl font-mono text-[12.5px] leading-relaxed text-ice/78 sm:text-sm"
           >
-            <span className="text-cyan/70">&gt;</span> {profile.summary}
+            <span className="text-cyan/80">&gt;</span> {profile.summary}
           </motion.p>
 
           {/* integration chip strip */}
@@ -105,8 +105,8 @@ export default function Hero() {
                 transition={{ delay: 0.85 + ki * 0.045, duration: 0.32 }}
                 className={`border px-2.5 py-1 font-mono text-[9.5px] tracking-[0.13em] transition-colors ${
                   AI_TAGS.includes(k)
-                    ? 'border-violet/40 bg-violet/[0.07] text-violet/90 hover:border-violet hover:text-violet'
-                    : 'border-stroke/80 bg-white/[0.025] text-ice/55 hover:border-cyan/40 hover:text-cyan'
+                    ? 'border-violet/40 bg-violet/[0.07] text-violet/94 hover:border-violet hover:text-violet'
+                    : 'border-stroke/80 bg-white/[0.025] text-ice/72 hover:border-cyan/40 hover:text-cyan'
                 }`}
               >
                 {k}
@@ -131,11 +131,11 @@ export default function Hero() {
               target="_blank"
               rel="noreferrer noopener"
               data-hot
-              className="group inline-flex items-center gap-2.5 border border-stroke bg-white/[0.03] px-6 py-3 font-mono text-[11px] tracking-[0.18em] text-ice/75 transition-all duration-300 hover:border-violet/50 hover:text-violet hover:shadow-[0_0_30px_-8px_rgba(167,139,250,0.7)]"
+              className="group inline-flex items-center gap-2.5 border border-stroke bg-white/[0.03] px-6 py-3 font-mono text-[11px] tracking-[0.18em] text-ice/88 transition-all duration-300 hover:border-violet/50 hover:text-violet hover:shadow-[0_0_30px_-8px_rgba(167,139,250,0.7)]"
             >
               <Icon.github size={15} />
               GITHUB
-              <span className="text-violet/70">{statsMeta.github.followers}★ followers</span>
+              <span className="text-violet/80">{statsMeta.github.followers}★ followers</span>
             </a>
 
             <a
@@ -164,7 +164,7 @@ export default function Hero() {
               className="group relative bg-void/70 px-4 py-3.5 backdrop-blur-sm transition-colors duration-300 hover:bg-hull/60"
             >
               <div className="flex items-center gap-1.5">
-                <span className="font-mono text-[9px] tracking-[0.18em] text-ice/35">
+                <span className="font-mono text-[9px] tracking-[0.18em] text-ice/52">
                   {s.label}
                 </span>
                 <span
@@ -185,7 +185,7 @@ export default function Hero() {
               >
                 {formatCount(s.value)}
               </div>
-              <div className="mt-0.5 font-mono text-[8.5px] tracking-[0.13em] text-ice/25">
+              <div className="mt-0.5 font-mono text-[8.5px] tracking-[0.13em] text-ice/56">
                 {s.hint}
               </div>
               <span className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-cyan/70 transition-transform duration-500 group-hover:scale-x-100" />
@@ -198,11 +198,11 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.8 }}
-          className="mt-3 max-w-3xl font-mono text-[8.5px] tracking-[0.14em] text-ice/25"
+          className="mt-3 max-w-3xl font-mono text-[8.5px] tracking-[0.14em] text-ice/56"
         >
-          <span className="text-lime/50">●</span> fetched live from api.github.com
+          <span className="text-lime/65">●</span> fetched live from api.github.com
           {statsMeta.fetchedAt && (
-            <span className="text-ice/20">
+            <span className="text-ice/52">
               {' '}
               · {new Date(statsMeta.fetchedAt).toLocaleString('en-GB', { dateStyle: 'medium', timeStyle: 'short' })}
             </span>
@@ -220,7 +220,7 @@ export default function Hero() {
         className="group absolute right-6 bottom-7 z-10 hidden flex-col items-center gap-2 sm:flex lg:right-10"
         aria-label="Scroll to profile"
       >
-        <span className="font-mono text-[9px] tracking-[0.3em] text-ice/30 transition-colors group-hover:text-cyan/70 [writing-mode:vertical-rl]">
+        <span className="font-mono text-[9px] tracking-[0.3em] text-ice/60 transition-colors group-hover:text-cyan/80 [writing-mode:vertical-rl]">
           SCROLL
         </span>
         <span className="relative h-8 w-[1px] overflow-hidden bg-stroke">
@@ -234,17 +234,17 @@ export default function Hero() {
 
       {/* HUD readouts — now integration telemetry */}
       <div className="pointer-events-none absolute inset-0 z-0 hidden xl:block">
-        <div className="absolute right-8 top-1/2 -translate-y-1/2 text-right font-mono text-[9px] leading-relaxed tracking-[0.2em] text-ice/20">
+        <div className="absolute right-8 top-1/2 -translate-y-1/2 text-right font-mono text-[9px] leading-relaxed tracking-[0.2em] text-ice/52">
           <div>UPLINK 2.4 Gb/s</div>
           <div>13 NODES</div>
           <div>14 EDGES</div>
-          <div className="text-cyan/40">MESH · NOMINAL</div>
+          <div className="text-cyan/58">MESH · NOMINAL</div>
         </div>
-        <div className="absolute left-8 top-1/2 -translate-y-1/2 font-mono text-[9px] leading-relaxed tracking-[0.2em] text-ice/20">
+        <div className="absolute left-8 top-1/2 -translate-y-1/2 font-mono text-[9px] leading-relaxed tracking-[0.2em] text-ice/52">
           <div>API: 200 OK</div>
           <div>WEBHOOKS: ARMED</div>
           <div>SIP: REGISTERED</div>
-          <div className="text-lime/40">PIPELINE: LIVE</div>
+          <div className="text-lime/58">PIPELINE: LIVE</div>
         </div>
       </div>
     </section>
@@ -281,7 +281,7 @@ function RoleRotator({ reduce }) {
   if (reduce) {
     return (
       <span className="flex items-center gap-2 font-mono text-[12px] tracking-[0.18em] text-violet sm:text-sm">
-        <span className="text-cyan/70">&gt;</span>
+        <span className="text-cyan/80">&gt;</span>
         {role}
       </span>
     )
@@ -298,7 +298,7 @@ function RoleRotator({ reduce }) {
           exit={{ opacity: 0, y: -16 }}
           transition={{ duration: 0.45, ease: EASE }}
         >
-          <span className="text-cyan/70">&gt;</span>
+          <span className="text-cyan/80">&gt;</span>
           <Typewriter text={role} speed={22} className="text-violet" />
         </motion.span>
       </AnimatePresence>

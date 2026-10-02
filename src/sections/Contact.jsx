@@ -76,7 +76,7 @@ export default function Contact() {
                 <span className="h-2 w-2 rounded-full bg-amber/60" />
                 <span className="h-2 w-2 rounded-full bg-lime/60" />
               </span>
-              <span className="ml-1 font-mono text-[9.5px] tracking-[0.22em] text-ice/40">
+              <span className="ml-1 font-mono text-[9.5px] tracking-[0.22em] text-ice/58">
                 /home/engineer/contact.sh
               </span>
             </div>
@@ -89,8 +89,8 @@ export default function Contact() {
               </span>
             </h2>
 
-            <p className="mt-5 font-mono text-[12.5px] leading-relaxed text-ice/55">
-              <span className="text-cyan/70">&gt;</span> Open to AI and software engineering
+            <p className="mt-5 font-mono text-[12.5px] leading-relaxed text-ice/72">
+              <span className="text-cyan/80">&gt;</span> Open to AI and software engineering
               roles, API and platform work, React Native positions, and freelance
               builds. Currently at{' '}
               <span className="text-cyan">{profile.org}</span> as{' '}
@@ -98,8 +98,8 @@ export default function Contact() {
             </p>
 
             <div className="mt-7 space-y-2 font-mono text-[11.5px]">
-              <p className="text-lime/85">
-                <span className="text-lime/50">$</span> ./open_channel --to engineer
+              <p className="text-lime/92">
+                <span className="text-lime/65">$</span> ./open_channel --to engineer
               </p>
               <a
                 href={`mailto:${profile.email}`}
@@ -117,7 +117,7 @@ export default function Contact() {
                 className={`mt-1.5 flex w-full items-center gap-2 border px-3 py-2 font-mono text-[10px] tracking-[0.16em] transition-colors ${
                   copied
                     ? 'border-lime/40 bg-lime/[0.07] text-lime'
-                    : 'border-stroke bg-white/[0.02] text-ice/45 hover:border-cyan/35 hover:text-cyan'
+                    : 'border-stroke bg-white/[0.02] text-ice/63 hover:border-cyan/35 hover:text-cyan'
                 }`}
               >
                 {copied ? <Icon.check size={12} /> : <Icon.copy size={12} />}
@@ -131,7 +131,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noreferrer noopener"
                 data-hot
-                className="flex items-center gap-1.5 border border-stroke px-2.5 py-1.5 font-mono text-[9.5px] tracking-[0.14em] text-ice/55 transition-colors hover:border-violet/40 hover:text-violet"
+                className="flex items-center gap-1.5 border border-stroke px-2.5 py-1.5 font-mono text-[9.5px] tracking-[0.14em] text-ice/72 transition-colors hover:border-violet/40 hover:text-violet"
               >
                 <Icon.github size={12} /> GITHUB
               </a>
@@ -140,7 +140,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noreferrer noopener"
                 data-hot
-                className="flex items-center gap-1.5 border border-stroke px-2.5 py-1.5 font-mono text-[9.5px] tracking-[0.14em] text-ice/55 transition-colors hover:border-cyan/40 hover:text-cyan"
+                className="flex items-center gap-1.5 border border-stroke px-2.5 py-1.5 font-mono text-[9.5px] tracking-[0.14em] text-ice/72 transition-colors hover:border-cyan/40 hover:text-cyan"
               >
                 @{profile.twitterHandle}
               </a>
@@ -149,7 +149,7 @@ export default function Contact() {
                 target="_blank"
                 rel="noreferrer noopener"
                 data-hot
-                className="flex items-center gap-1.5 border border-stroke px-2.5 py-1.5 font-mono text-[9.5px] tracking-[0.14em] text-ice/55 transition-colors hover:border-lime/40 hover:text-lime"
+                className="flex items-center gap-1.5 border border-stroke px-2.5 py-1.5 font-mono text-[9.5px] tracking-[0.14em] text-ice/72 transition-colors hover:border-lime/40 hover:text-lime"
               >
                 <Icon.globe size={12} /> irfanwani.vercel.app
               </a>
@@ -198,16 +198,16 @@ export default function Contact() {
                     </span>
 
                     <div className="min-w-0 flex-1">
-                      <div className="font-mono text-[9px] tracking-[0.22em] text-ice/30">
+                      <div className="font-mono text-[9px] tracking-[0.22em] text-ice/60">
                         {c.label}
                       </div>
                       <div className="mt-1 truncate font-mono text-[12.5px] text-ice transition-colors duration-300 group-hover:text-white">
                         {c.value}
                       </div>
-                      <div className="mt-1 font-mono text-[10px] text-ice/40">{c.note}</div>
+                      <div className="mt-1 font-mono text-[10px] text-ice/58">{c.note}</div>
                     </div>
 
-                    <span className="shrink-0 text-ice/25 transition-all duration-300 group-hover:translate-x-1 group-hover:text-cyan">
+                    <span className="shrink-0 text-ice/56 transition-all duration-300 group-hover:translate-x-1 group-hover:text-cyan">
                       <Icon.chevron size={16} />
                     </span>
                   </a>
@@ -220,10 +220,10 @@ export default function Contact() {
             <Panel className="flex items-center gap-3 p-5">
               <StatusDot />
               <div className="min-w-0 flex-1">
-                <div className="font-mono text-[10.5px] tracking-[0.14em] text-lime/90">
+                <div className="font-mono text-[10.5px] tracking-[0.14em] text-lime/94">
                   OPEN TO NEW OPPORTUNITIES
                 </div>
-                <div className="mt-0.5 font-mono text-[10px] text-ice/40">
+                <div className="mt-0.5 font-mono text-[10px] text-ice/58">
                   Response window · typically within 24h · {profile.timezone}
                 </div>
               </div>

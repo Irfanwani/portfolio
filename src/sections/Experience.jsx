@@ -12,11 +12,11 @@ export default function Experience() {
   return (
     <Section id="experience" className="py-20 sm:py-24" label="EXPERIENCE" code="03">
       <Reveal className="mb-10 flex flex-wrap items-end justify-between gap-4">
-        <p className="max-w-xl font-mono text-[12.5px] leading-relaxed text-ice/55">
-          <span className="text-cyan/70">&gt;</span> Professional roles and internships, most recent first.
+        <p className="max-w-xl font-mono text-[12.5px] leading-relaxed text-ice/72">
+          <span className="text-cyan/80">&gt;</span> Professional roles and internships, most recent first.
           Expand an entry for details.
         </p>
-        <div className="flex items-center gap-2 font-mono text-[9.5px] tracking-[0.2em] text-ice/35">
+        <div className="flex items-center gap-2 font-mono text-[9.5px] tracking-[0.2em] text-ice/52">
           <span className="border border-stroke px-2 py-1">TOTAL {experience.length} ROLES</span>
         </div>
       </Reveal>
@@ -84,7 +84,7 @@ function FlightLog({ job, index, open, onToggle }) {
           <div className="relative z-10 flex flex-wrap items-start justify-between gap-x-5 gap-y-3">
             <div className="min-w-0 flex-1">
               <div className="mb-1.5 flex flex-wrap items-center gap-2">
-                <span className="font-mono text-[9.5px] tracking-[0.18em] text-ice/30">
+                <span className="font-mono text-[9.5px] tracking-[0.18em] text-ice/60">
                   {job.from} → {job.to}
                 </span>
                 {job.current && (
@@ -100,23 +100,23 @@ function FlightLog({ job, index, open, onToggle }) {
               </h3>
 
               <div className="mt-1.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 font-mono text-[11px]">
-                <span className="text-cyan/85">{job.org}</span>
+                <span className="text-cyan/92">{job.org}</span>
                 {job.short && (
-                  <span className="border border-stroke px-1 py-px text-[8.5px] text-ice/45">
+                  <span className="border border-stroke px-1 py-px text-[8.5px] text-ice/63">
                     {job.short}
                   </span>
                 )}
-                <span className="text-ice/30">· {job.location}</span>
+                <span className="text-ice/60">· {job.location}</span>
               </div>
 
-              <p className="mt-3 max-w-2xl font-mono text-[11.5px] leading-relaxed text-ice/55">
+              <p className="mt-3 max-w-2xl font-mono text-[11.5px] leading-relaxed text-ice/72">
                 {job.summary}
               </p>
             </div>
 
             {/* expand chevron */}
             <span
-              className={`mt-1 grid h-8 w-8 shrink-0 place-items-center border border-stroke text-ice/40 transition-all duration-400 ${
+              className={`mt-1 grid h-8 w-8 shrink-0 place-items-center border border-stroke text-ice/58 transition-all duration-400 ${
                 open ? 'rotate-90 border-cyan/50 text-cyan' : 'group-hover:border-cyan/40 group-hover:text-cyan'
               }`}
             >
@@ -135,16 +135,16 @@ function FlightLog({ job, index, open, onToggle }) {
                 className="relative z-10 overflow-hidden"
               >
                 <div className="mt-5 border-t border-stroke/60 pt-4">
-                  <div className="font-mono text-[9px] tracking-[0.24em] text-cyan/60">
+                  <div className="font-mono text-[9px] tracking-[0.24em] text-cyan/72">
                     KEY ACTIVITIES
                   </div>
                   <ul className="mt-3 grid gap-1.5 sm:grid-cols-2">
                     {job.highlights.map((h) => (
                       <li
                         key={h}
-                        className="flex items-start gap-2 font-mono text-[11px] leading-relaxed text-ice/55"
+                        className="flex items-start gap-2 font-mono text-[11px] leading-relaxed text-ice/72"
                       >
-                        <Icon.spark size={12} className="mt-[2px] shrink-0 text-cyan/60" />
+                        <Icon.spark size={12} className="mt-[2px] shrink-0 text-cyan/72" />
                         {h}
                       </li>
                     ))}

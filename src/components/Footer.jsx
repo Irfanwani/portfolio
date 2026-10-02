@@ -33,18 +33,18 @@ export default function Footer() {
                 <div className="font-display text-lg font-semibold tracking-tight text-ice">
                   {profile.name}
                 </div>
-                <div className="font-mono text-[9.5px] tracking-[0.2em] text-cyan/70">
+                <div className="font-mono text-[9.5px] tracking-[0.2em] text-cyan/80">
                   {profile.role} · {profile.org}
                 </div>
               </div>
             </div>
 
-            <p className="mt-5 max-w-sm font-mono text-[11.5px] leading-relaxed text-ice/45">
+            <p className="mt-5 max-w-sm font-mono text-[11.5px] leading-relaxed text-ice/63">
               {profile.tagline}
             </p>
 
-            <div className="mt-5 flex flex-wrap items-center gap-3 font-mono text-[9.5px] tracking-[0.16em] text-ice/35">
-              <span className="flex items-center gap-1.5 text-lime/70">
+            <div className="mt-5 flex flex-wrap items-center gap-3 font-mono text-[9.5px] tracking-[0.16em] text-ice/52">
+              <span className="flex items-center gap-1.5 text-lime/80">
                 <StatusDot />
                 ALL SYSTEMS NOMINAL
               </span>
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* index */}
           <nav>
-            <div className="mb-4 font-mono text-[9px] tracking-[0.24em] text-ice/30">
+            <div className="mb-4 font-mono text-[9px] tracking-[0.24em] text-ice/60">
               [ INDEX ]
             </div>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-2 lg:grid-cols-1">
@@ -62,9 +62,9 @@ export default function Footer() {
                   <a
                     href={`#${s.id}`}
                     data-hot
-                    className="group flex items-center gap-2 font-mono text-[11px] text-ice/50 transition-colors hover:text-cyan"
+                    className="group flex items-center gap-2 font-mono text-[11px] text-ice/68 transition-colors hover:text-cyan"
                   >
-                    <span className="text-[9px] text-ice/20 group-hover:text-cyan/60">
+                    <span className="text-[9px] text-ice/52 group-hover:text-cyan/72">
                       {s.code}
                     </span>
                     {s.label}
@@ -76,7 +76,7 @@ export default function Footer() {
 
           {/* links */}
           <div>
-            <div className="mb-4 font-mono text-[9px] tracking-[0.24em] text-ice/30">
+            <div className="mb-4 font-mono text-[9px] tracking-[0.24em] text-ice/60">
               [ CHANNELS ]
             </div>
             <ul className="space-y-2">
@@ -89,9 +89,9 @@ export default function Footer() {
                       target={l.icon === 'mail' ? undefined : '_blank'}
                       rel="noreferrer noopener"
                       data-hot
-                      className="group flex items-center gap-2.5 border-b border-stroke/40 py-1.5 font-mono text-[11px] text-ice/55 transition-colors hover:border-cyan/30 hover:text-cyan"
+                      className="group flex items-center gap-2.5 border-b border-stroke/40 py-1.5 font-mono text-[11px] text-ice/72 transition-colors hover:border-cyan/30 hover:text-cyan"
                     >
-                      <Ico size={13} className="text-ice/30 transition-colors group-hover:text-cyan" />
+                      <Ico size={13} className="text-ice/60 transition-colors group-hover:text-cyan" />
                       {l.label}
                       <Icon.chevron
                         size={12}
@@ -104,7 +104,7 @@ export default function Footer() {
             </ul>
 
             <div className="mt-6 border border-stroke/60 bg-white/[0.02] p-3.5">
-              <div className="font-mono text-[9px] tracking-[0.2em] text-ice/30">
+              <div className="font-mono text-[9px] tracking-[0.2em] text-ice/60">
                 LOCAL TIME
               </div>
               <div className="mt-1 font-mono text-[12px] tabular-nums text-cyan">
@@ -116,10 +116,10 @@ export default function Footer() {
 
         {/* bottom bar */}
         <div className="mt-12 flex flex-col items-center gap-4 border-t border-stroke/60 pt-6 sm:flex-row sm:justify-between">
-          <p className="font-mono text-[10px] tracking-[0.14em] text-ice/30">
+          <p className="font-mono text-[10px] tracking-[0.14em] text-ice/60">
             © {YEAR} {profile.name.toUpperCase()} · ALL RIGHTS RESERVED
           </p>
-          <p className="font-mono text-[10px] tracking-[0.14em] text-ice/25">
+          <p className="font-mono text-[10px] tracking-[0.14em] text-ice/56">
             REACT · VITE · THREE.JS · TAILWIND
           </p>
         </div>
@@ -161,7 +161,7 @@ function LocalClock() {
   return (
     <span>
       {now ?? '--:--:--'}
-      <span className="ml-1.5 text-[9px] text-ice/30">IST</span>
+      <span className="ml-1.5 text-[9px] text-ice/60">IST</span>
     </span>
   )
 }

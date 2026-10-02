@@ -20,16 +20,16 @@ export function SectionHeader({ code, label, id }) {
   return (
     <header className="mb-10 sm:mb-14">
       <div className="flex items-center gap-3">
-        <span className="font-mono text-[10px] tracking-[0.3em] text-cyan/60">
+        <span className="font-mono text-[10px] tracking-[0.3em] text-cyan/72">
           [{code}]
         </span>
-        <span className="font-mono text-[11px] tracking-[0.34em] text-cyan/85 sm:text-xs">
+        <span className="font-mono text-[11px] tracking-[0.34em] text-cyan/92 sm:text-xs">
           {label}
         </span>
         <span className="rule flex-1" />
         <a
           href={`#${id}`}
-          className="hidden font-mono text-[10px] tracking-widest text-ice/25 transition-colors hover:text-cyan sm:block"
+          className="hidden font-mono text-[10px] tracking-widest text-ice/56 transition-colors hover:text-cyan sm:block"
         >
           #{id}
         </a>
@@ -84,12 +84,12 @@ export function Reveal({ children, delay = 0, y = 22, className = '' }) {
    Tag / chip
    ========================================================================== */
 const accentMap = {
-  cyan: 'border-cyan/30 text-cyan/90 bg-cyan/[0.07]',
-  violet: 'border-violet/30 text-violet/90 bg-violet/[0.07]',
-  amber: 'border-amber/30 text-amber/90 bg-amber/[0.07]',
-  lime: 'border-lime/30 text-lime/90 bg-lime/[0.07]',
-  rose: 'border-rose/30 text-rose/90 bg-rose/[0.07]',
-  ice: 'border-stroke text-ice/60 bg-white/[0.03]',
+  cyan: 'border-cyan/30 text-cyan/94 bg-cyan/[0.07]',
+  violet: 'border-violet/30 text-violet/94 bg-violet/[0.07]',
+  amber: 'border-amber/30 text-amber/94 bg-amber/[0.07]',
+  lime: 'border-lime/30 text-lime/94 bg-lime/[0.07]',
+  rose: 'border-rose/30 text-rose/94 bg-rose/[0.07]',
+  ice: 'border-stroke text-ice/78 bg-white/[0.03]',
 }
 
 export function Tag({ children, accent = 'ice', className = '' }) {

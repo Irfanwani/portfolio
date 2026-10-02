@@ -18,7 +18,7 @@ export default function Signals() {
           LIVE · api.github.com
         </span>
         {statsMeta.fetchedAt && (
-          <span className="font-mono text-[9px] tracking-[0.14em] text-ice/30">
+          <span className="font-mono text-[9px] tracking-[0.14em] text-ice/60">
             fetched{' '}
             {new Date(statsMeta.fetchedAt).toLocaleString('en-GB', {
               dateStyle: 'medium',
@@ -67,7 +67,7 @@ function StatCell({ stat }) {
       <span className="pointer-events-none absolute -top-12 -right-12 h-32 w-32 rounded-full bg-cyan opacity-[0.06] blur-2xl transition-opacity duration-500 group-hover:opacity-[0.18]" />
       <div className="relative z-10">
         <div className="flex items-center gap-1.5">
-          <span className="font-mono text-[9px] tracking-[0.2em] text-ice/35">
+          <span className="font-mono text-[9px] tracking-[0.2em] text-ice/52">
             {stat.label.toUpperCase()}
           </span>
           <span
@@ -78,7 +78,7 @@ function StatCell({ stat }) {
         <div className={`mt-1.5 font-display text-3xl font-semibold tabular-nums ${color}`}>
           <Counter value={Number(stat.value)} />
         </div>
-        <div className="mt-0.5 font-mono text-[8.5px] tracking-[0.14em] text-ice/25">
+        <div className="mt-0.5 font-mono text-[8.5px] tracking-[0.14em] text-ice/56">
           {stat.hint}
         </div>
       </div>

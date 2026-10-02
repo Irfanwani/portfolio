@@ -67,8 +67,8 @@ export default function Nav() {
                 <Icon.github size={14} className="text-cyan transition-transform duration-500 group-hover:rotate-180" />
                 <span className="absolute -inset-px animate-pulse-glow border border-cyan/20" />
               </span>
-              <span className="font-mono text-[11px] leading-none tracking-[0.2em] text-ice/85 transition-colors group-hover:text-cyan sm:text-xs">
-                IRFAN<span className="text-cyan/60">_</span>
+              <span className="font-mono text-[11px] leading-none tracking-[0.2em] text-ice/92 transition-colors group-hover:text-cyan sm:text-xs">
+                IRFAN<span className="text-cyan/72">_</span>
                 <span className="hidden sm:inline">WANI</span>
               </span>
             </a>
@@ -83,10 +83,10 @@ export default function Nav() {
                     href={`#${s.id}`}
                     data-hot
                     className={`group relative whitespace-nowrap px-2.5 py-2 font-mono text-[10.5px] tracking-[0.14em] transition-colors xl:px-3 ${
-                      isActive ? 'text-cyan' : 'text-ice/50 hover:text-ice'
+                      isActive ? 'text-cyan' : 'text-ice/68 hover:text-ice'
                     }`}
                   >
-                    <span className="mr-1.5 text-[9px] text-ice/25 group-hover:text-cyan/60">
+                    <span className="mr-1.5 text-[9px] text-ice/56 group-hover:text-cyan/72">
                       {s.code}
                     </span>
                     {s.label}
@@ -163,7 +163,7 @@ export default function Nav() {
                   onClick={() => setOpen(false)}
                   data-hot
                   aria-label="Close navigation"
-                  className="grid h-8 w-8 place-items-center border border-stroke text-ice/60"
+                  className="grid h-8 w-8 place-items-center border border-stroke text-ice/78"
                 >
                   <span className="relative block h-3.5 w-3.5">
                     <span className="absolute top-1/2 left-0 h-px w-full rotate-45 bg-cyan" />
@@ -183,10 +183,10 @@ export default function Nav() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.06 + i * 0.045 }}
                     className={`flex items-center gap-3 border-b border-stroke/50 py-3.5 font-mono text-xs tracking-[0.18em] transition-colors ${
-                      activeId === s.id ? 'text-cyan' : 'text-ice/65'
+                      activeId === s.id ? 'text-cyan' : 'text-ice/82'
                     }`}
                   >
-                    <span className="text-[9px] text-ice/30">{s.code}</span>
+                    <span className="text-[9px] text-ice/60">{s.code}</span>
                     {s.label}
                     <Icon.chevron size={13} className="ml-auto opacity-40" />
                   </motion.a>
@@ -206,7 +206,7 @@ export default function Nav() {
                 <a
                   href={`mailto:${profile.email}`}
                   data-hot
-                  className="flex items-center justify-center gap-2 border border-stroke py-3 font-mono text-[10px] tracking-[0.2em] text-ice/65"
+                  className="flex items-center justify-center gap-2 border border-stroke py-3 font-mono text-[10px] tracking-[0.2em] text-ice/82"
                 >
                   <Icon.mail size={13} /> EMAIL
                 </a>
