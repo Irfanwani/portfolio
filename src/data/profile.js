@@ -26,7 +26,7 @@ export const profile = {
   timezone: 'IST · UTC+5:30',
   tagline: 'Building the integration layer that keeps every customer system talking to each other.',
   summary:
-    'Senior software engineer building integration infrastructure for a voice platform. At FreJun I lead development of the integration layer that connects the calling product to customer systems — Salesforce, HubSpot, Zoho, Dynamics 365, Freshworks, Pipedrive, ATS platforms and custom enterprise software — so every call is dialed from the CRM, logged, recorded and analysed in one place. Own APIs, webhooks and SDKs end to end, from planning through deployment and maintenance. Builds cross-platform apps with React Native and backend services with Django and DRF. Two apps shipped to the Google Play Store.',
+    'Senior software engineer at FreJun, a voice infrastructure platform. Builds mobile apps and the\n    integrations that connect them to customer systems \u2014 owning APIs, webhooks and SDKs end to end,\n    with cross-platform React Native and Django/DRF backend work behind it. Five apps published on the\n    Google Play Store. Currently deep into AI engineering \u2014 building agent harnesses and local-first\n    LLM tooling, as the top contributor to Sidekick, a terminal AI agent published on PyPI.',
   email: 'irfanwani347@gmail.com',
   github: 'https://github.com/irfanwani',
   githubUser: 'Irfanwani',
@@ -38,6 +38,14 @@ export const profile = {
     'https://drive.google.com/file/d/1bAGv636a9BxP4Hpr4t2F3tplMQHP70EZ/view?usp=sharing',
   /** Individual app listings — used on that project's own card. */
   playStore: 'https://play.google.com/store/apps/details?id=com.geotagcamera',
+  /** Apps published under the Appshop Co. Play developer account. */
+  playApps: [
+    { name: 'Snap Tag', rating: '4.8\u2605' },
+    { name: 'Barbershop Services', rating: null },
+    { name: 'Kashmiri Wedding Tracker', rating: null },
+    { name: 'TicTacToe', rating: null },
+    { name: 'Space Blaster', rating: null },
+  ],
   /** The publisher storefront — used for any generic "apps on Play" link. */
   playDeveloper:
     'https://play.google.com/store/apps/developer?id=Appshop+Co.',
@@ -74,6 +82,10 @@ export const skills = [
   {
     group: 'Realtime & Comms',
     items: ['SIP', 'WebRTC', 'VoIP', 'Asterisk', 'STUN/TURN'],
+  },
+  {
+    group: 'AI & Agents',
+    items: ['Agent Harnesses', 'LLM Tooling', 'Ollama', 'Local-first AI', 'Prompt Engineering'],
   },
   {
     group: 'Tooling',
@@ -244,17 +256,8 @@ export const experience = [
   },
 ]
 
-export const education = [
-  {
-    degree: 'Master of Computer Applications (MCA)',
-    org: 'Central University of Kashmir',
-    location: 'Srinagar, J&K, India',
-    period: 'Graduated',
-    detail:
-      'Postgraduate computing studies — the foundation behind the systems, algorithms and data work across the portfolio.',
-    tags: ['MCA', 'Algorithms', 'Databases', 'Software Engineering'],
-  },
-]
+/** Awaiting confirmation — previously listed an incorrect entry. */
+export const education = []
 
 export const certifications = [
   'AWS Cloud Practitioner (in progress)',
@@ -322,10 +325,10 @@ export const projects = [
     rank: 3,
     id: 'sidekick',
     name: 'Sidekick',
-    tagline: 'Top contributor to a local-first terminal AI agent — 319 commits',
+    tagline: 'AI agent harness — top contributor, 319 commits, on PyPI',
     description:
-      'Sidekick is a local-first terminal companion you can talk to: chat, voice and 19 tools running entirely on your own hardware, published to PyPI. I am the top contributor to the project — 319 commits against the maintainer\u2019s 286 — and the work spans the Textual TUI, the tool-execution layer and the Ollama/OpenAI-compatible model plumbing.',
-    tech: ['Python 3.12', 'Textual TUI', 'Ollama', 'LLM Tooling', 'PyPI'],
+      'Sidekick is a local-first terminal AI agent: chat, voice and 19 tools running entirely on your own hardware, published to PyPI. Building an agent harness is the part I care most about \u2014 the tool-execution loop, the Textual TUI and the Ollama/OpenAI-compatible model plumbing. I am the top contributor, with 319 commits against the maintainer\u2019s 286.',
+    tech: ['Python 3.12', 'Agent Harness', 'Tool Use', 'Ollama', 'Textual TUI', 'PyPI'],
     metric: 'TOP CONTRIBUTOR \u00b7 319 COMMITS',
     accent: 'violet',
     live: true,
@@ -336,7 +339,7 @@ export const projects = [
     ],
     highlights: [
       '#1 of 4 contributors — more commits than the project maintainer',
-      'Local-first Textual TUI: chat, voice and a 19-tool execution layer',
+      'Agent harness with a 19-tool execution loop and voice input',
       'Open source under MIT, released on PyPI',
     ],
   },

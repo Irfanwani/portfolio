@@ -38,7 +38,7 @@ const CHANNELS = [
     href: profile.playDeveloper,
     icon: 'play',
     accent: 'lime',
-    note: 'GeoTag Camera · Space Blaster',
+    note: 'Snap Tag (4.8\u2605) \u00b7 Barbershop \u00b7 Space Blaster \u00b7 +2',
   },
   {
     id: 'resume',

@@ -83,21 +83,31 @@ export default function Hero() {
           {/* integration chip strip */}
           <motion.div variants={rise} className="mt-6 flex flex-wrap gap-1.5">
             {[
+              'AI Agents',
+              'Agent Harnesses',
+              'LLM Tooling',
+              'Ollama',
+              'React Native',
+              'TypeScript',
+              'Python',
+              'Django / DRF',
               'REST APIs',
               'Webhooks',
               'SDKs',
-              'React Native',
-              'Django / DRF',
+              'PostgreSQL',
               'AWS',
               'SIP / WebRTC',
-              'PostgreSQL',
             ].map((k, ki) => (
               <motion.span
                 key={k}
                 initial={{ opacity: 0, scale: 0.92 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.85 + ki * 0.045, duration: 0.32 }}
-                className="border border-stroke/80 bg-white/[0.025] px-2.5 py-1 font-mono text-[9.5px] tracking-[0.13em] text-ice/55 transition-colors hover:border-cyan/40 hover:text-cyan"
+                className={`border px-2.5 py-1 font-mono text-[9.5px] tracking-[0.13em] transition-colors ${
+                  AI_TAGS.includes(k)
+                    ? 'border-violet/40 bg-violet/[0.07] text-violet/90 hover:border-violet hover:text-violet'
+                    : 'border-stroke/80 bg-white/[0.025] text-ice/55 hover:border-cyan/40 hover:text-cyan'
+                }`}
               >
                 {k}
               </motion.span>
@@ -253,6 +263,9 @@ const ROLES = [
   'BUILDING HARNESSES FOR THE FUTURE',
 ]
 const DWELL = 3400
+
+/** Chips rendered in the AI accent. */
+const AI_TAGS = ['AI Agents', 'Agent Harnesses', 'LLM Tooling', 'Ollama']
 
 function RoleRotator({ reduce }) {
   const [i, setI] = useState(0)

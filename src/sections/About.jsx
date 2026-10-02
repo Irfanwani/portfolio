@@ -89,11 +89,10 @@ export default function About() {
                   <br />
                   &nbsp;&nbsp;org: <span className="text-amber">"{profile.org}"</span>,
                   <br />
-                  &nbsp;&nbsp;focus: [<span className="text-lime">"integrations"</span>,{' '}
-                  <span className="text-lime">"APIs"</span>,{' '}
-                  <span className="text-lime">"webhooks"</span>,{' '}
-                  <span className="text-lime">"SDKs"</span>,{' '}
-                  <span className="text-lime">"mobile"</span>],
+                  &nbsp;&nbsp;focus: [<span className="text-lime">"mobile apps"</span>,{' '}
+                  <span className="text-lime">"integrations"</span>,{' '}
+                  <span className="text-lime">"backend"</span>,{' '}
+                  <span className="text-lime">"AI agents"</span>],
                   <br />
                   &nbsp;&nbsp;ships: <span className="text-amber">"production"</span>
                   <br />
@@ -106,11 +105,12 @@ export default function About() {
                 <LogLine delay={0.2}>log --highlights --grep shipped</LogLine>
                 <ul className="space-y-1 text-ice/55">
                   {[
-                    'Lead the integration team — APIs, webhooks and SDKs',
-                    'GeoTag Camera shipped to the Google Play Store',
+                    'Five apps live on the Google Play Store as Appshop Co.',
+                    'Top contributor to Sidekick — 319 commits, on PyPI',
+                    'Building AI agent harnesses and local-first LLM tooling',
                     'Production SIP/WebRTC calling on Android and iOS',
+                    'Integration layer across CRM, ATS and enterprise systems',
                     'Django / DRF backend services on AWS',
-                    'Cross-platform apps with React Native',
                   ].map((t) => (
                     <li key={t} className="flex gap-2">
                       <span className="select-none text-cyan/50">└─</span>
@@ -144,44 +144,46 @@ export default function About() {
 
           {/* ---------- education + certifications ---------- */}
           <div className="space-y-6">
-            <Reveal delay={0.1}>
-              <Panel className="p-6">
-                <div className="mb-5 flex items-center gap-2">
-                  <Icon.book size={15} className="text-violet" />
-                  <span className="font-mono text-[10px] tracking-[0.28em] text-ice/55">
-                    EDUCATION
-                  </span>
-                </div>
-                <div className="space-y-5">
-                  {education.map((e, i) => (
-                    <div key={e.degree} className="relative pl-5">
-                      <span className="absolute left-0 top-1.5 h-2 w-2 border border-violet/60 bg-void" />
-                      {i < education.length - 1 && (
-                        <span className="absolute left-[3.5px] top-4 h-[calc(100%+0.5rem)] w-px bg-gradient-to-b from-violet/35 to-transparent" />
-                      )}
-                      <div className="font-mono text-[11.5px] leading-snug text-ice/85">
-                        {e.degree}
+            {education.length > 0 && (
+              <Reveal delay={0.1}>
+                <Panel className="p-6">
+                  <div className="mb-5 flex items-center gap-2">
+                    <Icon.book size={15} className="text-violet" />
+                    <span className="font-mono text-[10px] tracking-[0.28em] text-ice/55">
+                      EDUCATION
+                    </span>
+                  </div>
+                  <div className="space-y-5">
+                    {education.map((e, i) => (
+                      <div key={e.degree} className="relative pl-5">
+                        <span className="absolute left-0 top-1.5 h-2 w-2 border border-violet/60 bg-void" />
+                        {i < education.length - 1 && (
+                          <span className="absolute left-[3.5px] top-4 h-[calc(100%+0.5rem)] w-px bg-gradient-to-b from-violet/35 to-transparent" />
+                        )}
+                        <div className="font-mono text-[11.5px] leading-snug text-ice/85">
+                          {e.degree}
+                        </div>
+                        <div className="mt-1 font-mono text-[10.5px] text-violet/85">
+                          {e.org}
+                          <span className="text-ice/30"> · {e.location}</span>
+                        </div>
+                        <div className="mt-0.5 font-mono text-[9.5px] tracking-[0.16em] text-ice/35">
+                          {e.period}
+                        </div>
+                        <p className="mt-2 font-mono text-[11px] leading-relaxed text-ice/50">
+                          {e.detail}
+                        </p>
+                        <div className="mt-2.5 flex flex-wrap gap-1.5">
+                          {e.tags.map((t) => (
+                            <Tag key={t}>{t}</Tag>
+                          ))}
+                        </div>
                       </div>
-                      <div className="mt-1 font-mono text-[10.5px] text-violet/85">
-                        {e.org}
-                        <span className="text-ice/30"> · {e.location}</span>
-                      </div>
-                      <div className="mt-0.5 font-mono text-[9.5px] tracking-[0.16em] text-ice/35">
-                        {e.period}
-                      </div>
-                      <p className="mt-2 font-mono text-[11px] leading-relaxed text-ice/50">
-                        {e.detail}
-                      </p>
-                      <div className="mt-2.5 flex flex-wrap gap-1.5">
-                        {e.tags.map((t) => (
-                          <Tag key={t}>{t}</Tag>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Panel>
-            </Reveal>
+                    ))}
+                  </div>
+                </Panel>
+              </Reveal>
+            )}
 
             <Reveal delay={0.18}>
               <Panel className="p-6">
