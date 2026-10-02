@@ -105,12 +105,12 @@ export default function About() {
                 <LogLine delay={0.2}>log --highlights --grep shipped</LogLine>
                 <ul className="space-y-1 text-ice/55">
                   {[
-                    'Five apps live on the Google Play Store as Appshop Co.',
+                    '5+ apps live on the Google Play Store as Appshop Co.',
                     'Top contributor to Sidekick — 319 commits, on PyPI',
                     'Building AI agent harnesses and local-first LLM tooling',
                     'Production SIP/WebRTC calling on Android and iOS',
                     'Integration layer across CRM, ATS and enterprise systems',
-                    'Django / DRF backend services on AWS',
+                    'Python-based backend services on AWS',
                   ].map((t) => (
                     <li key={t} className="flex gap-2">
                       <span className="select-none text-cyan/50">└─</span>

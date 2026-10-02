@@ -256,13 +256,32 @@ export const experience = [
   },
 ]
 
-/** Awaiting confirmation — previously listed an incorrect entry. */
-export const education = []
+export const education = [
+  {
+    degree: 'Master of Computer Applications — MCA',
+    org: 'Lovely Professional University',
+    location: 'Phagwara, Punjab, India',
+    period: 'July 2023 — July 2025',
+    detail:
+      'Postgraduate specialisation in computer programming and application development \u2014 the formal grounding behind the mobile, backend and integration work on this site.',
+    tags: ['MCA', 'Computer Programming', 'Application Development'],
+  },
+  {
+    degree: 'B.Sc. — Physics',
+    org: 'Central University of Kashmir',
+    location: 'Srinagar, J&K, India',
+    period: 'November 2019 — September 2022',
+    detail:
+      'Undergraduate degree in physics with a mathematics base \u2014 where the habit of modelling systems quantitatively first came from.',
+    tags: ['Physics', 'Mathematics', 'Systems Modelling'],
+  },
+]
 
 export const certifications = [
-  'AWS Cloud Practitioner (in progress)',
-  'React Native — Advanced Patterns',
-  'Django & DRF',
+  'Supervised Machine Learning: Regression and Classification (Stanford University)',
+  'Mobile App Development with React Native (CS50, Harvard University)',
+  'Web Development with Python and JavaScript (CS50, Harvard University)',
+  'Python (Hackerrank)',
   'SIP / WebRTC Fundamentals',
 ]
 
