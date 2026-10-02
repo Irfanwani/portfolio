@@ -107,21 +107,6 @@ export const skills = [
 /* ------------------------------------------------------------------ */
 export const experience = [
   {
-    role: 'Senior Software Engineer',
-    org: 'FreJun',
-    location: 'Hyderabad, Telangana, India',
-    from: '2025-06',
-    to: 'Present',
-    current: true,
-    summary:
-      'Leads development of the integration infrastructure behind FreJun\u2019s customer communication workflows, connecting CRM, ATS and SaaS platforms into one centralized surface.',
-    highlights: [
-      'Integration layer across Salesforce, HubSpot, Zoho and Shopify',
-      'Connecting CRM, ATS, SaaS and custom enterprise systems',
-      'Scalable backend systems and APIs for a SaaS product',
-    ],
-  },
-  {
     role: 'Senior Software Development Engineer & Integration Manager',
     org: 'FreJun',
     location: 'Hyderabad, Telangana, India',
@@ -129,7 +114,7 @@ export const experience = [
     to: 'Present',
     current: true,
     summary:
-      'Leads the integration team end to end \u2014 planning, development, deployment and maintenance \u2014 keeping data flow reliable across every connected system.',
+      'Leads the development of the integration infrastructure behind FreJun and integration team end to end \u2014 planning, development, deployment and maintenance \u2014 keeping data flow reliable across every connected system.',
     highlights: [
       'Lead the integration team and integration architecture',
       'Design and maintain APIs, webhooks and SDKs',
@@ -180,20 +165,6 @@ export const experience = [
     ],
   },
   {
-    role: 'Mobile Application Developer',
-    org: 'Appsdeployer',
-    location: 'India',
-    from: '2022-10',
-    to: '2023-02',
-    summary:
-      'Built and upgraded multiple React Native applications \u2014 shipping new versions to the app stores repeatedly across the release lifecycle.',
-    highlights: [
-      'Built multiple apps with React Native, Redux and JavaScript',
-      'Upgraded existing apps and added new features',
-      'Published new versions to the app stores many times over',
-    ],
-  },
-  {
     role: 'React Native Intern \u2014 SIP Calling',
     org: 'FreJun',
     location: 'Hyderabad, Telangana, India',
@@ -209,6 +180,20 @@ export const experience = [
   },
   {
     role: 'Mobile Application Developer',
+    org: 'Appsdeployer',
+    location: 'India',
+    from: '2022-10',
+    to: '2023-02',
+    summary:
+      'Built and upgraded multiple React Native applications \u2014 shipping new versions to the app stores repeatedly across the release lifecycle.',
+    highlights: [
+      'Built multiple apps with React Native, Redux and JavaScript',
+      'Upgraded existing apps and added new features',
+      'Published new versions to the app stores many times over',
+    ],
+  },
+  {
+    role: 'Mobile Application Developer \u2014 Android Focus',
     org: 'Solvevolve',
     location: 'India',
     from: '2022-10',
@@ -218,34 +203,6 @@ export const experience = [
     highlights: [
       'Mobile app development across multiple frameworks',
       'React Native implementation work',
-    ],
-  },
-  {
-    role: 'React Native Intern \u2014 Full Stack',
-    org: 'FreJun',
-    location: 'India',
-    from: '2022-10',
-    to: '2023-10',
-    summary:
-      'Shipped features across React Native apps and the backend \u2014 UI work, API integration and debugging to support full-stack delivery.',
-    highlights: [
-      'React Native feature development for Android and iOS',
-      'API integration and backend debugging',
-      'Full-stack feature delivery',
-    ],
-  },
-  {
-    role: 'React Native Intern \u2014 Android Focus',
-    org: 'FreJun',
-    location: 'India',
-    from: '2022-10',
-    to: '2022-12',
-    summary:
-      'Built and optimised Android apps with React Native, supporting both frontend and backend teams to unblock the application stack.',
-    highlights: [
-      'Android app development and optimisation',
-      'Cross-team debugging and implementation support',
-      'React Native UI and performance work',
     ],
   },
   {

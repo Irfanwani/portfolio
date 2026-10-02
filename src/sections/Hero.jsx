@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
-import { profile } from '../data/profile'
+import { integrationEdges, integrationNodes, profile } from '../data/profile'
 import { buildStats, formatCount, statsMeta } from '../data/stats'
 import { Icon, Typewriter, StatusDot } from '../components/ui'
 

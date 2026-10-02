@@ -2,6 +2,7 @@ import { motion } from 'motion/react'
 import {
   certifications,
   education,
+  integrationEdges,
   integrationNodes,
   integrationTiers,
   languages,
@@ -305,7 +306,7 @@ export default function About() {
                 </span>
               </div>
               <p className="mb-5 font-mono text-[10.5px] leading-relaxed text-ice/58">
-                {integrationNodes.length} systems · 19 connections · pulses show live request
+                {integrationNodes.length} systems · {integrationEdges.length} connections · pulses show live request
                 flow
               </p>
 
