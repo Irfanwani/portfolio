@@ -1,0 +1,177 @@
+# =============================================================================
+#  DEPENDENCIES
+# =============================================================================
+node_modules/
+jspm_packages/
+.pnp
+.pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/versions
+bun.lockb
+# `bun.lock` and `pnpm-lock.yaml` are intentionally NOT ignored —
+# commit the lockfile your package manager generates.
+
+# =============================================================================
+#  BUILD OUTPUT
+# =============================================================================
+dist/
+dist-ssr/
+build/
+out/
+.output/
+.vercel/
+.netlify/
+.wrangler/
+*.tsbuildinfo
+source-map-explorer/
+
+# Vite / framework caches
+.vite/
+.cache/
+.turbo/
+.swc/
+.temp/
+.tmp/
+
+# =============================================================================
+#  PRIVATE SOURCE MATERIAL  —  never push to a remote
+# =============================================================================
+# Official profile export: contains a personal email address and other PII.
+# The public site renders this content from src/data/profile.js instead.
+# (no local PII files in this repo — see ../portfolio for the resume)
+*.pdf
+# …but anything deliberately placed under public/ is a site asset — commit it.
+!public/**/*.pdf
+
+# Resumes, transcripts, certificates, ID scans
+*resume*
+*cv*.pdf
+*transcript*
+*certificate*
+*.pfx
+*.p12
+*.pem
+*.key
+*.keystore
+
+# =============================================================================
+#  SECRETS & ENVIRONMENT
+# =============================================================================
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+secrets.json
+credentials.json
+.netrc
+.npmrc.local
+service-account*.json
+
+# =============================================================================
+#  LOGS & DIAGNOSTICS
+# =============================================================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+pids/
+*.pid
+*.seed
+*.pid.lock
+*.orig
+
+# =============================================================================
+#  TESTS / COVERAGE
+# =============================================================================
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+blob-report/
+.playwright/
+cypress/screenshots/
+cypress/videos/
+
+# =============================================================================
+#  EDITOR & IDE
+# =============================================================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+.idea/
+*.iml
+*.ipr
+*.iws
+.zed/
+*.sublime-workspace
+*.sublime-project
+.nvim.lua
+.history/
+*.code-workspace
+.project
+.settings/
+.classpath
+.factorypath
+
+# JetBrains / WebStorm local config
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+
+# =============================================================================
+#  OS METADATA
+# =============================================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachines.donotpresent
+Icon?
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# =============================================================================
+#  DEPLOYMENT SECRETS
+# =============================================================================
+.netlify/
+firebase-debug.log
+firebase-debug.*.log
+*-debug.log
+*-debug.*.log
+*.pem.dev
+.turbo/
+
+# =============================================================================
+#  MISC LOCAL ARTEFACTS
+# =============================================================================
+*.bak
+*.orig
+*.rej
+*~
+.swp
+.*.sw[a-p]
+scrypt.pem
+shadow.yaml
+
+# Local screenshot / scratch output from visual regression runs
+screenshots/
+shots/
+*.local.png
+.vercel
