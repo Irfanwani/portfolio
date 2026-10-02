@@ -236,8 +236,8 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 z-0 hidden xl:block">
         <div className="absolute right-8 top-1/2 -translate-y-1/2 text-right font-mono text-[9px] leading-relaxed tracking-[0.2em] text-ice/52">
           <div>UPLINK 2.4 Gb/s</div>
-          <div>13 NODES</div>
-          <div>14 EDGES</div>
+          <div>{integrationNodes.length} NODES</div>
+          <div>{integrationEdges.length} EDGES</div>
           <div className="text-cyan/58">MESH · NOMINAL</div>
         </div>
         <div className="absolute left-8 top-1/2 -translate-y-1/2 font-mono text-[9px] leading-relaxed tracking-[0.2em] text-ice/52">

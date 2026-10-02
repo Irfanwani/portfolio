@@ -520,26 +520,27 @@ export const integrationNodes = [
   // centre — what he owns
   { id: 'core', label: 'Integration Platform', kind: 'core', x: 0, y: 0, z: 0 },
 
-  // ring 1 — the customer systems actually integrated (from LinkedIn)
-  { id: 'salesforce', label: 'Salesforce', kind: 'crm', x: 0.0, y: -2.35, z: 0.2 },
-  { id: 'hubspot', label: 'HubSpot', kind: 'crm', x: 2.22, y: -0.73, z: -0.5 },
-  { id: 'zoho', label: 'Zoho', kind: 'crm', x: 1.38, y: 1.90, z: 0.6 },
-  { id: 'ats', label: 'ATS', kind: 'ats', x: -1.38, y: 1.90, z: -0.6 },
-  { id: 'dynamics', label: 'Dynamics 365', kind: 'commerce', x: -2.22, y: -0.73, z: 0.5 },
-  { id: 'crmmore', label: 'Freshworks · Pipedrive · Gong', kind: 'commerce', x: -2.10, y: 2.70, z: -0.9 },
+  // ring 1 — the customer systems integrated (r 2.5, 7 nodes)
+  { id: 'salesforce', label: 'Salesforce', kind: 'crm', x: 0.00, y: -2.50, z: 0.2 },
+  { id: 'hubspot', label: 'HubSpot', kind: 'crm', x: 1.95, y: -1.56, z: -0.5 },
+  { id: 'zoho', label: 'Zoho', kind: 'crm', x: 2.44, y: 0.56, z: 0.6 },
+  { id: 'crmmore', label: 'Freshworks · Pipedrive · Gong', kind: 'crm', x: 1.08, y: 2.25, z: -0.9 },
+  { id: 'dynamics', label: 'Dynamics 365', kind: 'crm', x: -1.08, y: 2.25, z: 0.9 },
+  { id: 'ats', label: 'ATS', kind: 'ats', x: -2.44, y: 0.56, z: -0.6 },
+  { id: 'shopify', label: 'Shopify', kind: 'commerce', x: -1.95, y: -1.56, z: 0.5 },
 
-  // ring 2 — the surfaces that carry the traffic
-  { id: 'api', label: 'REST APIs', kind: 'surface', x: 0.0, y: -4.25, z: -0.3 },
-  { id: 'webhooks', label: 'Webhooks', kind: 'surface', x: 4.04, y: -1.31, z: 0.4 },
-  { id: 'voice', label: 'Voice / SIP', kind: 'channel', x: 2.50, y: 3.44, z: -0.4 },
-  { id: 'email', label: 'Email', kind: 'channel', x: -2.50, y: 3.44, z: 0.4 },
-  { id: 'sdk', label: 'SDKs', kind: 'surface', x: -4.04, y: -1.31, z: -0.4 },
+  // ring 2 — the surfaces that carry the traffic (r 4.3, 5 nodes)
+  { id: 'api', label: 'REST APIs', kind: 'surface', x: 0.00, y: -4.30, z: -0.3 },
+  { id: 'webhooks', label: 'Webhooks', kind: 'surface', x: 4.09, y: -1.33, z: 0.4 },
+  { id: 'voice', label: 'Voice / SIP', kind: 'channel', x: 2.53, y: 3.48, z: -0.4 },
+  { id: 'email', label: 'Email', kind: 'channel', x: -2.53, y: 3.48, z: 0.4 },
+  { id: 'sdk', label: 'SDKs', kind: 'surface', x: -4.09, y: -1.33, z: -0.4 },
 
-  // ring 3 — internal stack serving it all
-  { id: 'mobile', label: 'React Native', kind: 'internal', x: 3.95, y: -3.95, z: 0.8 },
-  { id: 'django', label: 'Django / DRF', kind: 'internal', x: 3.95, y: 3.95, z: -0.8 },
-  { id: 'postgres', label: 'PostgreSQL', kind: 'internal', x: -3.95, y: 3.95, z: 0.8 },
-  { id: 'aws', label: 'AWS / ECS', kind: 'internal', x: -3.95, y: -3.95, z: -0.8 },
+  // ring 3 — internal stack serving it all (r 5.6, 4 nodes)
+  { id: 'mobile', label: 'React Native', kind: 'internal', x: 3.96, y: -3.96, z: 0.8 },
+  { id: 'django', label: 'Django / DRF', kind: 'internal', x: 3.96, y: 3.96, z: -0.8 },
+  { id: 'postgres', label: 'PostgreSQL', kind: 'internal', x: -3.96, y: 3.96, z: 0.8 },
+  { id: 'aws', label: 'AWS / ECS', kind: 'internal', x: -3.96, y: -3.96, z: -0.8 },
 ]
 
 export const integrationEdges = [
@@ -550,11 +551,13 @@ export const integrationEdges = [
   ['core', 'dynamics'],
   ['core', 'crmmore'],
   ['core', 'ats'],
+  ['core', 'shopify'],
   // inbound events + outbound sync
   ['salesforce', 'webhooks'],
   ['hubspot', 'webhooks'],
   ['dynamics', 'webhooks'],
   ['crmmore', 'api'],
+  ['shopify', 'webhooks'],
   ['zoho', 'api'],
   ['ats', 'api'],
   // the public surfaces
