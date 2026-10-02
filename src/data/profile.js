@@ -26,7 +26,7 @@ export const profile = {
   timezone: 'IST · UTC+5:30',
   tagline: 'Building the integration layer that keeps every customer system talking to each other.',
   summary:
-    'Senior software engineer at FreJun, a voice infrastructure platform. Builds mobile apps and the\n    integrations that connect them to customer systems \u2014 owning APIs, webhooks and SDKs end to end,\n    with cross-platform React Native and Django/DRF backend work behind it. Five apps published on the\n    Google Play Store. Currently deep into AI engineering \u2014 building agent harnesses and local-first\n    LLM tooling, as the top contributor to Sidekick, a terminal AI agent published on PyPI.',
+    'Senior software engineer at FreJun, a voice infrastructure platform. Builds mobile apps and the\n    integrations that connect them to customer systems \u2014 owning APIs, webhooks and SDKs end to end,\n    with cross-platform React Native and Python-based backend work behind it. Multiple apps published on the\n    Google Play Store. Currently deep into AI engineering \u2014 building agent harnesses and local-first\n    LLM tooling.',
   email: 'irfanwani347@gmail.com',
   github: 'https://github.com/irfanwani',
   githubUser: 'Irfanwani',
