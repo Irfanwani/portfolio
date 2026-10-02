@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import { profile } from '../data/profile'
 import { Section, Reveal, Panel, Icon, StatusDot } from '../components/ui'
+import ContactForm from '../components/ContactForm'
 import TiltCard from '../components/TiltCard'
 
 const CHANNELS = [
@@ -52,18 +52,6 @@ const CHANNELS = [
 ]
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false)
-
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(profile.email)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 1800)
-    } catch {
-      /* clipboard unavailable — the mailto link still works */
-    }
-  }
-
   return (
     <Section id="contact" className="py-20 sm:py-24" label="DOWNLINK" code="06">
       <div className="grid gap-6 lg:grid-cols-[1fr_1.05fr] lg:gap-8">
@@ -91,39 +79,13 @@ export default function Contact() {
 
             <p className="mt-5 font-mono text-[12.5px] leading-relaxed text-ice/72">
               <span className="text-cyan/80">&gt;</span> Open to AI and software engineering
-              roles, API and platform work, React Native positions, and freelance
+              roles and collaborations, API and platform work, React Native positions, and freelance
               builds. Currently at{' '}
               <span className="text-cyan">{profile.org}</span> as{' '}
               {profile.title.replace('Senior Software Development Engineer & ', '')}.
             </p>
 
-            <div className="mt-7 space-y-2 font-mono text-[11.5px]">
-              <p className="text-lime/92">
-                <span className="text-lime/65">$</span> ./open_channel --to engineer
-              </p>
-              <a
-                href={`mailto:${profile.email}`}
-                data-hot
-                className="group relative mt-2 flex items-center gap-3 overflow-hidden border border-cyan/45 bg-cyan/10 px-4 py-3.5 transition-all duration-300 hover:bg-cyan hover:text-void hover:shadow-[0_0_34px_-6px_rgba(34,211,238,0.8)]"
-              >
-                <Icon.mail size={16} className="shrink-0" />
-                <span className="truncate text-[11.5px] tracking-wide">{profile.email}</span>
-                <span className="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-500 group-hover:translate-x-full" />
-              </a>
-
-              <button
-                onClick={copy}
-                data-hot
-                className={`mt-1.5 flex w-full items-center gap-2 border px-3 py-2 font-mono text-[10px] tracking-[0.16em] transition-colors ${
-                  copied
-                    ? 'border-lime/40 bg-lime/[0.07] text-lime'
-                    : 'border-stroke bg-white/[0.02] text-ice/63 hover:border-cyan/35 hover:text-cyan'
-                }`}
-              >
-                {copied ? <Icon.check size={12} /> : <Icon.copy size={12} />}
-                {copied ? 'COPIED TO CLIPBOARD' : 'COPY ADDRESS'}
-              </button>
-            </div>
+            <ContactForm />
 
             <div className="mt-7 flex flex-wrap gap-1.5 border-t border-stroke/60 pt-5">
               <a

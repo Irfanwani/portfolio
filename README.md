@@ -54,6 +54,34 @@ Append to `integrationNodes` (pick a `kind` that exists in `KIND_COLOR` in
 `integrationEdges`. It appears in the 3D graph **and** the legend in `About.jsx`
 automatically.
 
+## Contact form
+
+The form in the `/home/engineer/contact.sh` card posts to
+[Formspree](https://formspree.io) (free tier — 50 submissions/month).
+
+The form ID is read from the environment at build time, so it is never committed:
+
+```bash
+cp .env.example .env        # then set VITE_FORMSPREE_ID
+```
+
+`VITE_FORMSPREE_ID` is the last path segment of your Formspree endpoint —
+`https://formspree.io/f/xabcdefg` → `VITE_FORMSPREE_ID=xabcdefg`.
+**Register the Formspree account with the address that should receive the mail**,
+since Formspree forwards to the account email rather than an address set in code.
+
+Payload notes:
+
+| Field      | Purpose                                                        |
+| ---------- | -------------------------------------------------------------- |
+| `_replyto` | sets Reply-To, so hitting Reply answers the sender directly    |
+| `_subject` | email subject line                                             |
+| `_gotcha`  | honeypot — bots get a fake success, nothing is sent             |
+
+If the ID is missing the form renders disabled with an inline explanation and a
+direct-mail fallback, rather than failing silently on submit. Formspree field
+errors are mapped back onto the offending input.
+
 ## Live statistics
 
 | Source  | Method                                             | Status          |
