@@ -36,15 +36,23 @@ export const profile = {
   site: 'https://irfanwani.dev',
   resume:
     'https://drive.google.com/file/d/1bAGv636a9BxP4Hpr4t2F3tplMQHP70EZ/view?usp=sharing',
-  /** Individual app listings — used on that project's own card. */
+  /**
+   * One Play Console account, owned by Irfan: "Appshop Co.". All five apps
+   * below are personal projects published through it — there is no second,
+   * separate developer account.
+   *
+   * NOTE: the Play listing for `com.geotagcamera` is titled "Snap Tag". It is
+   * the same app as the "GeoTag Camera" project below, not a sixth app, and
+   * "Snap Tag" is what a visitor sees after clicking through.
+   */
   playStore: 'https://play.google.com/store/apps/details?id=com.geotagcamera',
-  /** Apps published under the Appshop Co. Play developer account. */
+  /** Every app published under the Appshop Co. Play developer account. */
   playApps: [
     { name: 'Snap Tag', rating: '4.8\u2605' },
-    { name: 'Barbershop Services', rating: null },
-    { name: 'Kashmiri Wedding Tracker', rating: null },
-    { name: 'TicTacToe', rating: null },
-    { name: 'Space Blaster', rating: null },
+    { name: 'Barbershop Services', rating: '4.8\u2605' },
+    { name: 'Kashmiri Wedding Tracker', rating: '4.8\u2605' },
+    { name: 'TicTacToe', rating: '4.8\u2605' },
+    { name: 'Space Blaster', rating: '4.8\u2605' },
   ],
   /** The publisher storefront — used for any generic "apps on Play" link. */
   playDeveloper:
