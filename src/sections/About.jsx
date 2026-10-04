@@ -46,7 +46,7 @@ const PUBLIC_LINKS = [
     cls: 'border-amber/35 text-amber/94 hover:border-amber hover:bg-amber/10 hover:text-amber',
   },
   {
-    label: 'irfanwani.vercel.app',
+    label: 'irfanwani.dev',
     href: profile.site,
     external: true,
     cls: 'border-lime/35 text-lime/94 hover:border-lime hover:bg-lime/10 hover:text-lime',

@@ -113,7 +113,7 @@ export default function Contact() {
                 data-hot
                 className="flex items-center gap-1.5 border border-stroke px-2.5 py-1.5 font-mono text-[9.5px] tracking-[0.14em] text-ice/72 transition-colors hover:border-lime/40 hover:text-lime"
               >
-                <Icon.globe size={12} /> irfanwani.vercel.app
+                <Icon.globe size={12} /> irfanwani.dev
               </a>
             </div>
           </Panel>

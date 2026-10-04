@@ -33,7 +33,7 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/irfanwani',
   twitter: 'https://twitter.com/Irfan__wani',
   twitterHandle: 'Irfan__wani',
-  site: 'https://irfanwani.vercel.app',
+  site: 'https://irfanwani.dev',
   resume:
     'https://drive.google.com/file/d/1bAGv636a9BxP4Hpr4t2F3tplMQHP70EZ/view?usp=sharing',
   /** Individual app listings — used on that project's own card. */
