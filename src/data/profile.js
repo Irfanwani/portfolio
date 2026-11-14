@@ -15,27 +15,28 @@
 /*  PROFILE                                                            */
 /* ------------------------------------------------------------------ */
 export const profile = {
-  name: 'Irfan Wani',
-  handle: 'irfanwani',
-  callSign: 'IRFAN',
-  role: 'Senior Software Engineer',
-  title: 'Senior Software Development Engineer & Integration Manager',
-  shortTitle: 'Senior Software Engineer',
-  org: 'FreJun',
-  location: 'India',
-  timezone: 'IST · UTC+5:30',
-  tagline: 'Building the integration layer that keeps every customer system talking to each other.',
+  name: "Irfan Wani",
+  handle: "irfanwani",
+  callSign: "IRFAN",
+  role: "Senior Software Engineer",
+  title: "Senior Software Development Engineer & Integration Manager",
+  shortTitle: "Senior Software Engineer",
+  org: "FreJun",
+  location: "India",
+  timezone: "IST · UTC+5:30",
+  tagline:
+    "Building the integration layer that keeps every customer system talking to each other.",
   summary:
-    'Senior software engineer at FreJun, a voice infrastructure platform. Builds mobile apps and the\n    integrations that connect them to customer systems \u2014 owning APIs, webhooks and SDKs end to end,\n    with cross-platform React Native and Python-based backend work behind it. Multiple apps published on the\n    Google Play Store. Currently deep into AI engineering \u2014 building agent harnesses and local-first\n    LLM tooling.',
-  email: 'irfanwani347@gmail.com',
-  github: 'https://github.com/irfanwani',
-  githubUser: 'Irfanwani',
-  linkedin: 'https://linkedin.com/in/irfanwani',
-  twitter: 'https://twitter.com/Irfan__wani',
-  twitterHandle: 'Irfan__wani',
-  site: 'https://irfanwani.dev',
+    "Senior software engineer at FreJun, a voice infrastructure platform. Builds mobile apps and the\n    integrations that connect them to customer systems \u2014 owning APIs, webhooks and SDKs end to end,\n    with cross-platform React Native and Python-based backend work behind it. Multiple apps published on the\n    Google Play Store. Currently deep into AI engineering \u2014 building agent harnesses and local-first\n    LLM tooling.",
+  email: "irfanwani347@gmail.com",
+  github: "https://github.com/irfanwani",
+  githubUser: "Irfanwani",
+  linkedin: "https://linkedin.com/in/irfanwani",
+  twitter: "https://twitter.com/Irfan__wani",
+  twitterHandle: "Irfan__wani",
+  site: "https://irfanwani.dev",
   resume:
-    'https://drive.google.com/file/d/1bAGv636a9BxP4Hpr4t2F3tplMQHP70EZ/view?usp=sharing',
+    "https://drive.google.com/file/d/1bAGv636a9BxP4Hpr4t2F3tplMQHP70EZ/view?usp=sharing",
   /**
    * One Play Console account, owned by Irfan: "Appshop Co.". All five apps
    * below are personal projects published through it — there is no second,
@@ -45,19 +46,18 @@ export const profile = {
    * the same app as the "GeoTag Camera" project below, not a sixth app, and
    * "Snap Tag" is what a visitor sees after clicking through.
    */
-  playStore: 'https://play.google.com/store/apps/details?id=com.geotagcamera',
+  playStore: "https://play.google.com/store/apps/details?id=com.geotagcamera",
   /** Every app published under the Appshop Co. Play developer account. */
   playApps: [
-    { name: 'Snap Tag', rating: '4.8\u2605' },
-    { name: 'Barbershop Services', rating: '4.8\u2605' },
-    { name: 'Kashmiri Wedding Tracker', rating: '4.8\u2605' },
-    { name: 'TicTacToe', rating: '4.8\u2605' },
-    { name: 'Space Blaster', rating: '4.8\u2605' },
+    { name: "Snap Tag", rating: "4.8\u2605" },
+    { name: "Barbershop Services", rating: "4.8\u2605" },
+    { name: "Kashmiri Wedding Tracker", rating: "4.8\u2605" },
+    { name: "TicTacToe", rating: "4.8\u2605" },
+    { name: "Space Blaster", rating: "4.8\u2605" },
   ],
   /** The publisher storefront — used for any generic "apps on Play" link. */
-  playDeveloper:
-    'https://play.google.com/store/apps/developer?id=Appshop+Co.',
-}
+  playDeveloper: "https://play.google.com/store/apps/developer?id=Appshop+Co.",
+};
 
 /**
  * GitHub stats are fetched live from api.github.com at build time.
@@ -65,199 +65,234 @@ export const profile = {
  * unauthenticated statistics endpoint, and a scraped number goes stale
  * silently — so the site shows nothing rather than something wrong.
  */
-export const githubStatKeys = ['followers', 'publicRepos', 'totalStars', 'originalRepos']
+export const githubStatKeys = [
+  "followers",
+  "publicRepos",
+  "totalStars",
+  "originalRepos",
+];
 
 /* ------------------------------------------------------------------ */
 /*  TECH STACK                                                         */
 /* ------------------------------------------------------------------ */
 /** Spoken languages. Distinct from the programming-language skill group below. */
 export const languages = [
-  { name: 'English', level: 'Full Professional', pct: 100 },
-  { name: 'Urdu', level: 'Full Professional', pct: 100 },
-  { name: 'Kashmiri', level: 'Native / Bilingual', pct: 100 },
-  { name: 'Hindi', level: 'Limited Working', pct: 45 },
-  { name: 'German', level: 'Elementary', pct: 20 },
-]
+  { name: "English", level: "Full Professional", pct: 100 },
+  { name: "Urdu", level: "Full Professional", pct: 100 },
+  { name: "Kashmiri", level: "Native / Bilingual", pct: 100 },
+  { name: "Hindi", level: "Limited Working", pct: 45 },
+  { name: "German", level: "Elementary", pct: 20 },
+];
 
 export const skills = [
   {
-    group: 'Programming Languages',
-    items: ['Python', 'TypeScript', 'JavaScript', 'SQL', 'Java', 'Kotlin', 'Swift', 'C++'],
+    group: "Programming Languages",
+    items: [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "SQL",
+      "Java",
+      "Kotlin",
+      "Swift",
+      "C++",
+    ],
   },
   {
-    group: 'Frontend',
-    items: ['React', 'React Native', 'Redux', 'Next.js', 'Three.js', 'Zustand'],
+    group: "Frontend",
+    items: ["React", "React Native", "Redux", "Next.js", "Three.js", "Zustand"],
   },
   {
-    group: 'Backend',
-    items: ['Django', 'Django REST', 'FastAPI', 'GraphQL', 'REST APIs', 'Webhooks'],
+    group: "Backend",
+    items: [
+      "Django",
+      "Django REST",
+      "FastAPI",
+      "GraphQL",
+      "REST APIs",
+      "Webhooks",
+    ],
   },
   {
-    group: 'Data & Infra',
-    items: ['PostgreSQL', 'MongoDB', 'SQLite', 'AWS', 'ECS', 'Docker', 'Socket.io'],
+    group: "Data & Infra",
+    items: [
+      "PostgreSQL",
+      "MongoDB",
+      "SQLite",
+      "AWS",
+      "ECS",
+      "Docker",
+      "Socket.io",
+    ],
   },
   {
-    group: 'Realtime & Comms',
-    items: ['SIP', 'WebRTC', 'VoIP', 'Asterisk', 'STUN/TURN'],
+    group: "Realtime & Comms",
+    items: ["SIP", "WebRTC", "VoIP", "Asterisk", "STUN/TURN"],
   },
   {
-    group: 'AI & Agents',
-    items: ['Agent Harnesses', 'LLM Tooling', 'Ollama', 'Local-first AI', 'Prompt Engineering'],
+    group: "AI & Agents",
+    items: [
+      "Agent Harnesses",
+      "LLM Tooling",
+      "Ollama",
+      "Local-first AI",
+      "Prompt Engineering",
+    ],
   },
   {
-    group: 'Tooling',
-    items: ['Git', 'CI/CD', 'Vite', 'Expo', 'Automation', 'FFmpeg'],
+    group: "Tooling",
+    items: ["Git", "CI/CD", "Vite", "Expo", "Automation", "FFmpeg"],
   },
-]
+];
 
 /* ------------------------------------------------------------------ */
 /*  EXPERIENCE                                                         */
 /* ------------------------------------------------------------------ */
 export const experience = [
   {
-    role: 'Senior Software Development Engineer & Integration Manager',
-    org: 'FreJun',
-    location: 'Hyderabad, Telangana, India',
-    from: '2025-06',
-    to: 'Present',
+    role: "Senior Software Development Engineer & Integration Manager",
+    org: "FreJun",
+    location: "Hyderabad, Telangana, India",
+    from: "2025-06",
+    to: "Present",
     current: true,
     summary:
-      'Leads the development of the integration infrastructure behind FreJun and integration team end to end \u2014 planning, development, deployment and maintenance \u2014 keeping data flow reliable across every connected system.',
+      "Leads the development of the integration infrastructure behind FreJun and integration team end to end \u2014 planning, development, deployment and maintenance \u2014 keeping data flow reliable across every connected system.",
     highlights: [
-      'Lead the integration team and integration architecture',
-      'Design and maintain APIs, webhooks and SDKs',
-      'Support external teams integrating against the platform',
-      'Drive mobile application development and backend contributions',
+      "Lead the integration team and integration architecture",
+      "Design and maintain APIs, webhooks and SDKs",
+      "Support external teams integrating against the platform",
+      "Drive mobile application development and backend contributions",
     ],
   },
   {
-    role: 'Integration Manager',
-    org: 'FreJun',
-    location: 'Hyderabad, Telangana, India',
-    from: '2024-11',
-    to: '2025-06',
+    role: "Integration Manager",
+    org: "FreJun",
+    location: "Hyderabad, Telangana, India",
+    from: "2024-11",
+    to: "2025-06",
     summary:
-      'Owned the integration function \u2014 building the API surface, webhook delivery and SDKs that external teams and customer systems connect through.',
+      "Owned the integration function \u2014 building the API surface, webhook delivery and SDKs that external teams and customer systems connect through.",
     highlights: [
-      'Integration architecture, APIs and webhook infrastructure',
-      'Onboarding and support for integrating customer teams',
-      'Reliability and maintenance of live data flows',
+      "Integration architecture, APIs and webhook infrastructure",
+      "Onboarding and support for integrating customer teams",
+      "Reliability and maintenance of live data flows",
     ],
   },
   {
-    role: 'Software Development Engineer',
-    org: 'FreJun',
-    location: 'Hyderabad, Telangana, India',
-    from: '2024-06',
-    to: '2025-06',
+    role: "Software Development Engineer",
+    org: "FreJun",
+    location: "Hyderabad, Telangana, India",
+    from: "2024-06",
+    to: "2025-06",
     summary:
-      'Built scalable backend services and cross-platform mobile apps \u2014 Django/DRF APIs and React Native surfaces tuned for a smooth Android experience.',
+      "Built scalable backend services and cross-platform mobile apps \u2014 Django/DRF APIs and React Native surfaces tuned for a smooth Android experience.",
     highlights: [
-      'Django + Django REST Framework APIs, data modelling, business logic',
-      'React Native apps for Android with focus on responsiveness',
-      'AWS services for cloud deployment and management',
-      'Cross-functional delivery with product, design and integration teams',
+      "Django + Django REST Framework APIs, data modelling, business logic",
+      "React Native apps for Android with focus on responsiveness",
+      "AWS services for cloud deployment and management",
+      "Cross-functional delivery with product, design and integration teams",
     ],
   },
   {
-    role: 'Software Development Engineer',
-    org: 'Appsdeployer',
-    location: 'India',
-    from: '2023-03',
-    to: '2023-10',
+    role: "Software Development Engineer",
+    org: "Appsdeployer",
+    location: "India",
+    from: "2023-03",
+    to: "2023-10",
     summary:
-      'Client-side engineering across a portfolio of shipped mobile applications, working across both platforms rather than a single product.',
+      "Client-side engineering across a portfolio of shipped mobile applications, working across both platforms rather than a single product.",
     highlights: [
-      'Software development across multiple client applications',
-      'Feature delivery and maintenance on live app-store products',
+      "Software development across multiple client applications",
+      "Feature delivery and maintenance on live app-store products",
     ],
   },
   {
-    role: 'React Native Intern \u2014 SIP Calling',
-    org: 'FreJun',
-    location: 'Hyderabad, Telangana, India',
-    from: '2023-04',
-    to: '2023-07',
+    role: "React Native Intern \u2014 SIP Calling",
+    org: "FreJun",
+    location: "Hyderabad, Telangana, India",
+    from: "2023-04",
+    to: "2023-07",
     summary:
-      'Built Android and iOS apps in React Native around SIP-based calling \u2014 real-time communication, call-flow performance and a reliable calling UI.',
+      "Built Android and iOS apps in React Native around SIP-based calling \u2014 real-time communication, call-flow performance and a reliable calling UI.",
     highlights: [
-      'Built, maintained and upgraded the app for iOS and Android',
-      'Real-time call flows and UI interaction',
-      'Performance optimisation for call reliability',
+      "Built, maintained and upgraded the app for iOS and Android",
+      "Real-time call flows and UI interaction",
+      "Performance optimisation for call reliability",
     ],
   },
   {
-    role: 'Mobile Application Developer',
-    org: 'Appsdeployer',
-    location: 'India',
-    from: '2022-10',
-    to: '2023-02',
+    role: "Mobile Application Developer",
+    org: "Appsdeployer",
+    location: "India",
+    from: "2022-10",
+    to: "2023-02",
     summary:
-      'Built and upgraded multiple React Native applications \u2014 shipping new versions to the app stores repeatedly across the release lifecycle.',
+      "Built and upgraded multiple React Native applications \u2014 shipping new versions to the app stores repeatedly across the release lifecycle.",
     highlights: [
-      'Built multiple apps with React Native, Redux and JavaScript',
-      'Upgraded existing apps and added new features',
-      'Published new versions to the app stores many times over',
+      "Built multiple apps with React Native, Redux and JavaScript",
+      "Upgraded existing apps and added new features",
+      "Published new versions to the app stores many times over",
     ],
   },
   {
-    role: 'Mobile Application Developer \u2014 Android Focus',
-    org: 'Solvevolve',
-    location: 'India',
-    from: '2022-10',
-    to: '2022-12',
+    role: "Mobile Application Developer \u2014 Android Focus",
+    org: "Solvevolve",
+    location: "India",
+    from: "2022-10",
+    to: "2022-12",
     summary:
-      'Built mobile applications at Solvevolve using a mix of frameworks and technologies for company products.',
+      "Built mobile applications at Solvevolve using a mix of frameworks and technologies for company products.",
     highlights: [
-      'Mobile app development across multiple frameworks',
-      'React Native implementation work',
+      "Mobile app development across multiple frameworks",
+      "React Native implementation work",
     ],
   },
   {
-    role: 'Blockchain Intern',
-    org: 'National Institute of Technology Srinagar',
-    short: 'NIT Srinagar',
-    location: 'Srinagar, J&K, India',
-    from: '2022-06',
-    to: '2022-07',
+    role: "Blockchain Intern",
+    org: "National Institute of Technology Srinagar",
+    short: "NIT Srinagar",
+    location: "Srinagar, J&K, India",
+    from: "2022-06",
+    to: "2022-07",
     summary:
-      'Worked through core blockchain concepts \u2014 NFTs, dApps, smart contracts and cryptocurrency \u2014 hands-on with the development tooling.',
+      "Worked through core blockchain concepts \u2014 NFTs, dApps, smart contracts and cryptocurrency \u2014 hands-on with the development tooling.",
     highlights: [
-      'NFTs, dApps and smart contracts',
-      'Web3 tooling and development workflow',
-      'Cryptocurrency transaction modelling',
+      "NFTs, dApps and smart contracts",
+      "Web3 tooling and development workflow",
+      "Cryptocurrency transaction modelling",
     ],
   },
-]
+];
 
 export const education = [
   {
-    degree: 'Master of Computer Applications — MCA',
-    org: 'Lovely Professional University',
-    location: 'Phagwara, Punjab, India',
-    period: 'July 2023 — July 2025',
+    degree: "Master of Computer Applications — MCA",
+    org: "Lovely Professional University",
+    location: "Phagwara, Punjab, India",
+    period: "July 2023 — July 2025",
     detail:
-      'Postgraduate specialisation in computer programming and application development \u2014 the formal grounding behind the mobile, backend and integration work on this site.',
-    tags: ['MCA', 'Computer Programming', 'Application Development'],
+      "Postgraduate specialisation in computer programming and application development \u2014 the formal grounding behind the mobile, backend and integration work on this site.",
+    tags: ["MCA", "Computer Programming", "Application Development"],
   },
   {
-    degree: 'B.Sc. — Physics',
-    org: 'Central University of Kashmir',
-    location: 'Srinagar, J&K, India',
-    period: 'November 2019 — September 2022',
+    degree: "B.Sc. — Physics",
+    org: "Central University of Kashmir",
+    location: "Srinagar, J&K, India",
+    period: "November 2019 — September 2022",
     detail:
-      'Undergraduate degree in physics with a mathematics base \u2014 where the habit of modelling systems quantitatively first came from.',
-    tags: ['Physics', 'Mathematics', 'Systems Modelling'],
+      "Undergraduate degree in physics with a mathematics base \u2014 where the habit of modelling systems quantitatively first came from.",
+    tags: ["Physics", "Mathematics", "Systems Modelling"],
   },
-]
+];
 
 export const certifications = [
-  'Supervised Machine Learning: Regression and Classification (Stanford University)',
-  'Mobile App Development with React Native (CS50, Harvard University)',
-  'Web Development with Python and JavaScript (CS50, Harvard University)',
-  'Python (Hackerrank)',
-  'SIP / WebRTC Fundamentals',
-]
+  "Supervised Machine Learning: Regression and Classification (Stanford University)",
+  "Mobile App Development with React Native (CS50, Harvard University)",
+  "Web Development with Python and JavaScript (CS50, Harvard University)",
+  "Python (Hackerrank)",
+  "SIP / WebRTC Fundamentals",
+];
 
 /* ------------------------------------------------------------------ */
 /*  TOP 10 PROJECTS — ranked from 98 repositories (83 original)         */
@@ -268,214 +303,290 @@ export const certifications = [
 export const projects = [
   {
     rank: 1,
-    id: 'geotagcamera',
-    name: 'GeoTag Camera',
-    tagline: 'Camera app that geotags every photo by place and time',
+    id: "geotagcamera",
+    name: "GeoTag Camera",
+    tagline: "Camera app that geotags every photo by place and time",
     description:
-      'A React Native camera application that stamps location and time onto photos as they are captured. Shipped to the Google Play Store — a real production release with a public install base, and the strongest shipped-impact signal on this list.',
-    tech: ['React Native', 'TypeScript', 'Kotlin', 'Swift', 'Camera APIs'],
-    metric: 'LIVE ON PLAY STORE',
-    accent: 'lime',
+      "A React Native camera application that stamps location and time onto photos as they are captured. Shipped to the Google Play Store — a real production release with a public install base, and the strongest shipped-impact signal on this list.",
+    tech: ["React Native", "TypeScript", "Kotlin", "Swift", "Camera APIs"],
+    metric: "LIVE ON PLAY STORE",
+    accent: "lime",
     live: true,
     private: true,
-    links: [
-      { label: 'Play Store', href: profile.playStore, icon: 'play' },
-    ],
+    links: [{ label: "Play Store", href: profile.playStore, icon: "play" }],
     highlights: [
-      'Native camera + geolocation capture pipeline',
-      'Android (Kotlin) and iOS (Swift/Obj-C++) native modules',
-      'Production release on the Google Play Store',
+      "Native camera + geolocation capture pipeline",
+      "Android (Kotlin) and iOS (Swift/Obj-C++) native modules",
+      "Production release on the Google Play Store",
     ],
   },
 
   {
     rank: 2,
-    id: 'space-blaster',
-    name: 'Space Blaster',
-    tagline: 'Arcade space shooter in React Native — shipped on Play Store',
+    id: "space-blaster",
+    name: "Space Blaster",
+    tagline: "Arcade space shooter in React Native — shipped on Play Store",
     description:
-      'A fast-paced arcade shooter built with React Native and Expo and shipped to the Google Play Store. Drag-anywhere touch controls, four enemy archetypes with distinct movement patterns, five power-ups, combo scoring, particle FX and a parallax star field.',
-    tech: ['React Native', 'Expo', 'TypeScript', 'Game Loop', 'Particles'],
-    metric: 'LIVE ON PLAY STORE',
-    accent: 'violet',
+      "A fast-paced arcade shooter built with React Native and Expo and shipped to the Google Play Store. Drag-anywhere touch controls, four enemy archetypes with distinct movement patterns, five power-ups, combo scoring, particle FX and a parallax star field.",
+    tech: ["React Native", "Expo", "TypeScript", "Game Loop", "Particles"],
+    metric: "LIVE ON PLAY STORE",
+    accent: "violet",
     live: true,
     private: false,
     links: [
-      { label: 'Play Store', href: 'https://play.google.com/store/apps/details?id=com.appshop.spaceblaster', icon: 'play' },
-      { label: 'Source', href: 'https://github.com/Irfanwani/space-blaster', icon: 'github' },
-      { label: 'Site', href: 'https://github.com/Irfanwani/space-blaster-website', icon: 'external' },
+      {
+        label: "Play Store",
+        href: "https://play.google.com/store/apps/details?id=com.appshop.spaceblaster",
+        icon: "play",
+      },
+      {
+        label: "Source",
+        href: "https://github.com/Irfanwani/space-blaster",
+        icon: "github",
+      },
+      {
+        label: "Site",
+        href: "https://github.com/Irfanwani/space-blaster-website",
+        icon: "external",
+      },
     ],
     highlights: [
-      '4 enemy types, 3 movement patterns, boss waves',
-      'Combo system, 5 power-ups, particle FX and screen shake',
-      'Parallax star field rendered in-app',
-      'Production release on the Google Play Store',
+      "4 enemy types, 3 movement patterns, boss waves",
+      "Combo system, 5 power-ups, particle FX and screen shake",
+      "Parallax star field rendered in-app",
+      "Production release on the Google Play Store",
     ],
   },
 
   {
     rank: 3,
-    id: 'sidekick',
-    name: 'Sidekick',
-    tagline: 'AI agent harness — top contributor, 319 commits, on PyPI',
+    id: "sidekick",
+    name: "Sidekick",
+    tagline: "AI agent harness — top contributor, 319 commits, on PyPI",
     description:
-      'Sidekick is a local-first terminal AI agent: chat, voice and 19 tools running entirely on your own hardware, published to PyPI. Building an agent harness is the part I care most about \u2014 the tool-execution loop, the Textual TUI and the Ollama/OpenAI-compatible model plumbing. I am the top contributor, with 319 commits against the maintainer\u2019s 286.',
-    tech: ['Python 3.12', 'Agent Harness', 'Tool Use', 'Ollama', 'Textual TUI', 'PyPI'],
-    metric: 'TOP CONTRIBUTOR \u00b7 319 COMMITS',
-    accent: 'violet',
+      "Sidekick is a local-first terminal AI agent: chat, voice and 19 tools running entirely on your own hardware, published to PyPI. Building an agent harness is the part I care most about \u2014 the tool-execution loop, the Textual TUI and the Ollama/OpenAI-compatible model plumbing. I am the top contributor, with 319 commits against the maintainer\u2019s 286.",
+    tech: [
+      "Python 3.12",
+      "Agent Harness",
+      "Tool Use",
+      "Ollama",
+      "Textual TUI",
+      "PyPI",
+    ],
+    metric: "TOP CONTRIBUTOR \u00b7 319 COMMITS",
+    accent: "violet",
     live: true,
     private: false,
     links: [
-      { label: 'Project', href: 'https://github.com/Faisal-Fayaz/sidekick', icon: 'github' },
-      { label: 'PyPI', href: 'https://pypi.org/project/sidekick-agent/', icon: 'external' },
+      {
+        label: "Project",
+        href: "https://github.com/Faisal-Fayaz/sidekick",
+        icon: "github",
+      },
+      {
+        label: "PyPI",
+        href: "https://pypi.org/project/sidekick-agent/",
+        icon: "external",
+      },
     ],
     highlights: [
-      '#1 of 4 contributors — more commits than the project maintainer',
-      'Agent harness with a 19-tool execution loop and voice input',
-      'Open source under MIT, released on PyPI',
+      "#1 of 4 contributors — more commits than the project maintainer",
+      "Agent harness with a 19-tool execution loop and voice input",
+      "Open source under MIT, released on PyPI",
     ],
   },
 
   {
     rank: 4,
-    id: 'system-design-simulator',
-    name: 'System Design Simulator',
-    tagline: 'Compose distributed systems in 3D and watch them fail',
+    id: "system-design-simulator",
+    name: "System Design Simulator",
+    tagline: "Compose distributed systems in 3D and watch them fail",
     description:
-      'An interactive 3D simulator for exploring how infrastructure behaves under load. Compose DNS, CDNs, load balancers, caches, queues, replicas and workers, then push traffic through and observe health in real time.',
-    tech: ['React', 'Three.js', 'Zustand', 'Vite', 'WebGL'],
-    metric: 'INTERACTIVE 3D',
-    accent: 'cyan',
+      "An interactive 3D simulator for exploring how infrastructure behaves under load. Compose DNS, CDNs, load balancers, caches, queues, replicas and workers, then push traffic through and observe health in real time.",
+    tech: ["React", "Three.js", "Zustand", "Vite", "WebGL"],
+    metric: "INTERACTIVE 3D",
+    accent: "cyan",
     live: true,
     private: false,
     stars: 1,
     links: [
-      { label: 'Live demo', href: 'https://system-design-simulator-navy.vercel.app', icon: 'external' },
-      { label: 'Source', href: 'https://github.com/Irfanwani/system-design-simulator', icon: 'github' },
+      {
+        label: "Live demo",
+        href: "https://system-design-simulator-navy.vercel.app",
+        icon: "external",
+      },
+      {
+        label: "Source",
+        href: "https://github.com/Irfanwani/system-design-simulator",
+        icon: "github",
+      },
     ],
     highlights: [
-      '16+ composable infrastructure component types',
-      'Traffic shaping, caching, queueing and failure injection',
-      'Real-time system health visualisation',
+      "16+ composable infrastructure component types",
+      "Traffic shaping, caching, queueing and failure injection",
+      "Real-time system health visualisation",
     ],
   },
 
   {
     rank: 5,
-id: 'frejun-dialer',
-    name: 'FreJun Dialer',
-    tagline: 'In-app voice calling on a live VoIP platform',
+    id: "frejun-dialer",
+    name: "FreJun Dialer",
+    tagline: "In-app voice calling on a live VoIP platform",
     description:
-      'FreJun is a voice infrastructure platform — FreJun Dialer gives business teams AI-powered calling from inside their CRM, and FreJun Teler exposes programmable voice APIs and SIP trunking to developers. I build the mobile calling experience on top of it: in-app voice calling, live call flows and the calling UI across Android and iOS.',
-    tech: ['React Native', 'VoIP', 'SIP', 'Click-to-Call', 'IVR', 'Android', 'iOS'],
-    metric: 'PRODUCTION · APP STORES',
-    accent: 'amber',
+      "FreJun is a voice infrastructure platform — FreJun Dialer gives business teams AI-powered calling from inside their CRM, and FreJun Teler exposes programmable voice APIs and SIP trunking to developers. I build the mobile calling experience on top of it: in-app voice calling, live call flows and the calling UI across Android and iOS.",
+    tech: [
+      "React Native",
+      "VoIP",
+      "SIP",
+      "Click-to-Call",
+      "IVR",
+      "Android",
+      "iOS",
+    ],
+    metric: "PRODUCTION · APP STORES",
+    accent: "amber",
     live: true,
     private: false,
     links: [
-      { label: 'Play Store', href: 'https://play.google.com/store/apps/details?id=com.frejun.FreJunApp', icon: 'play' },
-      { label: 'App Store', href: 'https://apps.apple.com/us/app/frejun-dialer/id1621698092', icon: 'apple' },
+      {
+        label: "Play Store",
+        href: "https://play.google.com/store/apps/details?id=com.frejun.FreJunApp",
+        icon: "play",
+      },
+      {
+        label: "App Store",
+        href: "https://apps.apple.com/us/app/frejun-dialer/id1621698092",
+        icon: "apple",
+      },
     ],
     highlights: [
-      'In-app voice calling on a platform running 99.95%+ monthly uptime',
-      'Click-to-call, call routing and IVR flows on Android and iOS',
-      'Two-way CRM sync on the call record — dial, log, record, analyse',
+      "In-app voice calling on a platform running 99.95%+ monthly uptime",
+      "Click-to-call, call routing and IVR flows on Android and iOS",
+      "Two-way CRM sync on the call record — dial, log, record, analyse",
     ],
   },
 
   {
     rank: 6,
-    id: 'work-presence',
-    name: 'work-presence',
-    tagline: 'Turn a repo into an evidence-backed blog across 5 platforms',
+    id: "work-presence",
+    name: "work-presence",
+    tagline: "Turn a repo into an evidence-backed blog across 5 platforms",
     description:
-      'Point it at a local path, a GitHub URL or a description and it researches the work, writes the post, captures screenshots and a demo video from the running project, then publishes to dev.to, Hashnode and Medium with LinkedIn and X drafts.',
-    tech: ['Python', 'Dev.to API', 'Hashnode API', 'Automation'],
-    metric: '5 PLATFORMS',
-    accent: 'cyan',
+      "Point it at a local path, a GitHub URL or a description and it researches the work, writes the post, captures screenshots and a demo video from the running project, then publishes to dev.to, Hashnode and Medium with LinkedIn and X drafts.",
+    tech: ["Python", "Dev.to API", "Hashnode API", "Automation"],
+    metric: "5 PLATFORMS",
+    accent: "cyan",
     live: false,
     private: false,
     links: [
-      { label: 'Source', href: 'https://github.com/Irfanwani/blog-automation', icon: 'github' },
+      {
+        label: "Source",
+        href: "https://github.com/Irfanwani/blog-automation",
+        icon: "github",
+      },
     ],
     highlights: [
-      'Automated publishing to dev.to + Hashnode via API',
-      'One-click Medium import, LinkedIn post + X thread drafts',
-      'Screenshots and demo video captured from the live project',
+      "Automated publishing to dev.to + Hashnode via API",
+      "One-click Medium import, LinkedIn post + X thread drafts",
+      "Screenshots and demo video captured from the live project",
     ],
   },
 
   {
     rank: 7,
-    id: 'bottom-sheet',
-    name: '@irfanwani/react-native-bottom-sheet',
-    tagline: 'Bottom-sheet component — published to npm',
+    id: "bottom-sheet",
+    name: "@irfanwani/react-native-bottom-sheet",
+    tagline: "Bottom-sheet component — published to npm",
     description:
-      'An animated bottom-sheet component for React Native, published to npm and used as a drop-in dependency. The most-starred repository on the profile and the only project released as a public package under my own scope.',
-    tech: ['React Native', 'TypeScript', 'Animated', 'npm'],
-    metric: 'ON NPM \u00b7 3\u2605',
-    accent: 'cyan',
+      "An animated bottom-sheet component for React Native, published to npm and used as a drop-in dependency. The most-starred repository on the profile and the only project released as a public package under my own scope.",
+    tech: ["React Native", "TypeScript", "Animated", "npm"],
+    metric: "ON NPM \u00b7 3\u2605",
+    accent: "cyan",
     live: false,
     private: false,
     stars: 3,
     links: [
-      { label: 'Source', href: 'https://github.com/Irfanwani/bottomsheet', icon: 'github' },
-      { label: 'npm', href: 'https://www.npmjs.com/package/@irfanwani/react-native-bottom-sheet', icon: 'external' },
+      {
+        label: "Source",
+        href: "https://github.com/Irfanwani/bottomsheet",
+        icon: "github",
+      },
+      {
+        label: "npm",
+        href: "https://www.npmjs.com/package/@irfanwani/react-native-bottom-sheet",
+        icon: "external",
+      },
     ],
     highlights: [
-      'Published as a consumable npm package',
-      'Draggable sheet with animated transitions',
-      'Most-starred repository on the profile',
+      "Published as a consumable npm package",
+      "Draggable sheet with animated transitions",
+      "Most-starred repository on the profile",
     ],
   },
 
   {
     rank: 8,
-    id: 'barbershop',
-    name: 'Barbershop Platform',
-    tagline: 'Full-stack booking app — React Native client, Django API',
+    id: "barbershop",
+    name: "Barbershop Platform",
+    tagline: "Full-stack booking app — React Native client, Django API",
     description:
-      'A complete two-sided marketplace for a barbershop: one app for service providers and one for customers, backed by a Django REST API. Client and server were both built end to end, covering booking, availability and provider workflows.',
-    tech: ['React Native', 'Django', 'REST API', 'PostgreSQL'],
-    metric: 'FULL STACK',
-    accent: 'cyan',
+      "A complete two-sided marketplace for a barbershop: one app for service providers and one for customers, backed by a Django REST API. Client and server were both built end to end, covering booking, availability and provider workflows.",
+    tech: ["React Native", "Django", "REST API", "PostgreSQL"],
+    metric: "FULL STACK",
+    accent: "cyan",
     live: false,
     private: false,
     links: [
-      { label: 'App', href: 'https://github.com/Irfanwani/barbershopui', icon: 'github' },
-      { label: 'API', href: 'https://github.com/Irfanwani/barbershopbackend', icon: 'github' },
+      {
+        label: "App",
+        href: "https://github.com/Irfanwani/barbershopui",
+        icon: "github",
+      },
+      {
+        label: "API",
+        href: "https://github.com/Irfanwani/barbershopbackend",
+        icon: "github",
+      },
     ],
     highlights: [
-      'Two-sided React Native app for providers and customers',
-      'Django REST backend handling bookings and availability',
-      'Largest single project on the profile by codebase volume',
+      "Two-sided React Native app for providers and customers",
+      "Django REST backend handling bookings and availability",
+      "Largest single project on the profile by codebase volume",
     ],
   },
 
   {
     rank: 9,
-    id: 'kashmiri-wedding-tracker',
-    name: 'Kashmiri Wedding Tracker',
-    tagline: 'Expo app for wedding logistics, guests and expenses',
+    id: "kashmiri-wedding-tracker",
+    name: "Kashmiri Wedding Tracker",
+    tagline: "Expo app for wedding logistics, guests and expenses",
     description:
-      'A lightweight Expo React Native app for planning Kashmiri weddings: wedding details, guest families and expenses in one place, with a wedding-themed interface and fully local on-device storage.',
-    tech: ['React Native', 'Expo', 'JavaScript', 'Local Storage'],
-    metric: 'MOBILE APP',
-    accent: 'lime',
+      "A lightweight Expo React Native app for planning Kashmiri weddings: wedding details, guest families and expenses in one place, with a wedding-themed interface and fully local on-device storage.",
+    tech: ["React Native", "Expo", "JavaScript", "Local Storage"],
+    metric: "MOBILE APP",
+    accent: "lime",
     live: false,
     private: false,
     links: [
-      { label: 'Play Store', href: 'https://play.google.com/store/apps/details?id=com.appshop.kashmiriweddingtracker', icon: 'play' },
-      { label: 'Source', href: 'https://github.com/Irfanwani/kashmiri-wedding-tracker', icon: 'github' },
+      {
+        label: "Play Store",
+        href: "https://play.google.com/store/apps/details?id=com.appshop.kashmiriweddingtracker",
+        icon: "play",
+      },
+      {
+        label: "Source",
+        href: "https://github.com/Irfanwani/kashmiri-wedding-tracker",
+        icon: "github",
+      },
     ],
     highlights: [
-      'Wedding details, guest families and expense tracking',
-      'Wedding-themed UI built with Expo',
-      'Offline-first — all data stored on the device',
+      "Wedding details, guest families and expense tracking",
+      "Wedding-themed UI built with Expo",
+      "Offline-first — all data stored on the device",
     ],
   },
-]
-
+];
 
 /* ------------------------------------------------------------------ */
 /*  INTEGRATION GRAPH — drives the hero 3D scene                        */
@@ -483,94 +594,164 @@ id: 'frejun-dialer',
 /* ------------------------------------------------------------------ */
 export const integrationNodes = [
   // centre — what he owns
-  { id: 'core', label: 'Integration Platform', kind: 'core', x: 0, y: 0, z: 0 },
+  { id: "core", label: "Integration Platform", kind: "core", x: 0, y: 0, z: 0 },
 
   // ring 1 — the customer systems integrated (r 2.5, 7 nodes)
-  { id: 'salesforce', label: 'Salesforce', kind: 'crm', x: 0.00, y: -2.50, z: 0.2 },
-  { id: 'hubspot', label: 'HubSpot', kind: 'crm', x: 1.95, y: -1.56, z: -0.5 },
-  { id: 'zoho', label: 'Zoho', kind: 'crm', x: 2.44, y: 0.56, z: 0.6 },
-  { id: 'crmmore', label: 'Freshworks · Pipedrive · Gong', kind: 'crm', x: 1.08, y: 2.25, z: -0.9 },
-  { id: 'dynamics', label: 'Dynamics 365', kind: 'crm', x: -1.08, y: 2.25, z: 0.9 },
-  { id: 'ats', label: 'ATS', kind: 'ats', x: -2.44, y: 0.56, z: -0.6 },
-  { id: 'shopify', label: 'Shopify', kind: 'commerce', x: -1.95, y: -1.56, z: 0.5 },
+  {
+    id: "salesforce",
+    label: "Salesforce",
+    kind: "crm",
+    x: 0.0,
+    y: -2.5,
+    z: 0.2,
+  },
+  { id: "hubspot", label: "HubSpot", kind: "crm", x: 1.95, y: -1.56, z: -0.5 },
+  { id: "zoho", label: "Zoho", kind: "crm", x: 2.44, y: 0.56, z: 0.6 },
+  {
+    id: "crmmore",
+    label: "Freshworks · Pipedrive · Gong",
+    kind: "crm",
+    x: 1.08,
+    y: 2.25,
+    z: -0.9,
+  },
+  {
+    id: "dynamics",
+    label: "Dynamics 365",
+    kind: "crm",
+    x: -1.08,
+    y: 2.25,
+    z: 0.9,
+  },
+  { id: "ats", label: "ATS", kind: "ats", x: -2.44, y: 0.56, z: -0.6 },
+  {
+    id: "shopify",
+    label: "Shopify",
+    kind: "commerce",
+    x: -1.95,
+    y: -1.56,
+    z: 0.5,
+  },
 
   // ring 2 — the surfaces that carry the traffic (r 4.3, 5 nodes)
-  { id: 'api', label: 'REST APIs', kind: 'surface', x: 0.00, y: -4.30, z: -0.3 },
-  { id: 'webhooks', label: 'Webhooks', kind: 'surface', x: 4.09, y: -1.33, z: 0.4 },
-  { id: 'voice', label: 'Voice / SIP', kind: 'channel', x: 2.53, y: 3.48, z: -0.4 },
-  { id: 'email', label: 'Email', kind: 'channel', x: -2.53, y: 3.48, z: 0.4 },
-  { id: 'sdk', label: 'SDKs', kind: 'surface', x: -4.09, y: -1.33, z: -0.4 },
+  { id: "api", label: "REST APIs", kind: "surface", x: 0.0, y: -4.3, z: -0.3 },
+  {
+    id: "webhooks",
+    label: "Webhooks",
+    kind: "surface",
+    x: 4.09,
+    y: -1.33,
+    z: 0.4,
+  },
+  {
+    id: "voice",
+    label: "Voice / SIP",
+    kind: "channel",
+    x: 2.53,
+    y: 3.48,
+    z: -0.4,
+  },
+  { id: "email", label: "Email", kind: "channel", x: -2.53, y: 3.48, z: 0.4 },
+  { id: "sdk", label: "SDKs", kind: "surface", x: -4.09, y: -1.33, z: -0.4 },
 
   // ring 3 — internal stack serving it all (r 5.6, 4 nodes)
-  { id: 'mobile', label: 'React Native', kind: 'internal', x: 3.96, y: -3.96, z: 0.8 },
-  { id: 'django', label: 'Django / DRF', kind: 'internal', x: 3.96, y: 3.96, z: -0.8 },
-  { id: 'postgres', label: 'PostgreSQL', kind: 'internal', x: -3.96, y: 3.96, z: 0.8 },
-  { id: 'aws', label: 'AWS / ECS', kind: 'internal', x: -3.96, y: -3.96, z: -0.8 },
-]
+  {
+    id: "mobile",
+    label: "React Native",
+    kind: "internal",
+    x: 3.96,
+    y: -3.96,
+    z: 0.8,
+  },
+  {
+    id: "django",
+    label: "Django / DRF",
+    kind: "internal",
+    x: 3.96,
+    y: 3.96,
+    z: -0.8,
+  },
+  {
+    id: "postgres",
+    label: "PostgreSQL",
+    kind: "internal",
+    x: -3.96,
+    y: 3.96,
+    z: 0.8,
+  },
+  {
+    id: "aws",
+    label: "AWS / ECS",
+    kind: "internal",
+    x: -3.96,
+    y: -3.96,
+    z: -0.8,
+  },
+];
 
 export const integrationEdges = [
   // the platform reaches every connected customer system
-  ['core', 'salesforce'],
-  ['core', 'hubspot'],
-  ['core', 'zoho'],
-  ['core', 'dynamics'],
-  ['core', 'crmmore'],
-  ['core', 'ats'],
-  ['core', 'shopify'],
+  ["core", "salesforce"],
+  ["core", "hubspot"],
+  ["core", "zoho"],
+  ["core", "dynamics"],
+  ["core", "crmmore"],
+  ["core", "ats"],
+  ["core", "shopify"],
   // inbound events + outbound sync
-  ['salesforce', 'webhooks'],
-  ['hubspot', 'webhooks'],
-  ['dynamics', 'webhooks'],
-  ['crmmore', 'api'],
-  ['shopify', 'webhooks'],
-  ['zoho', 'api'],
-  ['ats', 'api'],
+  ["salesforce", "webhooks"],
+  ["hubspot", "webhooks"],
+  ["dynamics", "webhooks"],
+  ["crmmore", "api"],
+  ["shopify", "webhooks"],
+  ["zoho", "api"],
+  ["ats", "api"],
   // the public surfaces
-  ['api', 'core'],
-  ['webhooks', 'core'],
-  ['sdk', 'core'],
+  ["api", "core"],
+  ["webhooks", "core"],
+  ["sdk", "core"],
   // communication channels that drive the workflows
-  ['voice', 'core'],
-  ['email', 'core'],
+  ["voice", "core"],
+  ["email", "core"],
   // internal stack
-  ['core', 'django'],
-  ['core', 'mobile'],
-  ['django', 'postgres'],
-  ['django', 'aws'],
-]
+  ["core", "django"],
+  ["core", "mobile"],
+  ["django", "postgres"],
+  ["django", "aws"],
+];
 
 /** Named tiers, reused by the 3D scene and the legend in About.jsx. */
 export const integrationTiers = [
-  { kind: 'core', label: 'Integration Platform', color: 'cyan' },
-  { kind: 'crm', label: 'CRM Platforms', color: 'sky' },
-  { kind: 'ats', label: 'Applicant Tracking', color: 'teal' },
-  { kind: 'commerce', label: 'Commerce', color: 'amber' },
-  { kind: 'surface', label: 'Public Surfaces', color: 'violet' },
-  { kind: 'channel', label: 'Comms Channels', color: 'lime' },
-  { kind: 'internal', label: 'Internal Stack', color: 'rose' },
-]
+  { kind: "core", label: "Integration Platform", color: "cyan" },
+  { kind: "crm", label: "CRM Platforms", color: "sky" },
+  { kind: "ats", label: "Applicant Tracking", color: "teal" },
+  { kind: "commerce", label: "Commerce", color: "amber" },
+  { kind: "surface", label: "Public Surfaces", color: "violet" },
+  { kind: "channel", label: "Comms Channels", color: "lime" },
+  { kind: "internal", label: "Internal Stack", color: "rose" },
+];
 
 /* ------------------------------------------------------------------ */
 /*  CLI BOOT SEQUENCE                                                 */
 /* ------------------------------------------------------------------ */
 export const bootLines = [
-  { text: 'IRFAN-WANI :: INTEGRATION CONSOLE v1.0.0', type: 'title' },
-  { text: 'resolving user session .......................... OK', type: 'ok' },
-  { text: 'mounting /api gateway ........................... OK', type: 'ok' },
-  { text: 'loading webhook subscriptions .................... OK', type: 'ok' },
-  { text: 'syncing PostgreSQL primary ...................... OK', type: 'ok' },
-  { text: 'handshaking SIP/WebRTC transport ................ OK', type: 'ok' },
-  { text: 'building service mesh topology ................... OK', type: 'ok' },
-  { text: 'fetching github graph ........................... OK', type: 'ok' },
-  { text: 'ALL SYSTEMS NOMINAL — READY TO INTEGRATE.', type: 'success' },
-]
+  { text: "IRFAN-WANI :: INTEGRATION CONSOLE v1.0.0", type: "title" },
+  { text: "resolving user session .......................... OK", type: "ok" },
+  { text: "mounting /api gateway ........................... OK", type: "ok" },
+  { text: "loading webhook subscriptions .................... OK", type: "ok" },
+  { text: "syncing PostgreSQL primary ...................... OK", type: "ok" },
+  { text: "handshaking SIP/WebRTC transport ................ OK", type: "ok" },
+  { text: "building service mesh topology ................... OK", type: "ok" },
+  { text: "fetching github graph ........................... OK", type: "ok" },
+  { text: "ALL SYSTEMS NOMINAL — READY TO INTEGRATE.", type: "success" },
+];
 
 export const sections = [
-  { id: 'hero', label: 'UPLINK', code: '00' },
-  { id: 'about', label: 'PROFILE', code: '01' },
-  { id: 'stack', label: 'STACK', code: '02' },
-  { id: 'experience', label: 'EXPERIENCE', code: '03' },
-  { id: 'projects', label: 'PROJECTS', code: '04' },
-  { id: 'stats', label: 'SIGNALS', code: '05' },
-  { id: 'contact', label: 'DOWNLINK', code: '06' },
-]
+  { id: "hero", label: "UPLINK", code: "00" },
+  { id: "about", label: "PROFILE", code: "01" },
+  { id: "stack", label: "STACK", code: "02" },
+  { id: "experience", label: "EXPERIENCE", code: "03" },
+  { id: "projects", label: "PROJECTS", code: "04" },
+  { id: "stats", label: "SIGNALS", code: "05" },
+  { id: "contact", label: "DOWNLINK", code: "06" },
+];
