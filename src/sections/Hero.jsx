@@ -3,6 +3,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { integrationEdges, integrationNodes, profile } from '../data/profile'
 import { buildStats, formatCount, statsMeta } from '../data/stats'
 import { Icon, Typewriter, StatusDot } from '../components/ui'
+import ProfileSummary from '../components/ProfileSummary'
 
 const EASE = [0.16, 1, 0.3, 1]
 
@@ -77,7 +78,7 @@ export default function Hero() {
             variants={rise}
             className="mt-6 max-w-xl font-mono text-[12.5px] leading-relaxed text-ice/78 sm:text-sm"
           >
-            <span className="text-cyan/80">&gt;</span> {profile.summary}
+            <span className="text-cyan/80">&gt;</span> <ProfileSummary />
           </motion.p>
 
           {/* integration chip strip */}

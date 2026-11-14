@@ -11,6 +11,7 @@ import {
 } from '../data/profile'
 import { Section, Reveal, Panel, Icon, Tag } from '../components/ui'
 import TiltCard from '../components/TiltCard'
+import ProfileSummary from '../components/ProfileSummary'
 
 const EASE = [0.16, 1, 0.3, 1]
 
@@ -102,7 +103,9 @@ export default function About() {
                 </p>
 
                 <LogLine delay={0.1}>cat --summary brief.md</LogLine>
-                <p className="text-ice/85">{profile.summary}</p>
+                <p className="text-ice/85">
+                  <ProfileSummary />
+                </p>
 
                 <LogLine delay={0.2}>log --highlights --grep shipped</LogLine>
                 <ul className="space-y-1 text-ice/72">
